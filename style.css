@@ -36,8 +36,7 @@ html, body {
 
 }
 .bottomPosition{
-  display: flex;
-  flex-wrap: nowrap;
+  
   width: 80vw;
   text-align: center;
   margin-bottom: 10vh;
