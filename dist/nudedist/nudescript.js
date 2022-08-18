@@ -45,7 +45,6 @@ renderer.setPixelRatio(devicePixelRatio)
 //   }
 // }
 // window.addEventListener("scroll", orbitStart);
-gfds 
 
 var loader = new THREE.TextureLoader();
 const monotexture = new THREE.MeshBasicMaterial ({map: loader.load("mono.png"), transparent:true});
