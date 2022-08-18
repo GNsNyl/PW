@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>REALTIME FOOD NUTRITION(EQUITY) DETECTOR</title>
+  <link rel='stylesheet' href='https://codepen.io/soju22/pen/PoZLGJj/4aeaa568d7a4f3459bcde0e70b10f35a.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap'><link rel="stylesheet" href="./foodstyle.css">
+
+</head>
+<body>
+
+  
+<!-- partial:index.partial.html -->
+
+<canvas id="canvas"></canvas>  
+<div id="sidebar">
+  <div class="img">
+    <img src="ibun.png" width="50vw" onclick="toggleTextbun()" >
+    <span class="hide">info</span>
+  </div>
+  <div class="img">
+    <img src="iramen.png" width="50vw" onclick="toggleTextramen()">
+    <span class="hide">technicality</span>
+  </div>
+  <div class="img">
+    <img src="igrape.png" width="50vw" onclick="toggleTextgrape()">
+    <span class="hide">sceneio</span>
+  </div>
+</div>
+
+<div id="info" class="panal">
+  <div class = "closebutton" onclick="toggleTextbun()" >CLOSE</div>
+  <h2>information</h2>
+  <p>key words: Machine Learning, Classifier, YOLO, Food, Equity, Visualization</p>
+  <p>year: 2022/05</p>
+  <p>Some people who have a healthy diet, fresh produce and don’t eat sweet food (i.e. cakes, soft drinks) are still plagued with high blood sugar! It turns out there are hidden threats in fresh produce and dishes, they are high in sugar and sodium.
+    <br><br>Food and nutrition issue pertain to the Right to healthy diets and good nutrition,
+     Food Safety, Genetically Modified Crops, Exploitation of Workers, Lack of Equal Access, Monocrops, Diet-related non-communicable diseases (NCDs) – mainly overweight, obesity, diabetes, cardiovascular disease and cancer.
+    <br><br>This project aims to intervene in nutritional inequalities that hinge on key sociodemographic factors, such as geographic location, age, gender, ethnicity, education and wealth.
+    <br><br>It is targeting avoidable situations by shifting the information asymmetry regarding food nutrition and making informed decisions on food with the same price range. By the visual intervention, the project acts in “the food environment, where consumers make decisions about what to eat, that is currently inequitable for many in terms of physical access, affordability, targeting of advertising, and marketing and quality of foods.”
+    <br><br>The program will give personalized feedback, raising awareness of dietary balance.
+    Now the project will allow users to choose among: gout, blood sugar, cardiovascular conditions and iffy situations. 
+    <br><br>Currently, we the detector covers the 164 food categories: <br>Apple Banana Bagel Tomato Beer Bread Broccoli Burrito Cake Carrot Candy Cheese Chicken Cookie Crab Croissant Cucumber Dessert Doughnut Drink Duck Fish Grape Goose Grapefruit Hamburger
+      Juice Lemon Lobster Mango Milk Muffin Mushroom Orange Oyster Pancake Pasta Pear Pig Pineapple Pizza Popcorn Potato Pretzel Pumpkin Salad Sandwich Seafood
+      Sheep Shellfish Shrimp Snack Strawberry Sushi Taco Tart Tea Turkey Vegetable Waffle Wine Zucchini. (food100) rice eels-on-rice pilaf chicken-n-egg-on-rice pork-cutlet-on-rice beef-curry sushi chicken-rice fried-rice tempura-bowl bibimbap toast croissant roll-bread raisin-bread chip-butty
+      hamburger pizza sandwiches udon-noodle tempura-udon soba-noodle ramen-noodle beef-noodle tensin-noodle fried-noodle spaghetti Japanese-style-pancake takoyaki gratin sauteed-vegetables croquette
+      grilled-eggplant sauteed-spinach vegetable-tempura miso-soup potage sausage oden omelet ganmodoki jiaozi stew teriyaki-grilled-fish fried-fish grilled-salmon salmon-meuniere
+      sashimi grilled-pacific-saury- sukiyaki sweet-and-sour-pork lightly-roasted-fish steamed-egg-hotchpotch tempura fried-chicken sirloin-cutlet nanbanzuke boiled-fish seasoned-beef-with-potatoes
+      hambarg-steak beef-steak dried-fish ginger-pork-saute spicy-chili-flavored-tofu yakitori cabbage-roll rolled-omelet egg-sunny-side-up fermented-soybeans cold-tofu
+      egg-roll chilled-noodle stir-fried-beef-and-peppers simmered-pork boiled-chicken-and-vegetables sashimi-bowl sushi-bowl fish-shaped-pancake-with-bean-jam
+      shrimp-with-chill-source roast-chicken steamed-meat-dumpling omelet-with-fried-rice cutlet-curry spaghetti-meat-sauce
+      fried-shrimp potato-salad green-salad macaroni-salad Japanese-tofu-and-vegetable-chowder pork-miso-soup chinese-soup beef-bowl kinpira-style-sauteed-burdock rice-ball
+      pizza-toast dipping-noodles hot-dog french-fries mixed-rice goya-chanpuru
+    </p>
+  
+</div>
+<div id="technicality" class="panal">
+  <div class = "closebutton" onclick="toggleTextramen()" >CLOSE</div>
+  <h2>technicality</h2>
+  <p>
+    The project is initiated with YOLO (You Only Look Once) v4, it is a fast, and reasoning globbally y about the full image and all the object in the image, YOLO gives generalizable representations of objects.(by <a href="https://arxiv.org/abs/2004.10934?sid=NDAqzT" target="_blank">Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi. You Only Look Once: Unified, Real-Time Object Detection. arXiv:1506.02640 [cs.CV]</a>)
+  </p>
+  <img src="yolo.png" width="30%">
+  <p>training:
+    <br>&emsp;dataset: 
+    <br>&emsp;&emsp;open images dataset;
+    <br>&emsp;&emsp;62 food classes * ~300 images(bboxes)/class = ~18k
+    <br>&emsp;&emsp;grocery products
+    <br> &emsp;100+ hours with mAP(mean average precision) 35.6%
+    <br> &emsp;not working well on: 
+    <br> &emsp;&emsp;Generic categories: snacks/ desserts/ drinks
+    <br> &emsp;&emsp;Morphologically similar classes: Doughnut and Bagel; Lemon and Orange and Grapefruit; Wine and Beer and Drinks
+    <br><br>rederencing:
+    <br>&emsp;cross reference with food nutrition chart 
+    <br>&emsp;call up alert emoji when certain kind of risk is detected.
+
+
+  </p>
+  <a href="https://storage.googleapis.com/openimages/web/visualizer/index.html?set=train&type=detection&c=%2Fm%2F0ccs93" target="_blank">data: google openimages</a>
+  <br>
+  <a href="https://github.com/AlexeyAB/darknet" target="_blank">yolo: darknet</a>
+</div>
+<div id="scenerio" class="panal">
+  <div class = "closebutton" onclick="toggleTextgrape()" >CLOSE</div>
+  <h2>scenerio</h2>
+  <p>
+    #socialmediachallenge
+    <br>#day care center
+    <br>#anti-food commercials
+    <br>#anti-food porn
+    <br>
+    ...
+  </p>
+  
+</div>
+<div id="header">
+   <h1>REALTIME<br>FOOD | NUTRITION<br>EQUITY<br>DETECTOR</h1> 
+   
+</div>
+<div class="videos">
+  <video id="video" src = "o1_AdobeExpress1.mp4" loop crossOrigin="anonymous" display = "none">
+  </video>
+  <video id="video2" src = "v1.mp4" loop crossOrigin="anonymous" display = "none">
+  </video>
+  <video id="video3" src = "v2.mp4" loop crossOrigin="anonymous" display = "none">
+  </video>
+</div>
+
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js'></script>
+<script src='https://klevron.github.io/codepen/three.js/OrbitControls.110.js'></script>
+<script  src="foodscript.js"></script>
+<script>
+  function toggleTextbun(){
+    var x = document.getElementById("info");
+    var y = document.getElementById("technicality");
+    var z = document.getElementById("scenerio");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      y.style.display = "none";
+      z.style.display = "none";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  function toggleTextramen(){
+    var x = document.getElementById("info");
+    var y = document.getElementById("technicality");
+    var z = document.getElementById("scenerio");
+   if (y.style.display === "none") {
+      y.style.display = "block";
+      x.style.display = "none";
+      z.style.display = "none";
+    } else {
+      y.style.display = "none";
+    }
+  }
+  function toggleTextgrape(){
+    var x = document.getElementById("info");
+    var y = document.getElementById("technicality");
+    var z = document.getElementById("scenerio");
+    if (z.style.display === "none") {
+      x.style.display = "none";
+      y.style.display = "none";
+      z.style.display = "block";
+    } else {
+      z.style.display = "none";
+    }
+  }
+  </script>
+</body>
+</html>
+
+
