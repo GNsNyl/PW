@@ -1,0 +1,236 @@
+body {
+	margin: 0;
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+	font-family: Arial, Helvetica, sans-serif;
+	/* font-size: 13px; */
+	line-height: 24px;
+	overscroll-behavior: none;
+}
+
+/* p {
+	color: blue;
+} */
+
+a {
+	color: rgb(0, 0, 0); ;
+	text-decoration: none; 
+}
+h1 {
+	font: Helvetica;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: left;
+}
+
+
+h2 {
+	font: Helvetica;
+	font-size: 24px;
+	font-weight: bold;	
+	text-align: center;
+
+
+}
+h3 {
+	font: Helvetica;
+	font-size: 16px;
+}
+table {
+	table-layout: fixed;
+	width: 100%;
+  }
+/* .hide {
+	display: none;
+	font-size: 12px;
+	text-align:center;
+  } */
+.myDIV{
+	z-index: 9999;
+	padding: 70px 0;
+	font-size: 12px;
+	text-align: center ;
+}
+/* .myDIV:hover + .hide {
+	display: block;
+	font-size: 12px;
+	text-align:center; 
+	color: white;
+	font-weight: lighter;
+	transition: 0.35s
+
+  } */
+
+/* p {
+	font: Helvetica;
+	font-size: 14px;
+	font-weight: 50;
+	text-align: left; 
+} */
+
+.panal{
+	position: absolute;
+	font: Impact;
+	/* background-color: rgba(0, 0, 255, 0.25); */
+	/* color:rgb(0, 255, 0); */
+	top: 200px;
+	left: 10vw;
+	right: 10vw;
+	font-size: 14px;
+	/* width: 60%; */
+	padding: 5px;
+	/* box-sizing: border-box; */
+	/* text-align: center; */
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: auto;
+    z-index: 1000;
+	overflow: auto
+}
+.closebutton{
+	/* position: absolute; */
+	font-size: 14px;
+	pointer-events: auto;
+	cursor: pointer;
+	/* color:rgb(0, 255, 0); */
+	/* text-align: left; */
+	z-index: 2;
+	transition: 0.35s
+}
+
+#blm {
+	display: none;
+	transition: 0.35s
+}
+
+#india {
+	display: none;
+	transition: 0.35s
+}
+
+#cleve {
+	display: none;
+	transition: 0.35s
+}
+
+#city {
+	display: none;
+	transition: 0.35s
+}
+
+#naked {
+	display: none;
+	transition: 0.35s
+}
+
+
+button {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+#text {
+	width: 90vw;
+	z-index: 999;
+	cursor: pointer;
+
+}
+#info {
+	position: absolute;
+	top: 10px;
+	font-size: 60px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: auto;
+	z-index: 1000; /* TODO Solve this in HTML */
+}
+
+#bottom {
+	position: absolute;
+	top: 90vh;
+	font-size:24px;
+	width: 100%;
+	color: white;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: auto;
+	z-index: 1000; /* TODO Solve this in HTML */
+}
+#container {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 0px;
+	box-sizing: border-box;
+	text-align: center;
+	/* -moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none; */
+	/* user-select: none; */
+	/* pointer-events: none; */
+	z-index: -99;} 
+
+a, button, input, select {
+	pointer-events: auto;
+}
+
+/* .lil-gui {
+	z-index: 2 !important;
+} */
+
+@media all and ( max-width: 640px ) {
+	.lil-gui.root { 
+		right: auto;
+		top: auto;
+		max-height: 50%;
+		max-width: 80%;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+#overlay {
+	position: absolute;
+	font-size: 16px;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.7);
+}
+
+	#overlay button {
+		background: transparent;
+		border: 0;
+		border: 1px solid rgb(255, 255, 255);
+		border-radius: 4px;
+		color: #ffffff;
+		padding: 12px 18px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
