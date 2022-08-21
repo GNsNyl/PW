@@ -166,7 +166,7 @@
 
 	</div>
 	<script>
-				function toggleTextblm(){
+	    function toggleTextblm(){
 		  var x = document.getElementById("blm");
 		  var y = document.getElementById("india");
 		  var z = document.getElementById("naked");
@@ -274,7 +274,7 @@
         import * as THREE from 'https://unpkg.com/three@0.142.0/build/three.module.js';
 
 		import Stats from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/stats.module.js';
-		// import { GUI } from './jsm/libs/lil-gui.module.min.js';
+        import { GUI } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/dat.gui.module.js';
         // import * as dat from 'node_modules/dat.gui';
 
 		// import { OrbitControls } from './jsm/controls/OrbitControls.js';
@@ -286,11 +286,57 @@
         // let gui
 		let camera, light, backlight, controls, scene, renderer, material;
 
+        let sunLight, ambientLight, pointLight;
+
+        function addsunlight() {
+                sunLight = new THREE.SpotLight(0xffffff, 0.3, 0, Math.PI / 2);
+                sunLight.position.set(1000, 2000, 1000);
+                sunLight.castShadow = true;
+                sunLight.shadow.bias = -0.0002;
+                sunLight.shadow.camera.far = 4000;
+                sunLight.shadow.camera.near = 750;
+                sunLight.shadow.camera.fov = 30;
+
+                scene.add(sunLight);
+
+
+                pointLight = new THREE.PointLight(0xffaa00, 1, 5000);
+                pointLight.position.set(0, 0, 0);
+                scene.add(pointLight);
+
+                ambientLight = new THREE.AmbientLight(0x3f2806);
+                scene.add(ambientLight);
+        };
+        
+
+        
+
 		// gui
         // const gui = new dat.GUI()
 
 
-		const Method = {
+		
+
+        const loader = new THREE.TextureLoader();
+        const drawinggroup = new THREE.Group();
+        const bubblegroup = new THREE.Group();
+        var time = new THREE.Clock();
+        const objects=[];
+        const annotations=[];
+        const raycaster = new THREE.Raycaster();
+        const pointer = new THREE.Vector2();
+
+        bubblegroup.add(objects);
+
+		
+        init();
+        initmediaobj();
+        animate();
+        // addsunlight();
+
+                //
+		//
+        const Method = {
 			INSTANCED: 'INSTANCED',
 			MERGED: 'MERGED',
 			NAIVE: 'NAIVE'
@@ -301,371 +347,113 @@
 			count: 1000
 		};
 
-		//
-
-		init();
-        initmediaobj();
-		// initMesh();
-		animate();
-
-		//
-
-		// function clean() {
-
-		// 	const meshes = [];
-
-		// 	scene.traverse( function ( object ) {
-
-		// 		if ( object.isMesh ) meshes.push( object );
-
-		// 	} );
-
-		// 	for ( let i = 0; i < meshes.length; i ++ ) {
-
-		// 		const mesh = meshes[ i ];
-		// 		mesh.material.dispose();
-		// 		mesh.geometry.dispose();
-
-		// 		scene.remove( mesh );
-
-		// 	}
-
-		// }
-
-		// const randomizeMatrix = function () {
-
-		// 	const position = new THREE.Vector3();
-		// 	const rotation = new THREE.Euler();
-		// 	const quaternion = new THREE.Quaternion();
-		// 	const scale = new THREE.Vector3();
-
-		// 	return function ( matrix ) {
-
-		// 		position.x = Math.random() * 40 - 20;
-		// 		position.y = Math.random() * 40 - 20;
-		// 		position.z = Math.random() * 40 - 20;
-
-		// 		rotation.x = Math.random() * 2 * Math.PI;
-		// 		rotation.y = Math.random() * 2 * Math.PI;
-		// 		rotation.z = Math.random() * 2 * Math.PI;
-
-		// 		quaternion.setFromEuler( rotation );
-
-		// 		scale.x = scale.y = scale.z = Math.random() * 1;
-
-		// 		matrix.compose( position, quaternion, scale );
-
-		// 	};
-
-		// }();
-
-		// function initMesh() {
-
-		// 	clean();
-
-		// 	// make instances
-		// 	new THREE.BufferGeometryLoader()
-		// 		.setPath( 'models/json/' )
-		// 		.load( 'suzanne_buffergeometry.json', function ( geometry ) {
-
-		// 			material = new THREE.MeshNormalMaterial();
-
-		// 			geometry.computeVertexNormals();
-
-		// 			console.time( api.method + ' (build)' );
-
-		// 			switch ( api.method ) {
-
-		// 				case Method.INSTANCED:
-		// 					makeInstanced( geometry );
-		// 					break;
-
-		// 				case Method.MERGED:
-		// 					makeMerged( geometry );
-		// 					break;
-
-		// 				case Method.NAIVE:
-		// 					makeNaive( geometry );
-		// 					break;
-
-		// 			}
-
-		// 			console.timeEnd( api.method + ' (build)' );
-
-		// 		} );
-
-		// }
-
-		// function makeInstanced( geometry ) {
-
-		// 	const matrix = new THREE.Matrix4();
-		// 	const mesh = new THREE.InstancedMesh( geometry, material, api.count );
-
-		// 	for ( let i = 0; i < api.count; i ++ ) {
-
-		// 		randomizeMatrix( matrix );
-		// 		mesh.setMatrixAt( i, matrix );
-
-		// 	}
-
-		// 	scene.add( mesh );
-
-		// 	//
-
-		// 	const geometryByteLength = getGeometryByteLength( geometry );
-
-		// 	guiStatsEl.innerHTML = [
-
-		// 		'<i>GPU draw calls</i>: 1',
-		// 		'<i>GPU memory</i>: ' + formatBytes( api.count * 16 + geometryByteLength, 2 )
-
-		// 	].join( '<br/>' );
-
-		// }
-
-		// function makeMerged( geometry ) {
-
-		// 	const geometries = [];
-		// 	const matrix = new THREE.Matrix4();
-
-		// 	for ( let i = 0; i < api.count; i ++ ) {
-
-		// 		randomizeMatrix( matrix );
-
-		// 		const instanceGeometry = geometry.clone();
-		// 		instanceGeometry.applyMatrix4( matrix );
-
-		// 		geometries.push( instanceGeometry );
-
-		// 	}
-
-		// 	const mergedGeometry = BufferGeometryUtils.mergeBufferGeometries( geometries );
-
-		// 	scene.add( new THREE.Mesh( mergedGeometry, material ) );
-
-		// 	//
-
-		// 	guiStatsEl.innerHTML = [
-
-		// 		'<i>GPU draw calls</i>: 1',
-		// 		'<i>GPU memory</i>: ' + formatBytes( getGeometryByteLength( mergedGeometry ), 2 )
-
-		// 	].join( '<br/>' );
-
-		// }
-
-		// function makeNaive( geometry ) {
-
-		// 	const matrix = new THREE.Matrix4();
-
-		// 	for ( let i = 0; i < api.count; i ++ ) {
-
-		// 		randomizeMatrix( matrix );
-
-		// 		const mesh = new THREE.Mesh( geometry, material );
-		// 		mesh.applyMatrix4( matrix );
-
-		// 		scene.add( mesh );
-
-		// 	}
-
-		// 	//
-
-		// 	const geometryByteLength = getGeometryByteLength( geometry );
-
-		// 	guiStatsEl.innerHTML = [
-
-		// 		'<i>GPU draw calls</i>: ' + api.count,
-		// 		'<i>GPU memory</i>: ' + formatBytes( api.count * 16 + geometryByteLength, 2 )
-
-		// 	].join( '<br/>' );
-
-		// }
+        function onPointerDown( event ) {
+
+        // calculate pointer position in normalized device coordinates
+        // (-1 to +1) for both components
+
+
+            pointer.set( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1 );
+
+            raycaster.setFromCamera( pointer, camera );
+
+                        const intersects = raycaster.intersectObjects( objects, false );
+                        if ( intersects.length > 0 ) {
+                            const intersect = intersects[ 0 ];
+                            for (let a = 0; a<objects.length; a++){
+                                if (objects[a]===intersect.object) {
+                                    bubblegroup.add(annotations[a])
+                                } 
+                                else{
+                                    bubblegroup.remove(annotations[a])
+                                    
+                                }
+                            }
+            }
+        };
+        window.addEventListener( 'pointerdown', onPointerDown );
 
         function initmediaobj(){
-            var loader = new THREE.TextureLoader();
+            const medialist = ["chimney.png","cle.png", "city.jpeg", "blmplaza1.png", "blmplaza3.png", 
+                            "indian_1.png", "indian_3.png", "indian_4.png", "indian_4-2.png", 
+                            "indian_5.png", "disasterscnt.png", "nakedcity.png", "naked_city.png" ];
+        
+        
 
-            // const textureCube2 = [
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/1C.png") } ),
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/2C.png") } ),
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/3C.png") } ),
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/4C.png") } ),
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/5C.png") } ),
-            //     new THREE.MeshStandardMaterial( { map: loader.load("assets/6C.png") } ),
-
-            // ] ;
-//phong material
-            // const materialNormalMap = new THREE.MeshPhongMaterial( {
-
-            //     specular: 0x333333,
-            //     shininess: 15,
-            //     map: textureLoader.load( "textures/planets/earth_atmos_2048.jpg" ),
-            //     specularMap: textureLoader.load( "textures/planets/earth_specular_2048.jpg" ),
-            //     normalMap: textureLoader.load( "textures/planets/earth_normal_2048.jpg" ),
-
-            //     // y scale is negated to compensate for normal map handedness.
-            //     normalScale: new THREE.Vector2( 0.85, - 0.85 )
-
-            //     } );
-            var cmntexture = new THREE.MeshStandardMaterial( { map: loader.load("chimney.png"), transparent:true } );
-            var cletexture = new THREE.MeshStandardMaterial( { map: loader.load("cle.png") , transparent:true} );
-            var citytexture = new THREE.MeshStandardMaterial( { map: loader.load("city.jpeg") } );
-
-            var blm1texture = new THREE.MeshStandardMaterial( { map: loader.load("blmplaza1.png"), transparent:true } );
-            var blm2texture = new THREE.MeshStandardMaterial( { map: loader.load("blmplaza3.png"), transparent:true } );
-            var india1texture = new THREE.MeshStandardMaterial( { map: loader.load("indian_1.png"), transparent:true } );
-            var india2texture = new THREE.MeshStandardMaterial( { map: loader.load("indian_3.png"), transparent:true } );
-			var india3texture = new THREE.MeshStandardMaterial( { map: loader.load("indian_4.png"), transparent:true } );
-			var india4texture = new THREE.MeshStandardMaterial( { map: loader.load("indian_4-2.png"), transparent:true } );
-			var india5texture = new THREE.MeshStandardMaterial( { map: loader.load("indian_5.png"), transparent:true } );
-
-			var disastertexture = new THREE.MeshStandardMaterial({map: loader.load("disasterscnt.png"), transparent:true});
+            for (let i=0; i<medialist.length; i++){
+                let annotationmaterial, annotationgeo, annotationsprite, annotationmap;
 
 
-            var nakedcity2texture = new THREE.MeshStandardMaterial( { map: loader.load("nakedcity.png") , transparent: true},  );
-			var nakedcitytexture = new THREE.MeshStandardMaterial( { map: loader.load("naked_city.png"), transparent: true } );
+                let bubble, bubblegeo, bubblecolor;
+                
+                var mywidth = medialist[i].clientWidth;
+                var myheight = medialist[i].clientHeight;
+                var ratio = mywidth/myheight;
+                var imgwidth = 3;
 
-            var cmngeometry = new THREE.PlaneGeometry( 1.61, 2.15);
-			var citygeometry = new THREE.PlaneGeometry( 1.61, 2.15);
+                // annotationmaterial = new THREE.MeshBasicMaterial({map:loader.load(medialist[i]), transparent:true});
+                annotationmap = new THREE.TextureLoader().load( medialist[i]);
+                annotationmaterial = new THREE.SpriteMaterial( { map: annotationmap } );
+                // annotationgeo = new THREE.PlaneGeometry(4,4)   ;             
+                annotationmaterial.side = THREE.DoubleSide;
+                annotationsprite =  new THREE.Sprite( annotationmaterial );
+                // annotationsprite = new THREE.Mesh(annotationgeo, annotationmaterial);
 
-			var disastergeo = new THREE.PlaneGeometry(4.3, 4.3);
+                const color = new THREE.Color();
+                color.setHSL( Math.random(), 0.7, Math.random() * 0.2 + 0.05, 0.1 );
 
-			var clegeometry = new THREE.PlaneGeometry(2.15, 2.15);
-            var blmgeometry1 = new THREE.PlaneGeometry( 3.25, 2.15);
-			var blmgeometry2 = new THREE.PlaneGeometry( 2.35, 2.15);
+                bubblegeo = new THREE.SphereGeometry( 0.3, 15 );
+                
+                bubblecolor = new THREE.MeshBasicMaterial( { map: loader.load(medialist[i]), transparent:true } );
+                // bubblecolor = new THREE.MeshPhongMaterial({
+                //     shininess: 100,
+                //     color: 0xffffff,
+                //     specular: 0xffffff,
+                //     // envMap: cubeRenderTarget1.texture,
+                //     transparent: true,
+                //     side: THREE.BackSide,
+                //     blending: THREE.AdditiveBlending,
+                //     depthWrite: false
+                // });
+                bubble = new THREE.Mesh( bubblegeo, bubblecolor );
+                bubble.receiveShadow = true;
+                // bubble.position.set( 5*Math.random(),3* Math.random(), Math.random())
 
-			var indiangeometry = new THREE.PlaneGeometry( 1.89, 2.15);
+            
+                bubbleanimate();
 
-			var nakedcityngeometry1 = new THREE.PlaneGeometry( 3.1, 2.15);
-			var nakedcityngeometry2 = new THREE.PlaneGeometry( 1.4, 2.15);
-			var r = 0.1
+                function bubbleanimate() {
+                    const elapsedTime = time.getElapsedTime();
+                    const elapsedTimeInMs = Math.round(elapsedTime * 1000);
 
+                    const radius = 3;
+                    const speed = 0.008;
+                    const heightAngle = (i+1)*elapsedTime * speed + i/2;
+                    const thetaAngle = (i+1)* elapsedTime * -speed + i/2;
 
-            const cmn = new THREE.Mesh( cmngeometry, cmntexture );
-			const cle = new THREE.Mesh( clegeometry, cletexture );
-			const city = new THREE.Mesh( citygeometry, citytexture );
-
-			const disaster = new THREE.Mesh(disastergeo, disastertexture);
-
-            const blm = new THREE.Mesh( blmgeometry1, blm2texture );
-
-            const blm2 = new THREE.Mesh( blmgeometry2, blm1texture );
-			const india1 = new THREE.Mesh( indiangeometry, india1texture );
-            const india2 = new THREE.Mesh( indiangeometry, india2texture );
-            const india3 = new THREE.Mesh( indiangeometry, india3texture );
-            const india4 = new THREE.Mesh( indiangeometry, india4texture );
-            const india5 = new THREE.Mesh( indiangeometry, india5texture );
-
-			const nakedcity1 = new THREE.Mesh( nakedcityngeometry1, nakedcityngeometry1 );
-            const nakedcity2 = new THREE.Mesh( nakedcityngeometry2, nakedcity2texture );
-			
-			cmn.material.side = THREE.DoubleSide
-			city.material.side = THREE.DoubleSide
-			disaster.material.side = THREE.DoubleSide;
-
-			cle.material.side = THREE.DoubleSide
-			blm.material.side = THREE.DoubleSide
-			blm2.material.side = THREE.DoubleSide
-
-			india1.material.side = THREE.DoubleSide
-			india2.material.side = THREE.DoubleSide
-			india3.material.side = THREE.DoubleSide
-			india4.material.side = THREE.DoubleSide
-			india5.material.side = THREE.DoubleSide
-			nakedcity1.material.side = THREE.DoubleSide
-			nakedcity2.material.side = THREE.DoubleSide
-
-
-			// cmn.position.x = r * Math.sin(Math.Pi/8)
-			// cmn.position.z = -r*Math.cos(Math.Pi/8)
-
-			// blm.position.x = r*Math.sin(2*Math.Pi/8)
-			// blm.position.z = -r*Math.cos(2*Math.Pi/8)
-
-
-			// india1.position.x = r*Math.sin(3*Math.Pi/8)
-			// india1.position.z = -r*Math.cos(3*Math.Pi/8)
-			
-			// // cube2.position.x = 2
-			// india2.position.x = r*Math.sin(4*Math.Pi/8)
-			// india2.position.z = -r*Math.cos(4*Math.Pi/8)
-
-			// india3.position.x = r*Math.sin(5*Math.Pi/8)
-			// india3.position.z = -r*Math.cos(5*Math.Pi/8)
-
-			// india4.position.x = r*Math.sin(6*Math.Pi/8)
-			// india4.position.z = -r*Math.cos(6*Math.Pi/8)
-
-			// india5.position.x = r*Math.sin(7*Math.Pi/8)
-			// india5.position.z = -r*Math.cos(7*Math.Pi/8)
-			// nakedcity1.position.x = r*Math.sin(8*Math.Pi/8)
-			// nakedcity1.position.z = -r*Math.cos(8*Math.Pi/8)
-
-			// nakedcity2.position.x = r*Math.sin(9*Math.Pi/8)
-			// nakedcity2.position.z = -r*Math.cos(9*Math.Pi/8)
-
-			cmn.position.x = 0
-			cmn.position.z = 2
-
-			cmn.rotation.y = Math.random()
-			cle.position.x = 0
-			cle.position.z = -2
-
-			cle.rotation.y = Math.random()
-
-			disaster.position.x = -2;
-			disaster.position.z = 4;
-			disaster.position.y = 1.15;
-			disaster.rotation.y= Math.random();
-
-			city.position.x = 6
-			city.position.z = -5
-
-			city.rotation.y = Math.random()
-			// cmn.position.z = 0
-
-			
-			blm.position.x = -4
-			blm.position.z = -8
-			blm.rotation.y = Math.random()
+                    bubble.position.x = radius * Math.cos(thetaAngle) + i-4;
+                    bubble.position.y = radius * Math.sin(thetaAngle) + i-4;
+                    bubble.position.z = radius * Math.cos(heightAngle);
+                    
+                    annotationsprite.position.copy(bubble.position)
+                    annotationsprite.position.z = annotationsprite.position.z+1.5;
+                    annotationsprite.position.y = annotationsprite.position.y+0.5;
+                    annotationsprite.position.x = annotationsprite.position.x+0.5;            
+                    requestAnimationFrame( bubbleanimate );
+                    controls.update();
+                    render();
+                }
 
 
-			india1.position.x = 2
-			india1.position.z = 0
-			india1.rotation.y = Math.random()
+                objects.push(bubble)
+                annotations.push(annotationsprite)
+                // bubble.add(annotationsprite)
 
-			
-			india2.position.x = 2
-			india2.position.z = 3
-			india2.rotation.y = Math.random()
+                bubblegroup.add(bubble);
+                scene.add(bubblegroup)
 
 
-			india3.position.x = 2
-			india3.position.z = -3
-			india3.rotation.y = Math.random()
-
-
-			india4.position.x = 2
-			india4.position.z = -6
-			india4.rotation.y = Math.random()
-
-
-			india5.position.x = 2
-			india5.position.z = -6
-			india5.rotation.y = Math.random()
-
-			nakedcity1.position.x = 3.5
-			nakedcity1.position.z = -1.9
-			nakedcity1.rotation.y = Math.random()
-
-			nakedcity2.position.x = -4
-			nakedcity2.position.z = 3
-			nakedcity2.rotation.y = Math.random()
-
-			// cle1, cle2, cle3, blm1, blm2, 
-			// scene.add(blm)
-            scene.add(disaster, cmn,cle,blm, city, blm2, india1, india2, india3, india4, nakedcity1, nakedcity2)
-
+            };
         }
 
 		function init() {
@@ -676,10 +464,10 @@
 			// camera
 
 			camera = new THREE.PerspectiveCamera( 50, width / height, 1, 100 );
-			camera.position.z = 8;
-			camera.position.y = 3;
+			camera.position.z = 15;
+			// camera.position.y = 3;
 
-			camera.position.x = -2;
+			// camera.position.x = -2;
 
             //light
             light = new THREE.AmbientLight( 0xffffff, 1 );
@@ -702,6 +490,8 @@
 
 			scene = new THREE.Scene();
 			scene.background = new THREE.Color( 0xffffff );
+            scene.fog = new THREE.Fog(0x00aaff, 1000, 10000);
+
 
 			// controls
 
@@ -710,27 +500,11 @@
 
 			// stats
 
-// 			stats = new Stats();
-// 			container.appendChild( stats.dom );
+			stats = new Stats();
+			container.appendChild( stats.dom );
 
 
             scene.add(light)
-
-			// gui
-
-			// gui = new GUI();
-			// gui.add( api, 'method', Method ).onChange( initMesh );
-			// gui.add( api, 'count', 1, 10000 ).step( 1 ).onChange( initMesh );
-
-			// const perfFolder = gui.addFolder( 'Performance' );
-
-			// guiStatsEl = document.createElement( 'div' );
-			// guiStatsEl.classList.add( 'gui-stats' );
-
-			// perfFolder.$children.appendChild( guiStatsEl );
-			// perfFolder.open();
-
-			// listeners
 
 			window.addEventListener( 'resize', onWindowResize );
 
@@ -757,7 +531,7 @@
 			requestAnimationFrame( animate );
 
 			controls.update();
-// 			stats.update();
+			stats.update();
 
 			render();
 
