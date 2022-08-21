@@ -288,25 +288,25 @@
 
         let sunLight, ambientLight, pointLight;
 
-        function addsunlight() {
-                sunLight = new THREE.SpotLight(0xffffff, 0.3, 0, Math.PI / 2);
-                sunLight.position.set(1000, 2000, 1000);
-                sunLight.castShadow = true;
-                sunLight.shadow.bias = -0.0002;
-                sunLight.shadow.camera.far = 4000;
-                sunLight.shadow.camera.near = 750;
-                sunLight.shadow.camera.fov = 30;
+//         function addsunlight() {
+//                 sunLight = new THREE.SpotLight(0xffffff, 0.3, 0, Math.PI / 2);
+//                 sunLight.position.set(1000, 2000, 1000);
+//                 sunLight.castShadow = true;
+//                 sunLight.shadow.bias = -0.0002;
+//                 sunLight.shadow.camera.far = 4000;
+//                 sunLight.shadow.camera.near = 750;
+//                 sunLight.shadow.camera.fov = 30;
 
-                scene.add(sunLight);
+//                 scene.add(sunLight);
 
 
-                pointLight = new THREE.PointLight(0xffaa00, 1, 5000);
-                pointLight.position.set(0, 0, 0);
-                scene.add(pointLight);
+//                 pointLight = new THREE.PointLight(0xffaa00, 1, 5000);
+//                 pointLight.position.set(0, 0, 0);
+//                 scene.add(pointLight);
 
-                ambientLight = new THREE.AmbientLight(0x3f2806);
-                scene.add(ambientLight);
-        };
+//                 ambientLight = new THREE.AmbientLight(0x3f2806);
+//                 scene.add(ambientLight);
+//         };
         
 
         
@@ -398,6 +398,7 @@
                 annotationmaterial.side = THREE.DoubleSide;
                 annotationsprite =  new THREE.Sprite( annotationmaterial );
                 // annotationsprite = new THREE.Mesh(annotationgeo, annotationmaterial);
+// 		  annotationsprite.scale.set( 2, 2, 1 );
 
                 const color = new THREE.Color();
                 color.setHSL( Math.random(), 0.7, Math.random() * 0.2 + 0.05, 0.1 );
@@ -497,6 +498,7 @@
 
 			controls = new OrbitControls( camera, renderer.domElement );
 			controls.autoRotate = false;
+			controls.zoomSpeed = 2;
 
 			// stats
 
