@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>spectacular bostonelectropolis</title>
+		<title>Spectacular BOSTONELECTROPOLIS</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<link type="text/css" rel="stylesheet" href="main.css">
@@ -20,8 +20,18 @@
 				<h2 onclick="toggleTextproposition()" >proposition</h2>
 				<h2 onclick="toggleTextgis()">gis interpolation</h2>
 				<h2 onclick="toggleTextai()">ai classifier</h2>
-				<h2><a href="https://liu-yunsong.com/" target="_blank">homepage</a></h2>
 		</div>
+		<div class="videos">
+			<video id="goegetown" src = "goegetownfinalresult.mp4" loop   autoplay="true" muted="muted" crossOrigin="anonymous" display = "none">
+			</video>
+			<video id="jamacaplain" src = "jamacaplainfinalresult.mp4" loop   autoplay="true" muted="muted" crossOrigin="anonymous" display = "none">
+			</video>
+			<video id="southboston" src = "southbostonfinalresult.mp4" loop   autoplay="true" muted="muted" crossOrigin="anonymous" display = "none">
+			</video>
+			<video id="summunt" src = "summuntfinalresult.mp4" loop   autoplay="true" muted="muted" crossOrigin="anonymous" display = "none">
+			</video>
+		  </div>
+
 		<div id="info" class="panal">
 			<div class = "closebutton" onclick="toggleTextproposition()" >CLOSE</div>
 			<h2>information</h2>
@@ -159,6 +169,9 @@
 			
 			
 			const ENTIRE_SCENE = 0, BLOOM_SCENE = 1;
+			let videomap;
+			let isShiftDown = false;
+			const loader = new THREE.TextureLoader();
 
 			const bloomLayer = new THREE.Layers();
 			bloomLayer.set( BLOOM_SCENE );
@@ -181,6 +194,7 @@
 			document.body.appendChild( renderer.domElement );
 
 			const scene = new THREE.Scene();
+			scene.autoUpdate=true;
 
 			const camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 200 );
 			camera.position.set( 0, 0, 100 );
@@ -226,6 +240,16 @@
 			const raycaster = new THREE.Raycaster();
 
 			const mouse = new THREE.Vector2();
+			// const bubblegroup = new THREE.Group();
+			
+
+			const objects=[];
+       		const annotations=[];
+			const bloomobject = [];
+			// bubblegroup.add(objects);
+			// scene.add(objects)
+
+
 
 			window.addEventListener( 'pointerdown', onPointerDown );
 
@@ -282,6 +306,7 @@
 			} );
 
 			setupScene();
+			addmapvideo();
 
 			function onPointerDown( event ) {
 
@@ -289,12 +314,15 @@
 				mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
 
 				raycaster.setFromCamera( mouse, camera );
-				const intersects = raycaster.intersectObjects( scene.children, false );
+				const intersects = raycaster.intersectObjects( bloomobject, false );
 				if ( intersects.length > 0 ) {
 
 					const object = intersects[ 0 ].object;
-					object.layers.toggle( BLOOM_SCENE );
+					if (object !== videomap ) {
+						object.layers.toggle( BLOOM_SCENE );
 					render();
+					}
+					
 
 				}
 
@@ -324,7 +352,6 @@
 				scene.traverse( disposeMaterial );
 				scene.children.length = 0;
 
-				const loader = new THREE.TextureLoader();
 				
 				const bostongeo = new THREE.BoxGeometry(7,3,2);
 				const bostontexture = [
@@ -350,9 +377,9 @@
 					new THREE.MeshBasicMaterial( { map: loader.load("keywords.png"), transparent:true } ),
 					];
 				const keywordcube = new THREE.Mesh(keywordgeo,keywordtexture);
-				keywordcube.position.z=0;
-				keywordcube.position.y=-10;
-				keywordcube.position.x=3;
+				keywordcube.position.z=5;
+				keywordcube.position.y=-15;
+				keywordcube.position.x=30;
 
 				const clevegeo = new THREE.BoxGeometry(17,6);
 				const clevetexture = [
@@ -366,7 +393,7 @@
 				const clevecube = new THREE.Mesh(clevegeo,clevetexture);
 				clevecube.position.z=0;
 				clevecube.position.y=-10;
-				clevecube.position.x=25;
+				clevecube.position.x=45;
 
 
 				const bookgeo = new THREE.BoxGeometry(21,6);
@@ -381,7 +408,7 @@
 				const bookcube = new THREE.Mesh(bookgeo,booktexture);
 				bookcube.position.z=10;
 				bookcube.position.y=10;
-				bookcube.position.x=20;
+				bookcube.position.x=30;
 
 				const scenegeo = new THREE.BoxGeometry(23,23);
 				const scenetexture = [
@@ -393,46 +420,19 @@
 					new THREE.MeshBasicMaterial( { map: loader.load("lightscene.png"), transparent:true } ),
 					];
 				const scenecube = new THREE.Mesh(scenegeo,scenetexture);
-				scenecube.position.z=-20;
-				scenecube.position.y=-11;
-				// scenecube.position.x=-20;
+				scenecube.position.z =-14;
+				scenecube.position.y =-11;
+				scenecube.position.x = 36;
 
-
-				// var bosmaptabcoordinatesList = [
-				// 	new THREE.Vector3(0, 0, 0),
-				// 	new THREE.Vector3(0, 4.9, 0),
-				// 	new THREE.Vector3(6, 4.9, 0),
-				// 	new THREE.Vector3(6.4, 4.9, 0),
-				// 	new THREE.Vector3(6.4, 3.6, 0),
-				// 	new THREE.Vector3(6, 3.6, 0),
-
-				// 	new THREE.Vector3(6, 0, 0),
-				// ];
-
-
-				// maptab shape
-				// var bosmaptabShape = new THREE.ShapeBufferGeometry(new THREE.Shape(bosmaptabcoordinatesList));
-				const maplist = [ "income.png","latemap.png", "earlymap.png", "streetlightmap.png"]
+				const maplist = ["latemap.png", "earlymap.png", "streetlightmap.png"];
 				for(let i=0; i<maplist.length; i++) {
 					
-					// var cubegeo = new THREE.BoxGeometry(2,2,2);
-					// var cubematerial = new THREE.MeshBasicMaterial({color:0xffffff})
-					// var cubemap = new THREE.Mesh(cubegeo, cubematerial)
-
-					// var group = new THREE.Group();
-					// group.add(bostab, cubemap);
-					// cubemap.position.x = -15-3*i;
-					// cubemap.position.y =-10
-
-					// bostab.add(cubemap)
 					var bosmaptabShape = new THREE.PlaneGeometry(38.4,29.4)
 			
 					var bostabmaterial = new THREE.MeshBasicMaterial({map: loader.load(maplist[i]), transparent:true});
 					// bostabmaterial.alphaTest = 0.5;
 					var bostab = new THREE.Mesh(bosmaptabShape, bostabmaterial);
 					bostab.material.side = THREE.DoubleSide
-
-
 
 					bostab.position.z= 2*i ;
 					bostab.position.x=-30;
@@ -441,33 +441,24 @@
 					if ( Math.random() < 0.25 ) bostab.layers.enable( BLOOM_SCENE );
 					// if ( Math.random() < 0.25 ) cubemap.layers.enable( BLOOM_SCENE );
 					scene.add(bostab);
+					bloomobject.push(bostab);
+				};
 
-				}
-
-				var bosmaptabShape2 = new THREE.PlaneGeometry(38.4,29.4)
+				var bosmaptabShape2 = new THREE.PlaneGeometry(38.4,29.4);
 			
 					var bostbmaterial2 = new THREE.MeshBasicMaterial({map: loader.load("citymap.png"), transparent:true});
 					bostabmaterial.alphaTest = 0.5;
 					var bostab2 = new THREE.Mesh(bosmaptabShape2, bostbmaterial2);
 					bostab2.material.side = THREE.DoubleSide
 
-
-
 					bostab2.position.z= 8 ;
 					bostab2.position.x=-30;
 					bostab2.position.y=-10;
 
-					if ( Math.random() < 1000 ) bostab2.layers.enable( BLOOM_SCENE );
+				if ( Math.random() < 1000 ) bostab2.layers.enable( BLOOM_SCENE );
 					// if ( Math.random() < 0.25 ) cubemap.layers.enable( BLOOM_SCENE );
 					scene.add(bostab2);
-				
-				
-
-
-				
-				
-				// 
-
+					bloomobject.push(bostab2);
 
 				if ( Math.random() < 1000 ) bostoncube.layers.enable( BLOOM_SCENE );
 				if ( Math.random() < 0.15 ) keywordcube.layers.enable( BLOOM_SCENE );
@@ -476,10 +467,26 @@
 
 				if ( Math.random() < 0.15 ) clevecube.layers.enable( BLOOM_SCENE );
 
-
-
 				scene.add(bostoncube, keywordcube, bookcube, scenecube, clevecube);
+				bloomobject.push(bostoncube, keywordcube, bookcube, scenecube, clevecube);
+				let videomapgeo, videomapmaterial;
 
+				
+
+				videomapgeo = new THREE.PlaneGeometry(76.8,58.8);
+				videomapmaterial = new THREE.MeshBasicMaterial({map: loader.load("videomap.png"), transparent:true});
+				videomapmaterial.side= THREE.DoubleSide;
+				videomap = new THREE.Mesh(videomapgeo, videomapmaterial);
+				// videomap.rotation.y = Math.PI;
+				videomap.position.x = 6;
+				videomap.position.y =-5;
+				videomap.position.z =-38;
+
+				// if ( Math.random() < 0.15 ) videomap.layers.enable( BLOOM_SCENE );
+
+				scene.add(videomap);
+				
+				
 
 				const geometry = new THREE.IcosahedronGeometry( 1, 15 );
 
@@ -487,26 +494,21 @@
 
 					const color = new THREE.Color();
 					color.setHSL( Math.random(), 0.7, Math.random() * 0.2 + 0.05 );
-
 					const material = new THREE.MeshBasicMaterial( { color: color } );
 					const sphere = new THREE.Mesh( geometry, material );
 					sphere.position.x = -56+4*i;
 					sphere.position.y = -25;
 					sphere.position.z = 15;
-
 					// sphere.position.x = Math.random() * 50 - 25;
 					// sphere.position.y = Math.random() * 30 - 15;
 					// sphere.position.z = Math.random() * 10 - 5;
 					// sphere.position.normalize().multiplyScalar( Math.random() * 4.0 + 2.0 );
 					// sphere.scale.setScalar( Math.random() * Math.random() + 0.5 );
 					scene.add( sphere );
-
+					bloomobject.push(sphere);
 					if ( Math.random() < 10000000 ) sphere.layers.enable( BLOOM_SCENE );
-
 				}
-
 				render();
-
 			}
 
 			function disposeMaterial( obj ) {
@@ -581,6 +583,95 @@
 				}
 
 			}
+
+	function onPointerDownmap( event ) {
+
+		mouse.set( ( event.clientX / window.innerWidth ) * 2 - 1, - ( event.clientY / window.innerHeight ) * 2 + 1 );
+
+		raycaster.setFromCamera( mouse, camera );
+
+					const intersects = raycaster.intersectObjects( objects, false );
+					if ( intersects.length > 0 ) {
+						const intersect = intersects[ 0 ];
+						// if ( isShiftDown ){
+							for (let a = 0; a<objects.length; a++){
+							if (objects[a]===intersect.object) {
+								scene.add(annotations[a])
+							} 
+							else{
+								scene.remove(annotations[a])
+							}
+						}
+						
+						} else {
+							scene.remove(annotations)
+						// }
+		}
+	};
+	window.addEventListener( 'pointerdown', onPointerDownmap );
+
+function addmapvideo() {
+	
+	const videoidlist=["goegetown", "jamacaplain","southboston", "summunt" ];
+	const videosrclist=["goegetownfinalresult.mp4", "jamacaplainfinalresult.mp4","southbostonfinalresult.mp4", "summuntfinalresult.mp4" ];
+	const videoiconpositionxlist = [278/1600,501/1600,963/1600,718/1600];
+	const videoiconpositionylist = [300/1200,580/1200,802/1200,787/1200];
+	for (let i=0; i <videoidlist.length; i++){
+		let video, videotexture, videogeometry, videomaterial, videoannotation;
+		let videoicon, videoiconmaterial, videoicongeometry;
+
+		video = document.getElementById( videoidlist[i] );
+					video.src = videosrclist[i];
+					video.load();
+					video.play();
+
+		videogeometry = new THREE.PlaneGeometry(12,8);
+
+		videotexture = new THREE.VideoTexture( video );
+		videomaterial = new THREE.MeshBasicMaterial({map: videotexture})
+		videoannotation =  new THREE.Mesh(videogeometry, videomaterial);
+
+		videoicongeometry = new THREE.BoxGeometry(2, 2, 2);
+		videoiconmaterial = new THREE.MeshBasicMaterial({map:loader.load("cleve.png"), transparent:true});
+		videoicon = new THREE.Mesh(videoicongeometry, videoiconmaterial);
+		// videoicon.rotation
+		// videoicon.position.x = 6;
+		// videoicon.position.y=0;
+		videoicon.position.x = videoiconpositionxlist[i]*75 + 6-0.5*75;
+		videoicon.position.y = videoiconpositionylist[i]*55 -5 - 0.5*55;
+		videoicon.position.z = -38; 
+		//see videomap.position.z//
+
+		videoannotation.position.copy(videoicon.position);
+		videoannotation.position.y = videoannotation.position.y+0.5;
+		videoannotation.position.z= videoannotation.position.z +1;
+		videoicon.layers.enable( BLOOM_SCENE )
+
+		objects.push(videoicon);
+		// bubblegroup.add(videoicon);
+		scene.add(videoicon)
+		annotations.push(videoannotation)
+	}
+};
+function onDocumentKeyDown( event ) {
+
+switch ( event.keyCode ) {
+
+	case 16: isShiftDown = true; break;
+
+}
+
+}
+
+function onDocumentKeyUp( event ) {
+
+switch ( event.keyCode ) {
+
+	case 16: isShiftDown = false; break;
+
+}
+
+}
 
 		</script>
 
