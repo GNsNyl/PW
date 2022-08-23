@@ -123,3 +123,7 @@ canvas {
 		display: none;
 		transition: 0.35s
 	}
+
+	.videos{
+		display: none;
+	}
