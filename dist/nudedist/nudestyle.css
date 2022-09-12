@@ -35,6 +35,9 @@
   align-items: center;
 
 }
+html {  scroll-behavior: smooth;
+
+}
 .bottomPosition{
 
   width: 80vw;
