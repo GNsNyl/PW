@@ -8,6 +8,20 @@ html, body {
   color: white;
   font-size: 9px;
 }
+table {
+  table-layout: fixed;
+  width: 120px;
+  overflow: scroll;
+  border: 1px solid red;
+}
+
+td {
+  border: 1px solid blue;
+  overflow: scroll;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+Copy to Clipboard
 
 #magic {
 
