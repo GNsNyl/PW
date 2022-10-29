@@ -14,7 +14,7 @@ html, body {
   position: fixed;
   width: 100%;
   height: 100vh;
-  display: block;
+  display: contents;
   top: 0;
   left: 0;
   z-index: -9999;
