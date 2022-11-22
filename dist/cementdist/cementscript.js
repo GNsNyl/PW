@@ -5,7 +5,7 @@ function App() {
     cameraZ: 8,
     cameraX:0,
     cameraY:-2,
-    background: 0x0000ff,
+    background: 0xffffff,
   };
 
   let renderer, scene, camera, cameraCtrl;
