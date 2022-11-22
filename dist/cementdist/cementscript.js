@@ -5,7 +5,7 @@ function App() {
     cameraZ: 8,
     cameraX:0,
     cameraY:-2,
-    background: 0xffffff,
+    background: 0x0000ff,
   };
 
   let renderer, scene, camera, cameraCtrl;
@@ -25,7 +25,7 @@ function App() {
   init();
   initmediaobj();
   initbox();
-  initcalendar();
+  // initcalendar();
 
   function initmediaobj(){
     const light = new THREE.AmbientLight(0xffffff,0)
@@ -329,60 +329,60 @@ function initbox(){
     // cameraCtrl.rotateSpeed = 0.5;
   }
   
-  function initcalendar() {
-    calendarlist = ["vig5.png","vig4.png","vig3.png","vig2.png","vig1.png"];
-    cpositionlistx = [0,6.4,6.4*2, 6.4*3, 6.4*4, 6.4*5];
-    let cmaterial1,cmaterial2, cmaterial3, cmaterial4, cmaterial5, cgeometry;
-    let calendar1, calendar2, calendar3, calendar4, calendar5;
-    cmaterial1 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[0]), transparent:true});
-    cmaterial2 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[1]), transparent:true})
-    cmaterial3 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[2]), transparent:true})
-    cmaterial4 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[3]), transparent:true})
-    cmaterial5 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[4]), transparent:true})
-
-    cgeometry = new THREE.PlaneGeometry(6.4, 8.75)
-    calendar1 = new THREE.Mesh(cgeometry,cmaterial1)
-    calendar2 = new THREE.Mesh(cgeometry,cmaterial2)
-    calendar3 = new THREE.Mesh(cgeometry,cmaterial3)
-    calendar4 = new THREE.Mesh(cgeometry,cmaterial4)
-    calendar5 = new THREE.Mesh(cgeometry,cmaterial5)      
-    calendar1.position.z=2;
-    calendar1.position.y=-2;
-    calendar2.position.z=2;
-    calendar2.position.y=-2;
-    calendar3.position.z=2;
-    calendar3.position.y=-2;
-    calendar4.position.z=2;
-    calendar4.position.y=-2;
-    calendar5.position.z=2;
-    calendar5.position.y=-2;
-    calendar1.position.x = -cpositionlistx[0]-20;
-    calendar2.position.x = -cpositionlistx[1]-20;
-    calendar3.position.x = -cpositionlistx[2]-20;
-    calendar4.position.x = -cpositionlistx[3]-20;
-    calendar5.position.x = -cpositionlistx[4]-20;
-
-    // scene.add(calendar1)
-    scene.add(calendar1, calendar2, calendar3, calendar4, calendar5)
-
-      function dissolvecalendar(){
-        if (window.scrollY < 5500){
-          calendar1.position.x = -cpositionlistx[0]-20;
-          calendar2.position.x = -cpositionlistx[1]-20;
-          calendar3.position.x = -cpositionlistx[2]-20;
-          calendar4.position.x = -cpositionlistx[3]-20;
-          calendar5.position.x = -cpositionlistx[4]-20;
-        } else {
-          calendar1.position.x = -cpositionlistx[0]-65 + 0.01*window.scrollY;
-          calendar2.position.x = -cpositionlistx[1]-65+ 0.01*window.scrollY;
-          calendar3.position.x = -cpositionlistx[2]-65+ 0.01*window.scrollY;
-          calendar4.position.x = -cpositionlistx[3]-65+ 0.01*window.scrollY;
-          calendar5.position.x = -cpositionlistx[4]-65+ 0.01*window.scrollY;
-        }
-      }
-      window.addEventListener("scroll", dissolvecalendar);
-      
-  }
+  // function initcalendar() {
+  //   calendarlist = ["vig5.png","vig4.png","vig3.png","vig2.png","vig1.png"];
+  //   cpositionlistx = [0,6.4,6.4*2, 6.4*3, 6.4*4, 6.4*5];
+  //   let cmaterial1,cmaterial2, cmaterial3, cmaterial4, cmaterial5, cgeometry;
+  //   let calendar1, calendar2, calendar3, calendar4, calendar5;
+  //   cmaterial1 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[0]), transparent:true});
+  //   cmaterial2 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[1]), transparent:true})
+  //   cmaterial3 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[2]), transparent:true})
+  //   cmaterial4 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[3]), transparent:true})
+  //   cmaterial5 =new THREE.MeshBasicMaterial({map: loader.load(calendarlist[4]), transparent:true})
+  //
+  //   cgeometry = new THREE.PlaneGeometry(6.4, 8.75)
+  //   calendar1 = new THREE.Mesh(cgeometry,cmaterial1)
+  //   calendar2 = new THREE.Mesh(cgeometry,cmaterial2)
+  //   calendar3 = new THREE.Mesh(cgeometry,cmaterial3)
+  //   calendar4 = new THREE.Mesh(cgeometry,cmaterial4)
+  //   calendar5 = new THREE.Mesh(cgeometry,cmaterial5)
+  //   calendar1.position.z=2;
+  //   calendar1.position.y=-2;
+  //   calendar2.position.z=2;
+  //   calendar2.position.y=-2;
+  //   calendar3.position.z=2;
+  //   calendar3.position.y=-2;
+  //   calendar4.position.z=2;
+  //   calendar4.position.y=-2;
+  //   calendar5.position.z=2;
+  //   calendar5.position.y=-2;
+  //   calendar1.position.x = -cpositionlistx[0]-20;
+  //   calendar2.position.x = -cpositionlistx[1]-20;
+  //   calendar3.position.x = -cpositionlistx[2]-20;
+  //   calendar4.position.x = -cpositionlistx[3]-20;
+  //   calendar5.position.x = -cpositionlistx[4]-20;
+  //
+  //   // scene.add(calendar1)
+  //   scene.add(calendar1, calendar2, calendar3, calendar4, calendar5)
+  //
+  //     function dissolvecalendar(){
+  //       if (window.scrollY < 5500){
+  //         calendar1.position.x = -cpositionlistx[0]-20;
+  //         calendar2.position.x = -cpositionlistx[1]-20;
+  //         calendar3.position.x = -cpositionlistx[2]-20;
+  //         calendar4.position.x = -cpositionlistx[3]-20;
+  //         calendar5.position.x = -cpositionlistx[4]-20;
+  //       } else {
+  //         calendar1.position.x = -cpositionlistx[0]-65 + 0.01*window.scrollY;
+  //         calendar2.position.x = -cpositionlistx[1]-65+ 0.01*window.scrollY;
+  //         calendar3.position.x = -cpositionlistx[2]-65+ 0.01*window.scrollY;
+  //         calendar4.position.x = -cpositionlistx[3]-65+ 0.01*window.scrollY;
+  //         calendar5.position.x = -cpositionlistx[4]-65+ 0.01*window.scrollY;
+  //       }
+  //     }
+  //     window.addEventListener("scroll", dissolvecalendar);
+  //
+  // }
 
   function animate() {
     if (!mouseOver) {
