@@ -1,0 +1,14 @@
+{
+  "name": "@d3/ridgeline-plot",
+  "main": "16322ee964add9a2@259.js",
+  "version": "259.0.0",
+  "homepage": "https://observablehq.com/@d3/ridgeline-plot",
+  "author": {
+    "name": "D3",
+    "url": "https://observablehq.com/@d3"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}
