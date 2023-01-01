@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hands-on Community Creation</title>
+    <link rel="stylesheet" href="css/style_0.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/paperscript" canvas="loading_canvas" src="js/paper_index_0.js"></script>
+</head>
+<body>
+    <div id="start_btn">
+        <button id='detail_buttun' onclick="showDetails()">details</button>
+        <br><br>
+        <button id='start_buttun' onclick="location.href='index.html'">start</button>
+    </div>
+    <div><canvas id="loading_canvas" resize="true" >
+    </canvas>
+    </div>
+<div id="project_details">
+    project decription
+</div>
+<script>
+    var project_details = document.getElementById('project_details')
+    var canvas_page = document.getElementById('loading_canvas')
+    function showDetails(){
+        if (project_details.style.display==='block'){
+            project_details.style.display='none';
+            canvas_page.style.display='block';
+        }else {
+            project_details.style.display='block';
+            canvas_page.style.display='none';
+        };
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Hands-on Community Creation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>-->
+<!--<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>-->
+<!--    -->
+    <script src="js/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="js/control_utils.js" crossorigin="anonymous"></script>
+    <script src="js/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="js/hands.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="'body_id">
+<!-- partial:index.partial.html -->
+<div class="instructions">
+	<p>Allow webcam access<br>Move your <b>right hand</b> in front of your webcam to move the cursor.
+		<br>Pinch your thumb and index finger to pick up a photo.
+        <br>upload basemap or use the template.
+	</p>
+    <input type='file' id='getval' />
+    <button onclick="removeMap()">Remove Map</button>
+    <label><input type="checkbox" id="hand_choice"> <span id="left_hand_instruction">Click here to use <b>left hand</b></span></label>
+  <table>
+    <tr>
+      <th>give me one:</th>
+      <th><button onclick="createAllElments('building')">building</button></th>
+      <th><button onclick="createAllElments('apartment')">apartment</button></th>
+      <th><button onclick="createAllElments('stair')">staircases</button></th>
+      <th><button onclick="createAllElments('store')">store</button></th>
+      <th><button onclick="createAllElments('bush')">bush</button></th>
+      <th><button onclick="createAllElments('house')">house</button></th>
+      <th><button onclick="createAllElments('tree')">tree</button></th>
+    </tr>
+  </table>
+<!--    <div class="slidecontainer">-->
+<!--&lt;!&ndash;    <input onChange="sliderChange()" type="range" min="0.01" max="3" step="5" value="1" class="slider" id="Slider">&ndash;&gt;-->
+<!--&lt;!&ndash;<input onChange="sliderChange(this.value)" type="range"  min="0" max="15" step="5" class="slider">&ndash;&gt;-->
+<!--    </div>-->
+</div>
+
+<div id='background_map'></div>
+<div class="debug_window">
+  <video class="input_video"></video>
+  <canvas class="output_canvas" width="1280px" height="720px">
+  </canvas>
+</div>
+<div id="img_canvas">
+
+<!--  <img class="movable" src="img/building0.png" alt="garden pond" />-->
+<!--  <img class="movable" src="img/tree0.png" alt="garden pond" />-->
+</div>
+
+
+
+<!--<div class="movable photo">-->
+<!--    <img src="https://assets.codepen.io/246719/pexels-photo-206904.jpeg" alt="sun over mountains" />-->
+<!--</div>-->
+<!--<div class="movable photo">-->
+<!--  <div class="photo_frame">-->
+<!--    <img src="img/building0.svg" />-->
+
+<!--  </div>-->
+<!--</div>-->
+<div class="cursor wand"></div>
+<!-- partial -->
+  <script  src="./js/script.js"></script>
+  <script  src="./js/index.js"></script>
+
+</body>
+</html>
