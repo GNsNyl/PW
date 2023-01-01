@@ -304,18 +304,6 @@ if (OPTIONS.IS_DEBUG_MODE) {
 };
 };
 
-document.getElementById('getval').addEventListener('change', readURL, true);
-function readURL(){
-  var file = document.getElementById("getval").files[0];
-  var reader = new FileReader();
-  reader.onloadend = function(){
-    document.getElementById('background_map').style.backgroundImage = "url(" + reader.result + ")";
-  }
-  if(file){
-    reader.readAsDataURL(file);
-  }else{
-  }
-}
 // var imageElem=[]
 // var imageElem = document.getElementsByTagName('.img');
 // let wid

@@ -1,8 +1,24 @@
 var base_map=document.getElementById('background_map')
 function removeMap(){
     base_map.style.backgroundImage="url('')"
-}
+    var base_original_map = document.getElementById('original_map')
+    base_original_map.style.display='block'
 
+}
+document.getElementById('getval').addEventListener('change', readURL, true);
+function readURL(){
+    var base_original_map = document.getElementById('original_map')
+    base_original_map.style.display='none'
+    var file = document.getElementById("getval").files[0];
+    var reader = new FileReader();
+    reader.onloadend = function(){
+        document.getElementById('background_map').style.backgroundImage = "url(" + reader.result + ")";
+    }
+    if(file){
+        reader.readAsDataURL(file);
+    }else{
+    }
+}
 // var elementList=[]
 var i=0
 function createAllElments(name){
