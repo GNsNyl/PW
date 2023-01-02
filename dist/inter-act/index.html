@@ -18,10 +18,12 @@
 <body id="'body_id">
 <!-- partial:index.partial.html -->
 <div class="instructions">
-	<p>Allow webcam access<br>Move your <b>right hand</b> in front of your webcam to move the cursor.
-		<br>Pinch your thumb and index finger to pick up a photo.
-        <br>upload basemap or use the template.
-	</p>
+  <p>process:
+    <li>allow webcam access, by default, your right hand would work as cursor</li>
+    <li>upload basemap or use the given template.</li>
+    <li>click buttons to generate urban elements</li>
+    <li>pinch your thumb and index finger to pick up an urban element.</li>
+  </p>
     <input type='file' id='getval' />
     <button onclick="removeMap()">Remove Map</button>
     <label><input type="checkbox" id="hand_choice"> <span id="left_hand_instruction">Click here to use <b>left hand</b></span></label>
