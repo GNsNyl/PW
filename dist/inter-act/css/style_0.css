@@ -38,6 +38,11 @@ canvas[resize] {
 #project_details{
     /*color: blue;*/
     display: none;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-top: 45px;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 0.01;
     background-color: white;
-    width: 100%;
+    /*width: 100%;*/
 }
