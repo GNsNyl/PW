@@ -7,6 +7,11 @@
     html {
       scroll-behavior: smooth;
     }
+    #three_container{
+      position: absolute;
+      z-index: -10;
+      height: 100%;
+    }
 
     body {
       font-family: Arial;
@@ -215,6 +220,8 @@
 <body>
 
 <main>
+  <div id="three_container"></div>
+
   <div id = 'anchor'>
     <a href="#top">-</a><br />
     <a href="#sec1"> . </a><br />
@@ -399,10 +406,9 @@
             <ul>
             <li>Moore, Jason. Transcending the metabolic rift: A theory of crises in the capitalist world-ecology. Journal of Peasant Studies 38, no. 1: 1–46. 2011.
               </li><li>According to the 2021 Migrant Worker Report by the Chinese National Bureau of Statistics.
-          </li><li>Migration Worker Report 2021. http://www.stats.gov.cn/tjsj/zxfb/202204/t20220429_1830126.html
+          </li><li>http://www.stats.gov.cn/tjsj/zxfb/202204/t20220429_1830126.html
           </li><li>
-               Plag, Ingo. Word-Formation in English.
-             https://books.google.com/books?id=78KFCIHtJS4C&pg=PA93#v=onepage&q&f=false
+              https://books.google.com/books?id=78KFCIHtJS4C&pg=PA93#v=onepage&q&f=false
           </li><li>I am not so sure of this post, as in the original blog, I feel the “commodification” might just be a habitual typo by the author, when he meant “commoditization.” Investopidia, https://www.investopedia.com/terms/c/commoditization.asp
           </li><li> As a reference their sources are from Wiktionary. diffbw https://www.diffbw.com/commoditization-vs-commodification
           </li><li> Wikipedia https://en.wikipedia.org/wiki/Commoditization#:~:text=One%20way%20to%20summarize%20the,about%20nonsaleable%20things%20becoming%20saleable.
@@ -662,6 +668,9 @@
   </div>
 
 </main>
+<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.js'></script>-->
+
+<script type="module" src="bamboo_3d.js"></script>
 
 
 </body>
