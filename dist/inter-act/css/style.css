@@ -1,10 +1,12 @@
 .instructions {
 	color: #000000;
+  background-color: rgba(255,255,255,0.85);
 	font-size: 16px;
 	padding: 20px;
 	line-height: 1.4;
 	font-family: Helvetica;
     font-weight: 100;
+  position: fixed;
 }
 .instructions b {
 	color: gold;
@@ -17,7 +19,7 @@
 }
 
 .movable {
-  position: absolute;
+  position: fixed;
 
   left: 0;
   top: 0;
@@ -113,12 +115,22 @@ img{
 
 
 #background_map{
-  background-image:url('https://github.com/pagelyunsong/PW/blob/main/dist/inter-act/img/newImg/basemap.png');
+  background-image:url("");
   background-size:cover;
   background-position: center;
   height: 100vh;
   width: 100vw;
   border: 0px solid #bbb;
+  position: fixed;
+  z-index: -1;
+}
+#original_map{
+  /*height: 100vh;*/
+  /*position: relative;*/
+  position: fixed;
+  height: 100vh;
+  z-index: -1;
+
 }
 
 input[type=file] {
@@ -133,7 +145,7 @@ button{
   font-weight: 100;
   background-color: black;
   border-color: black;
-  /*background-image: "img/newImg/3.png";*/
+  /*background-image: "";*/
   color: white;
   border: 0;
   /*height: 45px;*/
