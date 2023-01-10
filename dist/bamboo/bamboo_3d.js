@@ -1,7 +1,3 @@
-console.log('hi')
-
-import * as THREE from 'https://unpkg.com/three@0.142.0/build/three.module.js';
-
 import Stats from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/libs/stats.module.js';
 
 import { OrbitControls } from 'https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js'
