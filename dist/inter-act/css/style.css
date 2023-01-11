@@ -118,7 +118,7 @@ img{
   background-image:url("");
   background-size:cover;
   background-position: center;
-  width: 100vw;
+  height: 100vh;
   border: 0px solid #bbb;
   position: fixed;
   z-index: -1;
