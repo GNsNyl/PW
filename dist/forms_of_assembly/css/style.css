@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  cursor: none;
+  /*cursor: none;*/
   font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
 
 }
@@ -57,3 +57,17 @@
   /*font-size: large;*/
   text-transform: uppercase;
 }
+
+a:link { text-decoration: none;color: white }
+
+
+a:visited { text-decoration: none;
+  color: white }
+
+
+a:hover { text-decoration: none;
+  color: white }
+
+
+a:active { text-decoration: none; color: white }
+

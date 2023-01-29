@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Informatics of Domination</title>
+  <link rel="stylesheet" href="./css/word_style.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<!--<body>-->
+<!--<div class="curzr" hidden>-->
+<!--    <div class="circle"></div>-->
+<!--    <div class="dot"></div>-->
+<!--</div>-->
+<div class="btn">
+    <h1>Informatics of Domination</h1>
+    <a class="indiv_btn">literature review</a>
+    <a class="indiv_btn" href="word.html">constituencies</a>
+    <a class="indiv_btn">intervention</a>
+
+</div>
+<!-- partial:index.partial.html -->
+<div class="svg-container">
+ <div id="tag"></div>
+   
+<!--I wrote this python script to create the json
+
+import bs4
+import json
+import urllib2
+import re
+
+req = urllib2.urlopen('https://twitter.com')
+html = req.read()
+            
+soup = bs4.BeautifulSoup(html)
+[s.extract() for s in soup('noscript')]
+[s.extract() for s in soup('script')]
+[s.extract() for s in soup('style')]
+[s.extract() for s in soup('link')]
+[s.extract() for s in soup(text=True)]
+
+body = soup.body
+
+if body:
+    json_string = ''
+        
+    def handle_element(node):
+        
+        global json_string
+
+        json_string += '{"name" :"' + node.name + '"'
+        child_size = len(list(node.contents))
+        children = node.contents
+        if children:
+            json_string += ',"children" : ['
+            for i in range(child_size):
+                if not isinstance(children[i], bs4.NavigableString):
+                    handle_element(children[i])
+                    if child_size > 1 and i < child_size - 1:
+                        json_string += ','
+                        
+            json_string += ']}'
+        else:
+            json_string += '}'
+        
+    
+    handle_element(body)
+    
+    j = json.loads(json_string)
+    
+    f = open('data.json', 'w');
+    f.write(json.dumps(j))
+    f.close()
+
+-->
+<!-- partial -->
+  <script src='https://d3js.org/d3.v3.min.js'></script><script  src="./js/word_script.js"></script>
+
+</body>
+</html>
