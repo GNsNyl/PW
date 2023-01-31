@@ -2,6 +2,7 @@
   box-sizing: border-box;
   /*cursor: none;*/
   font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  text-align: left;
 
 }
 :root {
@@ -36,25 +37,16 @@
 }
 
 .btn{
-  /*color: white;*/
-  /*text-align: center;*/
-  /*align-items: center;*/
   z-index: 1;
   position: fixed;
   margin-left: 7.5vw;
   margin-top: 7.5vh;
-  /*width: 100vw;*/
 }
-/*a {*/
-/*  text-align: center;*/
-/*}*/
 
 
 .indiv_btn{
   position: relative;
-  /*text-align: center;*/
   margin-right: 20px;
-  /*font-size: large;*/
   text-transform: uppercase;
 }
 
@@ -71,3 +63,47 @@ a:hover { text-decoration: none;
 
 a:active { text-decoration: none; color: white }
 
+/** {*/
+/*  margin: 0;*/
+/*  padding: 0;*/
+/*}*/
+body {
+  background: #000;
+  font-family: 'Open-Sans',sans-serif;
+}
+#tag {
+  color: white;
+  position: absolute;
+  display: none;
+  opacity: .85;
+  border-radius:2px;
+  border:1px solid white;
+  padding:3px 6px;
+}
+.svg-container {
+  width: 100%;
+  overflow: visible;
+  margin-top: 350px;
+  position: relative;
+}
+.node {
+  cursor: pointer;
+}
+.edge {
+  fill: none;
+  stroke: #657b83;
+  stroke-width: .75px;
+}
+
+.paragraphs{
+  width: 45vw;
+  right: 5vw;
+  margin-top: 350px;
+  position: fixed;
+  color: #6c6c6c;
+}
+
+svg.chart-wrap {
+  background-color: #000000;
+  border-color: white;
+}

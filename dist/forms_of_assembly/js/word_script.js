@@ -1,639 +1,292 @@
 var jsonDom = {
-	"name" : "gig economy" , "children" : [{
-		"name" : "div" , "children" : [{"name" : "div"} , {
-			"name" : "div" , "children" : [{"name" : "div"} , {
-				"name" : "div" , "children" : [{
-					"name" : "div" , "children" : [{
-						"name" : "div" ,
-						"children" : [{
-							"name" : "ul" ,
-							"children" : [{
-								"name" : "li" ,
-								"children" : [{"name" : "a" , "children" : [{"name" : "i"}]}]
-							}]
-						} , {
-							"name" : "div" ,
-							"children" : [{
-								"name" : "form" ,
-								"children" : [{"name" : "label"} , {"name" : "input"} , {
-									"name" : "span" ,
-									"children" : [{"name" : "button" , "children" : [{"name" : "span"}]}]
-								} , {"name" : "input"} , {
-									"name" : "div" ,
-									"children" : [{
-										"name" : "div" ,
-										"children" : [{"name" : "div"} , {"name" : "div"}]
-									} , {
-										"name" : "div" ,
-										"children" : [{
-											"name" : "ul" ,
-											"children" : [{
-												"name" : "li" ,
-												"children" : [{"name" : "a" , "children" : [{"name" : "i"}]}]
-											}]
-										} , {
-											"name" : "ul" ,
-											"children" : [{
-												"name" : "li" ,
-												"children" : [{"name" : "a" , "children" : [{"name" : "i"}]}]
-											}]
-										} , {
-											"name" : "div" ,
-											"children" : [{
-												"name" : "ul" ,
-												"children" : [{
-													"name" : "li" ,
-													"children" : [{
-														"name" : "a" ,
-														"children" : [{"name" : "img"} , {"name" : "span"} , {"name" : "i"} , {
-															"name" : "span" ,
-															"children" : [{"name" : "s"} , {"name" : "b"}]
-														}]
-													}]
-												} , {"name" : "li" , "children" : [{"name" : "a"}]}]
-											}]
-										}]
-									}]
-								}]
-							} , {
-								"name" : "ul" , "children" : [{
-									"name" : "li" ,
-									"children" : [{
-										"name" : "a" ,
-										"children" : [{"name" : "small"} , {"name" : "span"} , {"name" : "b"}]
-									} , {
-										"name" : "ul" ,
-										"children" : [{
-											"name" : "li" ,
-											"children" : [{"name" : "span"} , {"name" : "span"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										} , {"name" : "li" , "children" : [{"name" : "a"}]} , {
-											"name" : "li" ,
-											"children" : [{"name" : "a"}]
-										}]
-									} , {
-										"name" : "div" ,
-										"children" : [{
-											"name" : "form" ,
-											"children" : [{"name" : "input"} , {"name" : "input"} , {"name" : "input"}]
-										}]
-									}]
-								}]
-							} , {
-								"name" : "ul" ,
-								"children" : [{
-									"name" : "li" ,
-									"children" : [{
-										"name" : "a" ,
-										"children" : [{"name" : "small"} , {"name" : "span"}]
-									} , {
-										"name" : "a" ,
-										"children" : [{"name" : "small"} , {"name" : "span"}]
-									} , {
-										"name" : "ul" ,
-										"children" : [{
-											"name" : "li" ,
-											"children" : [{"name" : "span"} , {"name" : "span"}]
-										} , {
-											"name" : "li" ,
-											"children" : [{
-												"name" : "form" ,
-												"children" : [{
-													"name" : "fieldset" ,
-													"children" : [{
-														"name" : "label" ,
-														"children" : [{"name" : "span"} , {"name" : "input"}]
-													} , {
-														"name" : "label" ,
-														"children" : [{"name" : "span"} , {"name" : "input"}]
-													}]
-												} , {
-													"name" : "fieldset" ,
-													"children" : [{
-														"name" : "label" ,
-														"children" : [{"name" : "input"} , {"name" : "span"}]
-													} , {"name" : "button"}]
-												} , {"name" : "input"} , {"name" : "input"} , {"name" : "input"} , {"name" : "div"} , {
-													"name" : "p" ,
-													"children" : [{"name" : "a"} , {"name" : "br"} , {"name" : "a"}]
-												}]
-											}]
-										}]
-									}]
-								}]
-							}]
-						} , {"name" : "a" , "children" : [{"name" : "i"}]}]
-					}]
-				}]
+	"name" : "gig economy" , "children" : [
+
+		{
+			"name":"economic trends",
+			"children":[{
+				"name":"Valerio De Stefano",
+				"children":[
+					{"name":"casualization of the workforce"},
+					{"name":"informalization of the formal economy"},
+					{"name":"demutualization of risk"},
+				]
+
 			}]
-		} , {
-			"name" : "div" , "children" : [{
-				"name" : "div" , "children" : [{
-					"name" : "div" ,
-					"children" : [{"name" : "div" , "children" : [{"name" : "h3"} , {"name" : "p"}]} , {
-						"name" : "div" ,
-						"children" : [{"name" : "img"}]
-					} , {
-						"name" : "div" ,
-						"children" : [{
-							"name" : "div" ,
-							"children" : [{"name" : "div" , "children" : [{"name" : "h1"} , {"name" : "p"}]}]
-						} , {
-							"name" : "div" ,
-							"children" : [{
-								"name" : "form" ,
-								"children" : [{
-									"name" : "div" ,
-									"children" : [{"name" : "input"} , {"name" : "label"}]
-								} , {
-									"name" : "table" ,
-									"children" : [{
-										"name" : "tbody" ,
-										"children" : [{
-											"name" : "tr" ,
-											"children" : [{
-												"name" : "td" ,
-												"children" : [{
-													"name" : "div" ,
-													"children" : [{"name" : "input"} , {"name" : "label"}]
-												}]
-											} , {"name" : "td" , "children" : [{"name" : "button"}]}]
-										}]
-									}]
-								} , {
-									"name" : "div" ,
-									"children" : [{
-										"name" : "label" ,
-										"children" : [{"name" : "input"} , {"name" : "span"}]
-									} , {"name" : "span"} , {"name" : "a"}]
-								} , {"name" : "input"} , {"name" : "input"} , {"name" : "input"}]
-							}]
-						} , {
-							"name" : "div" ,
-							"children" : [{"name" : "h2" , "children" : [{"name" : "strong"}]} , {
-								"name" : "form" ,
-								"children" : [{
-									"name" : "div" ,
-									"children" : [{"name" : "input"} , {"name" : "label"}]
-								} , {
-									"name" : "div" ,
-									"children" : [{"name" : "input"} , {"name" : "label"}]
-								} , {
-									"name" : "div" ,
-									"children" : [{"name" : "input"} , {"name" : "label"}]
-								} , {"name" : "input"} , {"name" : "input"} , {"name" : "button"}]
-							}]
-						}]
-					} , {
-						"name" : "div" ,
-						"children" : [{
-							"name" : "ul" ,
-							"children" : [{
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "a"} , {"name" : "span"}]} , {
-								"name" : "li" ,
-								"children" : [{"name" : "a"} , {"name" : "span"}]
-							} , {"name" : "li" , "children" : [{"name" : "span"}]}]
-						}]
-					}]
+
+		},
+
+		{"name":"capitalism",
+		"children":[
+			{
+				"name":"GDP",
+				"children":[
+					{"name":"price"},
+					{"name":"unrecognized work of woman"},
+					{"name":"social reproduction"},
+					{"name":"linear progressive logic of economy"},
+				]
+			}
+		]},
+		{"name":"constituencies",
+		"children":[
+			{"name":"technology",
+				"children":[
+					{"name":"platform",
+						"children":[
+							{"name":"Uber",
+							"children":[
+								{"name":"Austin Zwick",
+								"children":[
+									{"name":"(mis)classifying workers"},
+									{"name":"engaging in regime shopping"},
+									{"name":"employing the most economically vulnerable"},
+								]}
+							]},
+							{"name":"lyft"},
+							{"name":"Apple podcast"},
+							{"name":"Airbnb"},
+							{"name":"Pornhub"},
+							{"name":"DoorDash"},
+							{"name":"Ele"},
+							{"name":"Meituan"},
+							{"name":"FlipKey"},
+							{"name":"Care"},
+							{"name":"Soothe"},
+							{"name":"Urbansitter"},
+							{"name":"Amazon Flex"},
+							{"name":"Amazon Turf"},
+							{"name":"Cargomatic"},
+							{"name":"Deliv"},
+							{"name":"Dunzo"},
+							{"name":"eCourier"},
+							{"name":"Instacart"},
+							{"name":"InnoCentive"},
+							{"name":"Upwork"},
+							{"name":"Catalant"},
+							{"name":"Kaggle"},
+
+						]}
+				]},
+			{"name":"activists"},
+			{"name":"journalists"},
+			{"name":"policymakers"},
+			{"name":"customers"},
+			{"name":"workers",
+			"children":[
+				{"name":"taxi"},
+				{"name":"pornography"},
+				{"name":"podcaster"},
+				{"name":"blogger"},
+				{"name":"airbnb"},
+				{"name":"food delivery"},
+				{"name":""},
+				{"name":""},
+				{"name":""},
+				{"name":""},
+				{"name":""},
+				{"name":""},
+
+
+			]},
+
+
+		]},
+		{"name":""},
+		{"name":""},
+		{
+		"name" : "management literature" , "children" : [{
+			"name" : "media parlance" , "children" : [{
+				"name" : "language and power",
+				"children":[
+					{"name":"language and power",
+					"children":[
+						{"name":"Entrepreneurism",
+						"children":[
+							{"name":"self-promotion"},
+							{"name":"passion"},
+							{"name":"suitable mindset"},
+							{"name":"nose for business"},
+							{"name":"creativity"},
+							{"name":"competitiveness"},
+
+						]},
+						{"name":"self-development",
+							"children":[
+								{"name":"urge-to-learn"},
+								{"name":"proficiency"},
+								{"name":"self-knowledge"},
+								{"name":"self-leadership"},
+
+							]},
+						{"name":"malleability",
+							"children":[
+								{"name":"change capability"},
+								{"name":"flexibility"},
+								{"name":"adaptability"},
+							]},
+						{"name":"prudence",
+							"children":[
+								{"name":"decisiveness"},
+								{"name":"self-discipline"},
+								{"name":"preparedness"},
+								{"name":"humbleness"},
+								{"name":"thrift"},
+								{"name":"responsibility"},
+
+							]},
+						{"name":"communicativeness",
+							"children":[
+								{"name":"people skills"},
+								{"name":"communicativity"},
+								{"name":"networking"},
+							]},
+					]},
+				]},]
+		},{
+			"name" : "pop management" , "children" : [{
+				"name" : "profit from the transformation of work" , "children" : [{
+					"name" : "reconfiguration of th eworking life" ,
 				}]
+			}, {
+			"name": "sentiment"}
+					,{
+				"name" : "exploitative aspects" ,
+				"children" : [{"name" : "precarity"} ,
+							{"name" : "eradication of collective bargaining power"},
+							{"name" : "legal barriers"},
+							{"name" : "shifting of economic responsibility"},
+							{"name" : "asymmetry of risks and benefits"},
+							{"name" : "gender-based discrimination",
+								"children":[
+									{"name":"ineligibility",
+									"children":[
+										{"name":"healthcare"},
+										{"name":"retirement plan"},
+										{"name":"overtime"},
+										{"name":"paid leave"},
+									]},
+									{"name":"neoliberal policies",
+									"children":[
+										{"name":"welfare"},
+										{"name":"affordable housing"},
+										{"name":"medical stamp"},
+										{"name":"food stamp"},
+
+									]},
+									{"name":"credit"},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+									// {"name":""},
+								]},
+							{"name" : "race-based discrimination"},]
+			}, {
+				"name" : "produser" ,
+						"children" :[{
+							"name" : "community" ,
+							"children" : [
+								{"name" : "self-actualization"} ,
+								{"name" : "audience maximization"},
+								{"name" : "authenticity"},
+								{"name" : "commitment"},
+								{"name" : "relationship maintenance"},
+								{"name" : "affective labor"}]}]
+			},{
+				"name" : "pro-ams" ,
+			}, {
+				"name" : "side-hustles" ,
+			}, {
+				"name" : "slasher" ,
+			}, {
+				"name" : "digital worker" ,
 			}]
 		}]
-	} , {
-		"name" : "div" ,
+	} ,{
+		"name":"arrangement",
+		"children" : [{"name":"subjectivity",
+						"children":[
+							{"name":"hyper-individualized"},
+							{"name":"entrepreneurial "},
+						]},
+						{"name":"ideological function",
+							"children":[
+								{"name":"intimate connections between language and power "},
+							]},
+						{"name":"work order",
+							"children":[
+								{"name":"deterioration of “regular work,” "},
+								{"name":"novel “structures of feeling” "},
+								{"name":"macro-scale restructuration of contemporary capitalism "},
+								{"name":"digital realm"},
+								{"name": "high efficiency"}
+							]},
+		]
+	} ,{
+		"name" : "digital cultural labor" ,
+		"children" :[{
+			"name" : "participatory creativity online" ,
+			"children" : [
+				{"name" : "cultural shift"},
+				{"name" : "online distribution"},
+				{"name" : "democratic information access"}]
+		}, {
+			"name" : "user-generated" ,
+			"children" : [{"name" : "mass amateurization" , "children" : [{"name" : "utopian enthusiasm"} ]}]
+		},{
+			"name" : "reactionary populism" ,
+			"children" : [{"name" : "populist politics of distribution" , "children" : [{"name" : "span"} , {"name" : "a"}]}]
+		}] },{
+		"name" :"entrepreneurial energy ",
+		"children" :[{
+			"name" : "formalization" ,
+			"children" : [{"name":"professionalization"},
+				{"name":"rationalized "},
+				{"name":"consolidated "},
+				{"name":"financially transparent"},
+				{"name" : "social communities" , "children" : [{"name" : "normative social order "}]},
+				{"name":"institutionalization of production practices "},
+				{"name":"meritocracy", "children" : [
+						{"name" : "monopoly of competence"},
+						{"name" : "sanctioned ‘expertise’"},
+						{"name" : "monopoly of credibility with the public"},
+						{"name" : "algorithmic formula"},
+						{"name" : "digital coordination"},
+						{"name" : "recommendation system"},
+						{"name" : "monopoly of credibility with the public"}]},]
+		}]
+	},
+		{
+		"name" : "progressive neoliberal hegemonic bloc" ,
 		"children" : [{
-			"name" : "div" ,
-			"children" : [{"name" : "div" , "children" : [{"name" : "span"} , {"name" : "a"}]}]
-		}]
-	} , {"name" : "div"} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{"name" : "a" , "children" : [{"name" : "i"}]} , {"name" : "h2"}]
-			} , {"name" : "div"} , {"name" : "div" , "children" : [{"name" : "span"}]} , {
-				"name" : "div" ,
-				"children" : [{"name" : "span"}]
-			} , {"name" : "div"}]
-		}]
-	} , {"name" : "div"} , {"name" : "div" , "children" : [{"name" : "div"} , {"name" : "iframe"}]} , {
-		"name" : "div" ,
-		"children" : [{
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{
-						"name" : "div" ,
-						"children" : [{
-							"name" : "form" ,
-							"children" : [{"name" : "input"} , {
-								"name" : "ul" ,
-								"children" : [{
-									"name" : "li" ,
-									"children" : [{"name" : "img"} , {"name" : "strong"} , {
-										"name" : "span" ,
-										"children" : [{"name" : "s"} , {"name" : "b"}]
-									}]
-								}]
-							}]
-						}]
-					}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {"name" : "div"} , {
-					"name" : "div" ,
-					"children" : [{"name" : "button"} , {"name" : "button"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {"name" : "div"} , {
-					"name" : "div" ,
-					"children" : [{"name" : "button"} , {"name" : "button"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" , "children" : [{"name" : "div"} , {
-			"name" : "div" , "children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{
-						"name" : "div" ,
-						"children" : [{
-							"name" : "table" ,
-							"children" : [{
-								"name" : "tbody" ,
-								"children" : [{
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{
-										"name" : "td" ,
-										"children" : [{"name" : "b"} , {"name" : "b"}]
-									} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								} , {
-									"name" : "tr" ,
-									"children" : [{"name" : "td" , "children" : [{"name" : "b"}]} , {"name" : "td"}]
-								}]
-							}]
-						}]
-					}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{
-			"name" : "ul" ,
-			"children" : [{"name" : "li" , "children" : [{"name" : "span"} , {"name" : "span"}]} , {
-				"name" : "li" ,
-				"children" : [{"name" : "h2"} , {"name" : "p" , "children" : [{"name" : "a"}]} , {
-					"name" : "div" ,
-					"children" : [{"name" : "button"} , {"name" : "button"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{
-			"name" : "ul" ,
-			"children" : [{"name" : "li" , "children" : [{"name" : "span"} , {"name" : "span"}]} , {
-				"name" : "li" ,
-				"children" : [{"name" : "input"} , {"name" : "i"}]
-			} , {"name" : "li"} , {"name" : "li" , "children" : [{"name" : "i"}]}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {"name" : "div"} , {
-					"name" : "div" ,
-					"children" : [{"name" : "img"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{"name" : "div"} , {"name" : "span"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{
-						"name" : "div" ,
-						"children" : [{
-							"name" : "div" ,
-							"children" : [{"name" : "label"} , {"name" : "input"}]
-						} , {
-							"name" : "div" ,
-							"children" : [{"name" : "label"} , {"name" : "span"}]
-						} , {"name" : "hr"} , {
-							"name" : "div" ,
-							"children" : [{"name" : "label"} , {"name" : "textarea"} , {"name" : "span"}]
-						} , {"name" : "hr"} , {
-							"name" : "div" ,
-							"children" : [{"name" : "label"} , {
-								"name" : "div" ,
-								"children" : [{
-									"name" : "label" ,
-									"children" : [{"name" : "input"} , {"name" : "b"}]
-								} , {"name" : "label" , "children" : [{"name" : "input"} , {"name" : "b"}]}]
-							}]
-						} , {"name" : "hr"} , {"name" : "div" , "children" : [{"name" : "div"}]}]
-					}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{"name" : "div"} , {
-						"name" : "div" ,
-						"children" : [{"name" : "img"}]
-					} , {"name" : "div"}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" ,
-		"children" : [{"name" : "div"} , {
-			"name" : "div" ,
-			"children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" ,
-					"children" : [{"name" : "p"}]
-				} , {"name" : "div" , "children" : [{"name" : "button"} , {"name" : "button"}]}]
-			}]
-		}]
-	} , {
-		"name" : "div" , "children" : [{
-			"name" : "div" , "children" : [{"name" : "div"} , {
-				"name" : "div" , "children" : [{
-					"name" : "div" ,
-					"children" : [{
-						"name" : "button" ,
-						"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-					} , {"name" : "div" , "children" : [{"name" : "h3"} , {"name" : "h3"}]} , {
-						"name" : "div" ,
-						"children" : [{
-							"name" : "form" ,
-							"children" : [{
-								"name" : "div" ,
-								"children" : [{"name" : "input"} , {"name" : "span"}]
-							} , {
-								"name" : "div" ,
-								"children" : [{"name" : "input"} , {"name" : "span"}]
-							} , {
-								"name" : "div" ,
-								"children" : [{"name" : "input"} , {"name" : "span"}]
-							} , {"name" : "input"} , {"name" : "input"} , {"name" : "input"} , {"name" : "input"}]
-						}]
-					} , {
-						"name" : "div" ,
-						"children" : [{
-							"name" : "form" ,
-							"children" : [{
-								"name" : "fieldset" ,
-								"children" : [{
-									"name" : "div" ,
-									"children" : [{"name" : "span"} , {"name" : "input"} , {
-										"name" : "p" ,
-										"children" : [{"name" : "a"}]
-									}]
-								} , {
-									"name" : "div" ,
-									"children" : [{"name" : "span"} , {"name" : "input"} , {
-										"name" : "p" ,
-										"children" : [{"name" : "a"}]
-									}]
-								} , {"name" : "input"}]
-							} , {
-								"name" : "div" ,
-								"children" : [{"name" : "input"} , {"name" : "input"} , {"name" : "input"} , {"name" : "button"} , {
-									"name" : "fieldset" ,
-									"children" : [{"name" : "label" , "children" : [{"name" : "input"}]}]
-								}]
-							} , {"name" : "div"} , {
-								"name" : "p" ,
-								"children" : [{"name" : "a"} , {"name" : "br"} , {"name" : "a"}]
-							}]
-						} , {
-							"name" : "div" ,
-							"children" : [{"name" : "h2"} , {
-								"name" : "form" ,
-								"children" : [{"name" : "input"} , {"name" : "input"} , {"name" : "button"}]
-							}]
-						}]
-					}]
-				}]
-			}]
-		}]
-	} , {
-		"name" : "div" , "children" : [{"name" : "div"} , {
-			"name" : "div" , "children" : [{
-				"name" : "div" ,
-				"children" : [{
-					"name" : "button" ,
-					"children" : [{"name" : "i" , "children" : [{"name" : "span"}]}]
-				} , {"name" : "div" , "children" : [{"name" : "h3"}]} , {
-					"name" : "div" , "children" : [{
-						"name" : "table" ,
-						"children" : [{
-							"name" : "thead" ,
-							"children" : [{
-								"name" : "tr" ,
-								"children" : [{"name" : "th"} , {"name" : "th"} , {"name" : "th"}]
-							}]
-						} , {
-							"name" : "tbody" ,
-							"children" : [{
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {
-								"name" : "tr" ,
-								"children" : [{"name" : "td"} , {"name" : "td"} , {"name" : "td"}]
-							} , {"name" : "tr" , "children" : [{"name" : "td"} , {"name" : "td"}]}]
-						} , {
-							"name" : "tfoot" ,
-							"children" : [{
-								"name" : "tr" ,
-								"children" : [{"name" : "td" , "children" : [{"name" : "a"}]}]
-							}]
-						}]
-					}]
-				}]
+			"name" : "liberal currents of social movement" ,
+		}, {
+			"name" : "high-end ‘symbolic’ and financial sectors" ,
+		},{
+			"name" : "reactionary populism" ,
+			"children" : [{"name" : "populist politics of distribution" ,
+				"children" : [{"name" : "progressive myth",
+				"children":[
+					{"name":"democratize travel"},
+					{"name":""},
+					{"name":""},
+					{"name":""},
+					{"name":""},
+				]} ]
 			}]
 		}]
 	}]
 };
 
-var diameter = 900;
+var diameter = 1000;
 
   		var tree = d3.layout
 			.tree()
-			.size([360, diameter / 2 - 100]);
+			.size([360, diameter / 3 - 100]);
 			
 			var diagonal = d3.svg
 			.diagonal
