@@ -36,35 +36,49 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
   // projection.fitExtent([[116.2202,40.0239], [116.1214,40.1159]]);
 
 
-  // ASTEROIDS
+  // food
   var food;
   d3.json("img/food.json", function(data) {
     food = svg.selectAll("circle")
       .data(data.features)
       .enter()
       .append("circle")
-      .attr("cx", function(d) {
-          return projection([116.4, 40.02])[0];
+        // .attr("cx", function(d) {
+        //   return projection([116.4, 40.02])[0];
+        // })
+        // .attr("cy", function(d) {
+        //   return projection([116.4, 40.02])[1];
+        // })
+        .style("opacity", 0)
+        .transition()
+        .duration(2000)
+        .attr("cx", function(d) {
+            return projection([116.4+3*(Math.random() - 0.3), 40.02+1.5*(Math.random() - 0.35)])[0]
+
         })
         .attr("cy", function(d) {
-          return projection([116.4, 40.02])[1];
-        })
-      .transition()
-      .duration(2000)
-      .attr("cx", function(d) {
-        return projection([d.LONGCJ02, d.LATGCJ02])[0];
-      })
-      .attr("cy", function(d) {
-        return projection([d.LONGCJ02, d.LATGCJ02])[1];
-      })
+            return projection([116.4, 40.02])[1]
+          })
+
       .attr("r", function(d) {
-        return 0.2
+        return 0.8
       })
         // .attr("cl", function(d) {
         //   return d.typecode
         // })
-      .style("fill", "white")
-      .style("opacity", 0.75);
+        .style("fill", "#ffffff")
+        .style("opacity", 1)
+        .transition()
+        .duration(4000)
+        .attr("r", function(d) {
+          return 0.2
+        })
+        .attr("cx", function(d) {
+          return projection([d.LONGCJ02, d.LATGCJ02])[0];
+        })
+        .attr("cy", function(d) {
+          return projection([d.LONGCJ02, d.LATGCJ02])[1];
+        });
     
     // // TOOLTIP
     // meteors.on("mouseover", function(d) {

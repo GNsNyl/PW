@@ -8,7 +8,7 @@
 :root {
   --scale: 1.5;
   --y: 0;
-  overflow: hidden;
+  overflow: scroll;
 }
 :root body {
   position: relative;
@@ -16,7 +16,7 @@
   /*font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;*/
   /*font-weight: bold;*/
   font-size: 0.875rem;
-  overflow: hidden;
+  overflow: scroll;
   color: #ffffff;
   margin: 0;
   /*background-color: black;*/
@@ -71,7 +71,12 @@ body {
   background: #000;
   font-family: 'Open-Sans',sans-serif;
 }
+p2{
+  font-size: xx-small;
+}
 #tag {
+  /*width: 50%;*/
+  left:0;
   color: white;
   position: absolute;
   display: none;
@@ -81,8 +86,8 @@ body {
   padding:3px 6px;
 }
 .svg-container {
-  width: 100%;
-  overflow: visible;
+  width: 50%;
+  overflow: scroll;
   margin-top: 350px;
   position: relative;
 }
@@ -96,11 +101,13 @@ body {
 }
 
 .paragraphs{
+  z-index: 1;
   width: 45vw;
   right: 5vw;
   margin-top: 350px;
-  position: fixed;
+  position: absolute;
   color: #6c6c6c;
+  overflow: scroll;
 }
 
 svg.chart-wrap {

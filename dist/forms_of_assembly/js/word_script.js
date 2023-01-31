@@ -100,46 +100,48 @@ var jsonDom = {
 				"children":[
 					{"name":"language and power",
 					"children":[
-						{"name":"Entrepreneurism",
-						"children":[
-							{"name":"self-promotion"},
-							{"name":"passion"},
-							{"name":"suitable mindset"},
-							{"name":"nose for business"},
-							{"name":"creativity"},
-							{"name":"competitiveness"},
-
-						]},
-						{"name":"self-development",
+						{"name":"subjectivity",
+						"children":[{"name":"Entrepreneurism",
 							"children":[
-								{"name":"urge-to-learn"},
-								{"name":"proficiency"},
-								{"name":"self-knowledge"},
-								{"name":"self-leadership"},
+								{"name":"self-promotion"},
+								{"name":"passion"},
+								{"name":"suitable mindset"},
+								{"name":"nose for business"},
+								{"name":"creativity"},
+								{"name":"competitiveness"},
 
 							]},
-						{"name":"malleability",
-							"children":[
-								{"name":"change capability"},
-								{"name":"flexibility"},
-								{"name":"adaptability"},
-							]},
-						{"name":"prudence",
-							"children":[
-								{"name":"decisiveness"},
-								{"name":"self-discipline"},
-								{"name":"preparedness"},
-								{"name":"humbleness"},
-								{"name":"thrift"},
-								{"name":"responsibility"},
+							{"name":"self-development",
+								"children":[
+									{"name":"urge-to-learn"},
+									{"name":"proficiency"},
+									{"name":"self-knowledge"},
+									{"name":"self-leadership"},
 
-							]},
-						{"name":"communicativeness",
-							"children":[
-								{"name":"people skills"},
-								{"name":"communicativity"},
-								{"name":"networking"},
-							]},
+								]},
+							{"name":"malleability",
+								"children":[
+									{"name":"change capability"},
+									{"name":"flexibility"},
+									{"name":"adaptability"},
+								]},
+							{"name":"prudence",
+								"children":[
+									{"name":"decisiveness"},
+									{"name":"self-discipline"},
+									{"name":"preparedness"},
+									{"name":"humbleness"},
+									{"name":"thrift"},
+									{"name":"responsibility"},
+
+								]},
+							{"name":"communicativeness",
+								"children":[
+									{"name":"people skills"},
+									{"name":"communicativity"},
+									{"name":"networking"},
+								]},]}
+
 					]},
 				]},]
 		},{
