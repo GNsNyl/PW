@@ -44,6 +44,14 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
       .enter()
       .append("circle")
       .attr("cx", function(d) {
+          return projection([116.4, 40.02])[0];
+        })
+        .attr("cy", function(d) {
+          return projection([116.4, 40.02])[1];
+        })
+      .transition()
+      .duration(2000)
+      .attr("cx", function(d) {
         return projection([d.LONGCJ02, d.LATGCJ02])[0];
       })
       .attr("cy", function(d) {
