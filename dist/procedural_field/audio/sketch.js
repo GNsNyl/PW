@@ -18,8 +18,10 @@ function setup() {
 
   cnv = createCanvas(windowWidth, 0.3*windowHeight);
   cnv.parent("audio-container");
+  cnv.mousePressed(userStartAudio);
   noFill();
   stroke(0,100);
+  strokeWeight(0.45)
   stroke(color(255, 255, 255));
 
   source = new p5.AudioIn();
