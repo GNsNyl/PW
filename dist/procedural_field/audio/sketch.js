@@ -9,14 +9,14 @@
 var source, fft;
 
 // height of fft == height/divisions
-var divisions = 5;
+var divisions = 4;
 var cnv;
 var speed = 1;
 
 function setup() {
   background(0, 0, 0);
 
-  cnv = createCanvas(windowWidth, 0.3*windowHeight);
+  cnv = createCanvas(0.75*windowWidth, 0.3*windowHeight);
   cnv.parent("audio-container");
   cnv.mousePressed(userStartAudio);
   noFill();
@@ -27,7 +27,7 @@ function setup() {
   source = new p5.AudioIn();
   source.start();
 
-  fft = new p5.FFT(0.9, 1024);
+  fft = new p5.FFT(0.69, 1024);
   fft.setInput(source);
 }
 
