@@ -39,7 +39,7 @@ function init(){
     // Decrease repel intensity
     graph.d3Force('charge').strength(-15);
 
-    fetch('../datasets/d3-dependencies.csv')
+    fetch('d3-dependencies.csv')
         .then(r => r.text())
         .then(d3.csvParse)
         .then(data => {
