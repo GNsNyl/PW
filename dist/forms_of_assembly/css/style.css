@@ -1,14 +1,26 @@
+/*@import url(//db.onlinewebfonts.com/c/b8c332e7b686ba28daebf6524c66aeec?family=PMingLiU);*/
+/*@font-face {font-family: "PMingLiU"; src: url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.eot"); src: url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.woff") format("woff"), url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b8c332e7b686ba28daebf6524c66aeec.svg#PMingLiU") format("svg"); }*/
 * {
   box-sizing: border-box;
   /*cursor: none;*/
-  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  /*font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;*/
   text-align: left;
+  /*overflow: scroll;*/
+
+}
+
+:lang(en) {
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+}
+
+:lang(ch) {
+  font-family: PMingLiU;
 
 }
 :root {
   --scale: 1.5;
   --y: 0;
-  overflow: scroll;
+  overflow: hidden;
 }
 :root body {
   position: relative;
@@ -35,10 +47,18 @@
   transform: translateX(var(--x)) translateY(var(--y)) scale(var(--scale));
   transition: ease-out 0.7s;
 }
-
-.btn{
-  z-index: 1;
+.back{
+  z-index: 5;
+  background-color: black;
+  width: 100%;
   position: fixed;
+  marhin:0;
+  height:25vh;
+}
+.btn{
+  z-index: 6;
+  /*width:100%*/
+  position: absolute;
   margin-left: 7.5vw;
   margin-top: 7.5vh;
 }
@@ -87,7 +107,7 @@ p2{
 }
 .svg-container {
   width: 50%;
-  overflow: scroll;
+  overflow: hidden;
   margin-top: 350px;
   position: relative;
 }
@@ -107,7 +127,7 @@ p2{
   margin-top: 350px;
   position: absolute;
   color: #6c6c6c;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 svg.chart-wrap {
