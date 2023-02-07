@@ -20,7 +20,7 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
 
   var projection = d3.geo.mercator()
       // .scale([2])
-      .scale(205000)
+      .scale(295000)
       // .translate([200, 280])
       .translate([w/2, h/2])
       .center([116.400,40.010]);
@@ -169,7 +169,7 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
                 // .attr("d",line)
                 .enter()
                 .append("line")
-                .style("stroke", "#00ffea")
+                .style("stroke", "#ffffff")
                 .style("stroke-width", 0.1)
                 .attr("x1", function(d) {
                     return projection([116+d.order/13333, d.LATGCJ02])[0];
@@ -187,7 +187,7 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
                 .delay(2000)
                 .duration(4000)
                 .attr("y2", function(d) {
-                    return projection([d.LONGCJ02, 40.02])[1]+10*(0.5-Math.random());
+                    return projection([d.LONGCJ02, 40.02])[1]+50*(0.5-Math.random());
                 })
                 .transition()
                 .delay(2000)
@@ -226,13 +226,13 @@ d3.json("img/beijing-municipality_1140 copy.geojson", function(json) {
                     return projection([d.LONGCJ02, d.LATGCJ02])[0];
                 })
                 .attr("x2", function(d) {
-                    return projection([d.LONGCJ02, d.LATGCJ02])[0]+ 10*(0.5-Math.random());
+                    return projection([d.LONGCJ02, d.LATGCJ02])[0]+ 50*(0.5-Math.random());
                 })
                 .attr("y1", function(d) {
                     return projection([d.LONGCJ02, d.LATGCJ02])[1];
                 })
                 .attr("y2", function(d) {
-                    return projection([d.LONGCJ02, d.LATGCJ02])[1]+10*(0.5-Math.random());
+                    return projection([d.LONGCJ02, d.LATGCJ02])[1]+50*(0.5-Math.random());
                 })
 
 
