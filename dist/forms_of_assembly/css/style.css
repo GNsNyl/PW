@@ -42,7 +42,8 @@
 :root body #wrapper #image {
   width: 100vw;
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1539035104074-dee66086b5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=2550&q=80");
+  background-color:black;
+  /*background-image: url("https://images.unsplash.com/photo-1539035104074-dee66086b5e3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjI0MX0&auto=format&fit=crop&w=2550&q=80");*/
   background-size: cover;
   transform: translateX(var(--x)) translateY(var(--y)) scale(var(--scale));
   transition: ease-out 0.7s;
@@ -134,3 +135,57 @@ svg.chart-wrap {
   background-color: #000000;
   border-color: white;
 }
+
+/* Makes the canvas stick to (0, 0) */
+/* html, body {
+    margin: 0;
+    padding: 0;
+} */
+
+/**{*/
+/*  !*background-color: black;*!*/
+/*  color: #565656;*/
+/*  !*alignment: center;*!*/
+/*  !*text-align: center;*!*/
+/*}*/
+
+
+/* Makes the canvas centered on the page */
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.year{
+  background-color:rgba(0,0,0,0);
+  margin: auto;
+  width: 100%;
+  color: #565656;
+
+  alignment: center;
+  text-align: center;
+  z-index: 10;
+  /*margin: auto;*/
+  /*left: 40vw;*/
+  position: fixed;
+  bottom: 10vh;
+}
+/*p{  alignment: center;*/
+/*  text-align: center;}*/
+/*#2023{*/
+/*  right: 20px;*/
+/*  background-color:rgba(0,0,0,0);*/
+
+/*  !*right: 60vw;*!*/
+
+/*  position: fixed;*/
+/*  !*bottom: 10vh;*!*/
+/*}*/
