@@ -15,7 +15,7 @@ let img;
 // preload table data
 function preload() {
     table = loadTable(
-        "../data/name200.csv",
+        "data/name200.csv",
         'csv',
         'header');
             // console.log(table)
