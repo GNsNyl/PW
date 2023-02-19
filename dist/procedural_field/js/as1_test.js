@@ -125,7 +125,7 @@ function draw() {
 
 
     newColor.setAlpha(alphaValue);
-    newColorLine.setAlpha(0.01+alphaValueLine*Math.sin(float*Math.PI));
+    newColorLine.setAlpha(0.01+alphaValueLine*Math.abs(Math.sin(float*Math.PI)));
     newColorText.setAlpha(alphaValueText);
 
 
