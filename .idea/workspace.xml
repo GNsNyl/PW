@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/moving-arch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/moving-arch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/data/name200.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/data/name200.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/sketch_a1.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +35,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -37,7 +48,8 @@
       <option name="presentableId" value="Default" />
       <updated>1676778437074</updated>
       <workItem from="1676778438308" duration="6000" />
-      <workItem from="1676778458517" duration="19000" />
+      <workItem from="1676778458517" duration="4453000" />
+      <workItem from="1676811771026" duration="13540000" />
     </task>
     <servers />
   </component>

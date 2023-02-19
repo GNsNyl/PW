@@ -21,13 +21,25 @@
           margin: auto;
           border-radius: 12px;
       }
+
+      #allslider-container{
+          position: absolute;
+
+          width: 200px; /* Width of the outside container */
+
+      }
     .slidecontainer {
       /*top:1px;*/
-      margin-left: 165px;
+      /*margin-left: 165px;*/
       color: white;
-
-      width: 30%; /* Width of the outside container */
+      width: 100%; /* Width of the outside container */
     }
+      #drawing-container{
+          position: absolute;
+          left: 350px;
+          /*margin-top:-100vh;*/
+          width: 70%;
+      }
 
     /* The slider itself */
     .slider {
@@ -63,17 +75,17 @@
       background: #ffffff; /* Green background */
       cursor: pointer; /* Cursor on hover */
     }
+    .slidecontainer{
+        font-size: smaller;
+        padding-bottom: 10px;
+    }
   </style>
-
   <script src="js/p5.js"></script>
-
 <!--  <script src="js/p5.min.js"></script>-->
-
 <!--  <script src="js/p5.dom.min.js"></script>-->
-
 <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>-->
   <script src="js/p5.sound.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="6483/style.css">
+  <link rel="stylesheet" type="text/css" href="css/all-style.css">
   <meta charset="utf-8" />
 </head>
 
@@ -123,71 +135,83 @@
 <div class="section">
   <div class="row">
 
+      <div id="allslider-container">
 
-    <div id="drawing-container">
+          <div id="circle">
+              <div class="slidecontainer" >
+                  <!--        <p>background transparency</p>-->
+                  circle size
+                  <!--            | 球尺寸-->
+                  <input type="range" min="0" max="10" value="1" class="slider" step="0.1" id="myRangeSize">
+              </div>
+              <!--<div class="slidecontainer">-->
+              <!--  <input type='file' id='getval' />-->
+              <!--</div>-->
+              <div class="slidecontainer" >
+                  <!--        <p>circle color| transparency</p>-->
+                  circle color-transparency
+                  <!--          ｜ 球颜色-透明度-->
+                  <input type="range" min="0" max="255" value="30" class="slider" id="myRange">
+              </div>
+              <!--            <hr class="solid">-->
+
+          </div>
+          <hr class="solid">
 
 
-        <div class="slidecontainer">
-<!--            <form id="myForm">-->
-<!--            <input type="file" id="csvFile" accept=".csv" />-->
-<!--            <br />-->
-<!--            <input type="submit" value="Submit" />-->
-<!--        </form>-->
-            <input type="file" id="filepicker" name="fileList" webkitdirectory multiple />
-            <output id="output"></output>
-        </div>
+          <div id="curve">
+              <div class="slidecontainer">
+                  <!--        <p>curve color| transparency</p>-->
+                  curve color-transparency
+                  <!--          ｜ 曲线颜色-透明度-->
+                  <input type="range" min="0" max="255" value="50" class="slider" id="myRangeLine">
+              </div>
+              <div class="slidecontainer">
+                  <!--        <p>curve color| transparency</p>-->
+                  curve line-weight
+                  <!--            ｜ 线宽-->
+                  <input type="range" min="0" max="50" value="7" class="slider" id="myRangeLineWeight">
+              </div>
+              <!--                <hr class="solid">-->
+
+          </div>
+          <hr class="solid">
 
 
+          <div id="text">
+              <div class="slidecontainer">
+                  font size
+                  <!--          ｜ 字号-->
+                  <input type="range" min="2" max="90" value="23" class="slider" id="myRangeFontSize">
+              </div>
+              <div class="slidecontainer">
+                  <!--        <p>font transparency</p>-->
+                  font transparency
+                  <!--          | 字体透明度-->
+                  <input type="range" min="0" max="255" value="160" class="slider" id="myRangeText">
+              </div>
+              <!--            <hr class="solid">-->
 
-        <div class="slidecontainer">
-<!--        <p>background transparency</p>-->
-        circle size
-<!--            | 球尺寸-->
-        <input type="range" min="0" max="10" value="1" class="slider" id="myRangeSize">
-      </div>
-      <!--<div class="slidecontainer">-->
-      <!--  <input type='file' id='getval' />-->
-      <!--</div>-->
-      <div class="slidecontainer">
-<!--        <p>circle color| transparency</p>-->
-        circle color-transparency
-<!--          ｜ 球颜色-透明度-->
-        <input type="range" min="0" max="255" value="30" class="slider" id="myRange">
-      </div>
-      <div class="slidecontainer">
-<!--        <p>curve color| transparency</p>-->
-        curve color-transparency
-<!--          ｜ 曲线颜色-透明度-->
-        <input type="range" min="0" max="255" value="50" class="slider" id="myRangeLine">
-      </div>
-        <div class="slidecontainer">
-            <!--        <p>curve color| transparency</p>-->
-            curve line-weight
-<!--            ｜ 线宽-->
-            <input type="range" min="0" max="50" value="7" class="slider" id="myRangeLineWeight">
-        </div>
-      <div class="slidecontainer">
-        font size
-<!--          ｜ 字号-->
-        <input type="range" min="2" max="90" value="10" class="slider" id="myRangeFont">
-      </div>
-      <div class="slidecontainer">
-<!--        <p>font transparency</p>-->
-        font transparency
-<!--          | 字体透明度-->
-        <input type="range" min="0" max="255" value="160" class="slider" id="myRangeText">
-      </div>
-        <div class="slidecontainer">
-            <!--        <p>font transparency</p>-->
-            press "s" to export
-<!--            ｜ 按 s 键下载-->
+          </div>
+          <hr class="solid">
 
-        </div>
+
+          <div class="slidecontainer">
+              <!--        <p>font transparency</p>-->
+              drag bubbles to move <br> </br>press "s" to export
+              <!--            ｜ 按 s 键下载-->
+
+          </div></div>
+
+      <div id="drawing-container"></div>
+
     </div>
     <!--                <div class="col-sm-9 title-label"><textarea id="ti1" value="TEST">Type a sentence, copy or paste a paragraph, or find some random symbols, and click the convert button! </textarea></div>-->
     <!--                <div class="col-sm-3 title-desc-label"> <button onclick="convert();">Convert</button> </div>-->
     <!--            </div>-->
   </div>
+</div>
+
   <br>
 
 
@@ -219,7 +243,9 @@
 
 
 <!--<script src="js/circle_class/js"></script>-->
-<script type="text/javascript" src="js/assignment1.js"></script>
+<!--<script type="text/javascript" src="js/assignment1.js"></script>-->
+<script type="text/javascript" src="js/as1_test.js"></script>
+
 <!---->
 <!--<script type="text/javascript" src="js/assignment1_2.js"></script>-->
 
