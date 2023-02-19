@@ -28,6 +28,17 @@
           width: 200px; /* Width of the outside container */
 
       }
+      table, th, td {
+          border: 0.1px solid #565656;
+
+      }
+      table p{
+          text-align: center;
+          display: block;
+          font-size: smaller;
+
+      }
+
     .slidecontainer {
       /*top:1px;*/
       /*margin-left: 165px;*/
@@ -224,13 +235,34 @@
     <div class="row">
       <div class="col-sm-9">
         <div class="paragraph">
-          <p> hfkhdkjfjskhfkdshfjksfjkds
+          <p> This drawing app is intended for artistic visualization of data.
+              <br>- Drag your csv file into the canvas above.
+              <br>- Test with different parameters on the left.
+              <br>- Press s to save your work.
+              <br>- Your csv file should be structured as such
           </p>
+
+            <table>
+            <tr>
+                <th><p>annotation[str]</p></th>
+                <th><p>intended size of bubble[int or float]</p></th>
+                <th><p>number of arms[int]</p></th>
+
+            </tr>
+
+            <tr>
+                <th><p>Max</p></th>
+                <th><p>100</p></th>
+                <th><p>25</p></th>
+            </tr>
+
+                </table>
+
         </div>
       </div>
       <div class="col-sm-3">
         <div class="paragraph-desc">
-          <p>some<br>什么</p>
+          <p>Yunsong Liu<br>刘 云松</p>
         </div>
       </div>
     </div>

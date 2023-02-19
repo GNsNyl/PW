@@ -4,8 +4,6 @@
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/data/name200.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/data/name200.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/sketch_a1.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
       <updated>1676778437074</updated>
       <workItem from="1676778438308" duration="6000" />
       <workItem from="1676778458517" duration="4453000" />
-      <workItem from="1676811771026" duration="13540000" />
+      <workItem from="1676811771026" duration="14464000" />
     </task>
     <servers />
   </component>
