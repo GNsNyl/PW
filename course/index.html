@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>liuyunsong</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<script type="x-shader/x-vertex" id="vertexshader">
+
+  attribute float size;
+  attribute vec3 customColor;
+  varying vec3 vColor;
+
+  void main() {
+
+    vColor = customColor;
+    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+    gl_PointSize = size * ( 300.0 / -mvPosition.z );
+    gl_Position = projectionMatrix * mvPosition;
+
+  }
+
+</script>
+<script type="x-shader/x-fragment" id="fragmentshader">
+
+ uniform vec3 color;
+ uniform sampler2D pointTexture;
+
+ varying vec3 vColor;
+
+ void main() {
+
+   gl_FragColor = vec4( color * vColor, 1.0 );
+   gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+
+ }
+</script>
+
+<div id="magic"></div>
+<div class="playground">
+  <div class="bottomPosition">
+    <table>
+      <tr>
+        <th>
+          <div class="minText">[in]CALCULABILITY:</div>
+        </th>
+        <th>
+           <a href="dist/forms_of_assembly/index.html" target="_blank">
+            <div class="logo">
+              <div class="minText">All Things Assembly</div>
+            </div>
+          </a>
+        </th>
+<!--        <th>-->
+<!--           <a href="dist/procedural_field/index.html" target="_blank">-->
+<!--&lt;!&ndash;             <a href="dist/procedural_field/audio/audio.html" target="_blank"> &ndash;&gt;-->
+
+<!--            <div class="logo">-->
+<!--              <div class="minText">Procedural Field</div>-->
+<!--            </div>-->
+<!--          </a>-->
+<!--        </th>-->
+        <th>
+          <a href="dist/inter-act/index_0.html" target="_blank">
+            <div class="logo">
+              <img src="dist/inter-act/interact-01.png" width="50px" >
+              <span class="tooltiptext">participatory design</span>
+            </div>
+          </a>
+        </th>
+        <th>
+          <a href="dist/nudedist/nudeindex.html" target="_blank">
+            <div class="logo">
+              <img src="dist/nudedist/nudeicon.png" width="50px" >
+              <span class="tooltiptext">gender structure</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="dist/fooddist/foodindex.html" target="_blank">
+            <div class="logo">
+              <img src="dist/fooddist/foodicon.png" width="50px" >
+              <span class="tooltiptext">food equity</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://wahnabezee-future-histories.github.io/wahnabezee-future-histories/" target="_blank">
+            <div class="logo">
+              <img src="dist/xrdist/xricon.png" width="50px" >
+              <span class="tooltiptext">xr detroit</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://liuyunsongrep.cargo.site/finger-book" target="_blank">
+            <div class="logo">
+              <img src="dist/xrdist/finger-01.png" width="50px" >
+              <span class="tooltiptext">computer vision</span>
+            </div>
+          </a>
+        </th>
+        <th>
+          <a href="dist/lightdist/lightclick.html" target="_blank">
+            <div class="logo">
+              <img src="dist/lightdist/lighticon.png" width="50px" >
+              <span class="tooltiptext">artificial light</span>
+              </div>
+          </a>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="minText">URBANITY:</div>
+        </th>
+        <th>
+          <a href="dist/bamboo/bamboo.html" target="_blank">
+            <div class="logo">
+              <img src="dist/xrdist/bamboo.png" width="50px" >
+              <span class="tooltiptext">carbon trading</span>
+            </div>
+          </a>
+        </th>
+        <th>
+          <a href="dist/delraydist/delray_index.html" target="_blank">
+            <div class="logo">
+              <img src="dist/delraydist/cement.png" width="50px" >
+              <span class="tooltiptext">infrastructure</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://liuyunsongrep.cargo.site/" target="_blank">
+            <div class="logo">
+              <img src="dist/mediadist/visualicon.png" width="50px" >
+              <span class="tooltiptext">narratives</span>
+              </div>
+          </a>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <div class="minText">VERBOSITY:</div>
+        </th>
+        <th>
+          <a href="https://scielo.conicyt.cl/scielo.php?script=sci_arttext&pid=S0717-69962020000300060&lng=es&nrm=iso&tlng=en" target="_blank">
+            <div class="logo">
+              <img src="dist/publicationdist/arqicon.png" width="50px" >
+              <span class="tooltiptext">arq journal</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://www.tandfonline.com/doi/abs/10.1080/10511482.2021.1924825?journalCode=rhpd20" target="_blank">
+            <div class="logo">
+              <img src="dist/publicationdist/housingicon.png" width="50px" >
+              <span class="tooltiptext">housing policy</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://research.gsd.harvard.edu/zofnass/menu/events/fall_conference/" target="_blank">
+            <div class="logo">
+              <img src="dist/publicationdist/climateicon.png" width="50px" >
+              <span class="tooltiptext">climate resilience</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://www.fora-ontheurban.net/contributions/refracted-reading-of-practices-black-lives-matter-mural-plaza-washington-d-c-liu-yungsong" target="_blank">
+            <div class="logo">
+              <img src="dist/publicationdist/foraicon.png" width="50px" >
+              <span class="tooltiptext">fora</span>
+              </div>
+          </a>
+        </th>
+        <th>
+          <a href="https://liuyunsongrep.cargo.site/mahjong" target="_blank">
+            <div class="logo">
+              <img src="dist/xrdist/mahjong.png" width="50px" >
+              <span class="tooltiptext">philosophy</span>
+            </div>
+          </a>
+        </th>
+      </tr>
+    </table>
+        <h1 class="maxText">ON DIGITAL HUMANITY | URBANITY | GENDER | [in]CALCULABILITY | BODILY AFFECTIVITY<br><span class="maxText">YUNSONG LIU | SELECTED WORKS 2020-2022</span></h1>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>

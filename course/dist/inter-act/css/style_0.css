@@ -1,0 +1,48 @@
+html,
+body {
+    /*font-family: "Helvetica Neue";*/
+    /*font-size: small;*/
+    margin: 0;
+    overflow: scroll;
+    height: 100%;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+#start_btn{
+    width: 100vw;
+    text-align:center;
+    position: absolute;
+    alignment: center;
+    align-items: center;
+    align-content: center;
+    z-index: 2;
+    margin-top: 75vh;
+    /*left: 46vw;*/
+}
+/*#start_buttun{*/
+/*    */
+/*    !*width: 100vw;*!*/
+/*    !*position: absolute;*!*/
+/*    alignment: center;*/
+/*    align-items: center;*/
+/*    align-content: center;*/
+/*    !*z-index: 2;*!*/
+/*    !*margin-top: 80vh;*!*/
+/*    !*left: 46vw;*!*/
+#project_details{
+    /*color: blue;*/
+    display: none;
+    margin-left: 85px;
+    margin-right: 85px;
+    margin-top: 45px;
+    font-family: "Helvetica Neue LT Std";
+    font-weight: 0.01;
+    background-color: white;
+    /*width: 100%;*/
+}

@@ -46,7 +46,7 @@ var slider_line = document.getElementById("myRangeLine");
 var slider_line_weight = document.getElementById("myRangeLineWeight");
 var slider_text= document.getElementById("myRangeText");
 var slider_font_size= document.getElementById("myRangeFontSize");
-var circles = [];
+var blobs = [];
 
 let cns;
 
@@ -109,7 +109,7 @@ function setup() {
         let name_ani=tableArray[i][0]
         let num=tableArray[i][1]/10
         let arm=tableArray[i][2]
-        circles.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+        blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
     }
 };
 // Draw on the canvas.
@@ -117,11 +117,11 @@ function draw() {
 
     let backColor=backcolPic.color();
     let alphaValue = slider.value;
-    let circleSize=slider_size.value;
-    let newColor = colPic.color();
+    let blobsize=slider_size.value;
+    let fillColor = colPic.color();
     let alphaValueLine =slider_line.value;
     let lineWeight =slider_line_weight.value/10;
-    let newColorLine = linecolPic.color();
+    let lineColor = linecolPic.color();
     let alphaValueText =slider_text.value;
     let newColorText = textcolPic.color();
     fontsize = slider_font_size.value;
@@ -131,27 +131,30 @@ function draw() {
     text(msg, width / 2, height - 25);
 
 
-    newColor.setAlpha(alphaValue);
-    newColorLine.setAlpha(alphaValueLine);
+    fillColor.setAlpha(alphaValue);
+    lineColor.setAlpha(alphaValueLine);
     newColorText.setAlpha(alphaValueText);
 
+    // let minR=50;
+    // let maxR=100;
+    for (let i = 0; i < tableArray.length; i++) {
+        let blob=blobs[i]
 
+        addIrregular(0.3*blob.radius_num, 0.7*blob.radius_num,1+i/tableArray.length,zoff,lineColor,fillColor,lineWeight,blob.x,blob.y)
+
+    }
+    zoff+=0.007
 
     float+=0.002
 };
-function addIrregular(){
-    let minR=50;
-    let maxR=100;
-    // add blobs--------------------------------------------------
-    // noiseMax = sliderNoise.value();
-    // let all=[]
 
-    // position of each blob----------------------------------
-    translate(width / 2, height / 2);
+function addIrregular(minR, maxR,noiseMax,zoff,lineColor,fillColor,lineWeight,cx,cy){
 
     beginShape();
-    noFill();
-
+    // noFill();
+    stroke(lineColor)
+    strokeWeight(lineWeight)
+    fill(fillColor)
     for (let a = 0; a <= TWO_PI; a += inc) {
         let xoff = map(cos(a), -1, 1, 0, noiseMax);
         let yoff = map(sin(a), -1, 1, 0, noiseMax);
@@ -159,28 +162,10 @@ function addIrregular(){
         let x = 2*r * Math.cos(a);
         let y = 3*r * Math.sin(a);
 
-        line(0,0,x,y)
-        vertex(x, y);
+        line(cx,cy,cx+x,cy+y)
+        vertex(cx+x, cy+y);
     }
     endShape(CLOSE);
-    beginShape();
-    fill(newColor);
-
-    for (let a = 0; a <= TWO_PI; a += inc) {
-        let xoff = map(cos(a), -1, 1, 0, 4);
-        let yoff = map(sin(a), -1, 1, 0, noiseMax);
-        let r = map(noise(xoff, yoff, zoff), 0, 1, minR, maxR);
-        let x = 1.3*r * Math.cos(a);
-        let y = 2*r * Math.sin(a);
-
-        line(0,0,x,y)
-        vertex(x, y);
-    }
-    endShape(CLOSE);
-
-    zoff += 0.01;
-
-
 }
 
 function gotFile(file) {
@@ -192,7 +177,7 @@ function gotFile(file) {
     csv = parseCSV(inputFile);
     console.log(csv);
     if (csv) {
-        circles=[]
+        blobs=[]
         console.log("running")
         // table = loadTable(
         //     inputFile.name,
@@ -208,7 +193,7 @@ function gotFile(file) {
             let name_ani=csv[i][0]
 
             // console.log(num)
-            circles.push({ x: 0.5*windowWidth*(Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+            blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
         }
     }
 
@@ -236,9 +221,9 @@ function mousePressed() {
     if(mouseX>0){
 
         if (mouseY > 0){
-            if (circles.length > 0) {
-                for (var i = 0; i < circles.length; i++) {
-                    var circle = circles[i],
+            if (blobs.length > 0) {
+                for (var i = 0; i < blobs.length; i++) {
+                    var circle = blobs[i],
                         distance = dist(mouseX, mouseY, circle.x, circle.y);
                     if (distance < circle.radius_num) {
                         circle.active = true;
@@ -259,9 +244,9 @@ function mouseDragged() {
     if(mouseX>0){
 
         if (mouseY > 0){
-            if (circles.length > 0) {
-                for (var i = 0; i < circles.length; i++) {
-                    var circle = circles[i];
+            if (blobs.length > 0) {
+                for (var i = 0; i < blobs.length; i++) {
+                    var circle = blobs[i];
                     if (circle.active) {
                         circle.x = mouseX;
                         circle.y = mouseY;

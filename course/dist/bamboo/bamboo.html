@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>The Wicker Basket, Bamboo, and K-line</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    #three_container{
+      position: absolute;
+      z-index: -10;
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial;
+      color: black;
+    }
+    p{
+      font-family: Arial;
+      /*font-weight:20 ;*/
+      color: black;
+      font-size: small;
+    }
+
+    .split {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      overflow-x: hidden;
+      padding-top: 20px;
+      scroll-behavior: smooth;
+      transition-duration: 500ms;
+    }
+
+    .left {
+      left: 0;
+      background-color: rgba(255,255,255,0);
+      display: flex;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      scroll-behavior: smooth;
+      transition-duration: 500ms;
+    }
+    .main_text {
+      margin-top: 25vh;
+      position:absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .right {
+      right: 0;
+      width: 50%;
+      background: none;
+      position: absolute;
+      overflow-x:hidden;
+      overflow-y: scroll;
+    }
+    canvas{
+      height: 100%;
+      position:fixed;
+    }
+
+    .centered {
+      position: relative;
+      width: 45vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .centered img {
+      width: 150px;
+      /*border-radius: 50%;*/
+    }
+    .placeholder{
+      height: 100vh;
+      margin-top: 100vh;
+    }
+
+    #img1{
+      width: 100px;
+      /* top: 75%; */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    iframe{
+      frameborder: 0px;
+      /*display: flow;*/
+      /*margin-top: 20px;*/
+      border: 0px;
+      alignment: center;
+      width: 30vw;
+      height:80vh;
+      position: relative;
+      /*margin: 5vw;*/
+    }
+    /*section{*/
+    /*  margin-top: 50vh;*/
+    /*}*/
+    #container{
+      right: -10%;
+      top:10%;
+      width: 50%;
+      height: 100%;
+      z-index: -2;
+      position: fixed;
+      /* overflow-y: hidden;
+      overflow-x: hidden; */
+      position: fixed;
+      /*top: 0;*/
+      pointer-events: auto;
+      /* display: block; */
+    }
+    .scrool{
+      position: fixed;
+      overflow-y: scroll;
+    }
+    section{
+      margin-top: 25vh;
+    }
+    h4 {
+      font-family: "Times New Roman", Times, serif;
+      font-size: small;
+      font-style: italic;
+    }
+    #data_container{
+      right: 0;
+      color: black;
+      width: 50%;
+      height: 100%;
+      z-index: 2;
+      position: absolute;
+      /* overflow-y: hidden;
+      overflow-x: hidden; */
+      top: 0;
+      /* display: block; */
+    }
+    #term_container{
+      /*width: 30vw;*/
+      font-size: x-small;
+      font-family: "Andale Mono";
+    }
+    .line {
+      fill: none;
+      stroke-width: 1px;
+    }
+
+    .axis path {
+      stroke: black;
+      stroke-width: 2px;
+      fill: none;
+      shape-rendering: crispEdges;
+    }
+    .imgs_cont{
+      width: 150%;
+    }
+    .imgs{
+      width: 10vw;
+      /*height: 20px;*/
+      transition: width 2s, height 2s;
+      /*display: flow;*/
+    }
+    .imgs:hover {
+      width: 50vw;
+      /*height: 80px;*/
+    }
+    #large_img{
+      width: 50vw;
+      /*left: -45vw;*/
+    }
+    #term_container{
+      align-content: center;
+    }
+    .tick line {
+      stroke: black;
+      stroke-width: 2px;
+    }
+
+    #anchor{
+      z-index: 500;
+      pointer-events: auto;
+      font-size: xx-large;
+    }
+    a:link { color:black; text-decoration: none; }
+    a:visited { color:black; text-decoration: none; }
+    a:hover { color:black; text-decoration: none; }
+    a:active { color:black; text-decoration: none; }
+    html {scroll-behavior: smooth;}
+
+    ul {
+      list-style-type: none;
+      alignment: left;
+      text-align: left;
+      counter-reset: css-counters 0; /* intializes counter, set -1 for zero-based counters */
+      font-size: smaller;
+    }
+
+    ul li:before {
+      counter-increment: css-counters;
+      content: counters(css-counters, ".") " "; /* generates inherited counters from parents */
+    }
+
+
+
+
+  </style>
+
+</head>
+<body>
+
+<main>
+  <div id="three_container"></div>
+
+  <div id = 'anchor'>
+    <a href="#top">-</a><br />
+    <a href="#sec1"> . </a><br />
+    <a href="#sec2"> ..</a><br />
+    <a href="#sec3">...</a><br />
+  </div>
+
+  <div class="split left">
+
+    <div class="centered main_text" id="top">
+
+      <h2>The Wicker Basket, Bamboo, and K-line:
+      </h2>
+      <h3>“market” economy and carbon trading in rural China, a commodity, an appropriation, or a relation?</h3>
+      <h4>In memory of my grandma,<br>
+        wife to a Chinese teacher, illiterate,<br>
+        mother of 4 children, peasant,<br>
+        had the strength to shoulder a tree,<br>
+        fought lung cancer for 16 years, <br>
+        passed away as the autumn of 2022 fell.<br>
+        It’s a Chinese tradition to be buried in the land where one was born,<br>
+        in her case, the soil she married.
+      </h4>
+
+      <section>
+        <h5>Change of Mind</h5>
+        <p>My starting point was to write about the commodification of nature through carbon trading. But whenever I closed my eyes and started outlining, I saw faces, fading faces and villages. My memory of grandma is my only clear tie with my hometown village. I want to document it before it pales off. Not until the middle of the writing did I find that her story is so attuned to the time of massive changes I was too within to see. Jason Moore illustrates as he adopts a socio-ecological perspective that  “one’s point of departure - nature? society? the relations between them? - shapes the range of possible destinations.”<sup>1</sup> The outcome of this socially registered writing is expected to be different from one from an ecological perspective. However, this is not to sever the ecological aspects from carbon trading, this is indeed a situation of relations on which we premised. In this regard, I see this writing of stories as a needle pincushion, recasting theories and critique of labor, economy, ecology, and society.
+          </p><p>A pure critique is as radically wrong as a tout. The practice of carbon trade and payment for ecological services is a result of the collective discussions of informed economists, politicians, and intellectuals whose information is asymmetrically broader in horizon and time scale than mine. What I offer here is a zooming-in analysis of its implementation in one place and the immediate impacts on villagers.
+
+        </p>
+        <img class = 'imgs' src="img/pin.png">
+        <p>After reading the American Lucifers by Jeremy Zallen, I hesitate to “conflate relations of oppression,” but here, this IS a typical rural story, a prototypical struggle shared by 292,510,000 migrant workers<sup>2</sup> in the cities and their close family members stationed behind. I do not claim or even attempt to comment on the lopsided developments of urban and rural areas but rather see them as the socio-political terrain in which the rhetoric of carbon trade situates itself. The work of this paper is to contextualize the carbon market (using the case of <i>Anji</i>) in the well-studied socio-economic models of Polanyian market theory and the Lewis dual sector model, both of which constitute the theoretical foundation and analytical framework of the transformation of China, and recast Marxist critique of political economy in the process of commodification of nature.
+        </p>
+        <h5>Choice of Word: Commodification or Commoditization?</h5>
+        <p>
+          The choice of words implies and enforces normative importance on the subject matter under discussion. In describing the process of making nature a commodity for sale, two words are up for bid: commodification and commoditization. I could not find a systematic analysis of their difference, and word formation gives more syllabic explanations regarding -ize and -ify.<sup>3</sup> Below are some efforts made by other people.
+        </p>
+        <p style="margin-left:100px; margin-right:100px; color: #5e5e5e">
+          According to New Oxford American Dictionary:
+          Commoditization: the action or process of treating something as a mere commodity: he warned against commoditization of the ancient Indian practice.
+          Commodification: the action or process of treating something as a mere commodity: he warned against commoditization of the ancient Indian practice.
+        <br>
+          According to a blog in Investopedia,
+          “Commoditization refers to the process of making something into a commodity. More broadly, commodification is taking something that previously was not available in the market and making it so…”<sup>4</sup>
+          <br>
+          According to DiffBw:
+          As a noun, commoditization is "The transformation of something into a commodity". On the other hand, commodification is "The assignment of a commercial value to something previously valueless."<sup>5</sup>
+          <br>
+          According to Wikipedia:
+          One way to summarize the difference is that commoditization is about proprietary things becoming generic, whereas commodification is about nonsaleable things becoming saleable. In social sciences, particularly anthropology, the term is used interchangeably with commodification to describe the process of making commodities out of anything that was not available for trade previously.<sup>6</sup>
+          <br>There is also debate over the Marxism embeddedness of the words, although different people hold different opinions, Douglas Rushkoff argues that commodification is a Marxist term<sup>7</sup> whereas Braden R. Allenby states the opposite that “Commoditization is a strange word. Frequently found in Marxist discourse, it means…”<sup>8</sup>
+        </p>
+        <p>I am here using commodification of nature for the prevalence of this term as opposed to the commoditization of nature, however, the choice of commodification is provisional and subject to change once I have a clearer and more determinant understanding.</p>
+        <section id = 'sec1'>
+        <h4>Section 1 SCALE-UP: STORY, STORIES</h4>
+        <h5>Year two Thousand Something, the Wicker Basket and Mushroom “Economy”:</h5>
+        <p>
+          I spent my early summer and winter breaks in small villages with my grandparents, powering up by doing nothing. We lived in the northern part of inland China. Thanks to the mountainous topography, we got about ten-minute heavy rain almost every day, and the sky cleared up for the rest of the day. This is the perfect condition for mushroom prosperity: humid enough for its growth and gentle so that it is not washed away. Grandma would get in the forest and collect mushrooms every other day, and I could tag along if I felt like it. All the time, she carried an empty wicker basket, spacious enough to put me inside, and got back a basket full of mushrooms, hazelnuts, and some unnamed grasses. Risking overgeneralization, the most common “wall decoration” in northern rural China was those handcrafted wicker baskets of various sizes, weathered. I don’t see them often today anymore. Made devoid of material and structural mechanics, in my grandma's hands, they seemed steady enough to carry the mountain. After not very long, I earned myself a mini-basket for participation award; happily, I became “well” equipped to collect.
+        </p>
+        <p>
+          The newly collected mushrooms must be cleaned and flatted under the sun to avoid molding. Depending on the weather conditions, but most often, after two or three weeks, we would bag them to sell. Different varieties of mushrooms sold at different prices; for me, this wasn’t given knowledge back then. I learned at the “business negotiation table.” There had always been men on a motorcycle, traveling miles across villages to buy mushrooms, hazelnuts, etc. I called them the “mushroom brokers.”
+        </p>
+        <p>
+          That was almost 20 years ago. A gunny sack of mushrooms from a month's labor, compact of my height, could only sell for 30 <i>yuan</i> (about $4.5). That was already the price after haggling. From their “dance” of negotiation, I learned about yield and rainfall, price, and temperature. The mushroom broker came already burdening the motorcycle but always managed to make space for grandma’s bloated bags. Grandma was illiterate but could do the math; however, she ensured that I was always around in case her untrained math skills failed her at critical points.
+        </p>
+        <p>
+          I lived in the city most of the year, but never had I been so close to the “market” while I was in the distant village, assisting grandma in selling mushrooms. Many years later, I learned the term “invisible hands of the market” in junior high politics class. At that time, the “hand” was talking through the broker’s mouth about words he probably had picked up from other merchants and handed grandma the compensation for the summers’ labor.
+        </p>
+        <p>
+          One thing important is that you don’t sell mushrooms to make a living; the mountain was not generous enough to have that many mushrooms to support the entire family. Grandparents live off the modest income as a teacher and their rice and corn field. Collecting mushrooms was only to fill in what meant to be a recessive season of the year – between spring sowing-seeding and fall harvesting.
+        </p>
+
+        <h5>
+          “Rural Renewal,” Depeasantization, and Migrant Workers
+        </h5>
+        <p>
+          My grandparents moved to the city in 2005 when my parents could finally afford another apartment in the city (small town, to be more precise) and wished their parents could take early retirement from farm work. My grandparents’ moving cut down my thin tie to my hometown, from two stays each year to one every two or three years. Their going to the city was normal in a special way: of the many migrants from villages, they were in a less frequent age group. That was the time of booming development in China's large cities; young people rushed into big cities<sup>9</sup> in the hope of making good fortune, leaving the seniors and children in the village for lack money to support education and health care in big cities, and the restriction of household registration (Hukou<sup>10</sup>). At about the time when “grandmas” stopped collecting for the poor price that mushrooms had become, the mountain grew at a renewed intensity and unkempt, swallowing down previous trails; the farmland was not as occupied as it used to be, but some youngsters might still come back farming for less than two weeks and head back to cities without water break; green the nature might be, lonesomeness was all I saw. Contrary to the exponential diversification of mountain vegetation, the villages homogenized to an age combination of 15- and 60+, aging, with its prevalence sweeping across the country.
+        </p>
+        <div class="main_text imgs_cont">
+<!--          <img class = 'imgs' src="img/before_pick.png">-->
+<!--          <img class = 'imgs' src="img/mush_more.png">-->
+<!--          <img class = 'imgs' src="img/bow.png">-->
+<!--          &lt;!&ndash;          <img class = 'imgs' src="img/mush_less.png">&ndash;&gt;-->
+<!--          &lt;!&ndash;          <img class = 'imgs' src="img/after_pick.png">&ndash;&gt;-->
+<!--          <img class = 'imgs' src="img/cal.png">-->
+        </div>
+        <p>Like that, my hometown, a space of primary-commodity production, receded on the layered parchment of progress. The strong and the young stopped their peasantry and joined the “labor reserve army” in cities,<sup>11</sup> expected to break the material separation and seek upward mobility, leaving our village a labor resource hinterland. The actualized depeasantization took off along with the densified tapestry of connectivity and information fluidity, and some places were rendered invisible in the circulatory system. The moving of migrant workers conforms to the Dual Sector model<sup>12</sup> of the traditional agricultural sector and a modern industrial sector formulated by Sir William Arthur Lewis. Inferring from the elasticity of agricultural products as necessities less than 1, in my grandma’s case, the price of mushrooms stopped being attractive to her anymore, and farmers’ income lagged behind the overall income (earning) and inflation (spending) rate, forcing farmers to seek jobs in cities. Price scissors, meaning the inequity of prices among agricultural products versus industrial products, further discourage farmers’ productivity. The Dual Sector model describes the process that surplus labor from the agricultural sector is drawn and simultaneously contributes to the growth of the industrial sector. The migration has deeper roots in the incongruence between industrialization and the lagged behind urbanization, or what the World Bank termed in 1982 “industrialization without urbanization,” which has deep spatio-political embeddedness.
+        </p>
+        <p>Moving into large cities, migrant workers take on jobs in construction sites and gig economy. The modality of turning imperative to make a living into the urban flow and concrete spectacle underpins the process of logistical urbanization. People were “voluntarily” forced into the relationship of production, the regime of labor and capital, and the falsified promise of automation and modernization. Young former peasants struggle in that their “only source of income is the sale of his labor-power” indispensable to “the whole class of buyers.”<sup>13</sup>
+        </p>
+        <p>
+          This is the story of grandma’s participation in the commodity network as a farmer, her unalienated labor, and the stories of the subsumed farmers I see through hers. The industrialization and socialist economic regime concerted the geospatial and dual-sectoral reconfiguration of labor. I did not think this was relevant to carbon trading; however, carbon capture in practice demands the economistic metric of human labor, and carbon or in its more tangible form – carbon capturing plants constitute the material axis and unity of labor and nature. The force atlas of the carbon market seems to pull migrant worker back to rural labor with the promise of carbon compensation; the next section traces the socio-economic genealogy of carbon trading in <i>Anji</i> and quantitively analyze the legitimacy of its promise.
+        </p>
+        </section>
+        <section id = 'sec2'>
+        <h4>Section 2 SCALE-DOWN: MARKETS, MARKET</h4>
+        <h5>Carbon Trading, Fictitious Commodity in the Dual Sector?</h5>
+          <p>Payment for ecosystem services (PES) is an environmental managerial approach to facilitate ecosystem conservation and restoration using monetary compensation,<sup>14</sup> whose details I will spare here. In their article, Milder, Scherr, and Bracer emphasize PES’ potential to alleviate poverty and be beneficial for low-income people both in the program and outside. To localize the conversation within the social context of China – the dual sector and imbalanced rural and urban development and socialist economy, I focus the discussion on the <i>Anji</i> Liangshan Bamboo Forest Carbon Collection and Storage Trading Center established in December 2021.
+        </p>
+        <p style="margin-left:100px; margin-right:100px; color: #5e5e5e">
+          <i>In December 2021, the <i>Anji</i> Liangshan Bamboo Forest Carbon Collection and Storage Trading Center was established, marking the official operation of the country's first county-level bamboo forest carbon collection and storage trading platform.
+          The transaction and storage of the bamboo forest carbon sink need to go through <i>Anji</i> Liangshan Bank. The bank purchases carbon sinks from village collectives (farmers) and then trades them to enterprises. Up to now, <i>Anji</i> Liangshan Bank has completed the first phase of transactions of 142,400 mu<sup>15</sup> of bamboo forest with three enterprises in the county at a total of 416,000 <i>yuan</i>. Of the revenue of about 147,000 <i>yuan</i>, <i>Anji</i> Liangshan Bank will compensate 80% of the net income to the village collectives and guide the villagers to interplant, interbreed, and harvest scientifically.<sup>16</sup>
+          </i></p>
+        <p>
+          The general notion of carbon trading or PES bears the impression of a double gain: economically subsidizing for farmers and meeting the carbon cap for corporations. The <i>Anji</i> trade center is initiated under the umbrella of corporate carbon initiatives of increasing salience under the political agenda of carbon reduction and carbon neutrality. We can ask myriad questions: does this act uncouple corporates’ mitigation from carbon reduction and externalize it to the rural? Does this usher in a new modality of earthy integration among villagers? Would the trade lead to the over-exploitation of Bamboo soil? Will the biodiversity of the local ecosystem be compromised by overemphasizing one carbon-captive plant? However, the environmental effects of overgrown bamboo need further substantiation to evaluate. The main objective in the following paragraphs is to unpack the transactional process in the case of <i>Anji</i>, where the trade center marks the official marketization of carbon sink and its relevance to the local farmers. Through the Dual Sector model lens, does this trade introduce a non-agricultural product (commodity) whose income elasticity of demand is larger than 1 in the spatially and geopolitically agricultural sector? If so, will this alleviate the series of social inequities brought on by the imbalanced development between rural and urban China? The idea of emission trading originates from the 1997 Kyoto Protocol, and the term did not get this much attention until recently in China, however the governmental intervention aspect of the carbon tax that Diana Stuart, Ryan Gunderson, and Brian Petersen<sup>17</sup>> associated with Polanyian economy theory dates far back in China’s history.
+        </p>
+          <h6>Polanyi<sup>18</sup> and China’s Great Transformation</h6>
+          <p style="margin-left:100px; margin-right:100px; color: #5e5e5e">
+            <i>
+              The Story of Spring<sup>19</sup><br><br>
+              "In 1979,<br>
+              that was a spring,<br>
+              an old man drew a circle on the South Sea of China,<br>
+              mythically rising cities,<br>
+              miraculously gathering golden mountains..."
+            </i></p>
+          <p>In 2007, Polanyi’s The Great Transformation was introduced in mainland China. Before that, his thoughts had already coincided with China’s Reform and Open-up policy, also named the “socialist market economy.”  In the shy of the policy, the “socialist market economy” is itself an entity of inner conflicts between “socialism” and “market economy” that takes contradictory methods of social and economic organizations. There were serious debates over the ideological problems of the duality of a “socialist market economy,” forcing Chinese scholars to rethink what socialism is and how to embody a market economy under the socialist structure. It would be hasty to say if Polanyi’s thoughts got to China or if Chinese scholars found Polanyi’s thoughts. Per Polanyi’s writings, Marxist class analysis concerns only a narrow part of conflicts between employers and workers but not the overall political background of the conflicts. He suggests the state power between employers and workers. Though Chinese scholars never ceased their study of Marxism, they sensed an alignment between the Polanyian theory of economy and China’s great transformation of a “socialist market economy” (SME), or what I learned in junior high politics class “Chinese way of the market economy.” Lin Yi, in Thoughts on Institutional Economics and Its Enlightenment), points out that Polanyiʼs view of the Western market economy is not the only model of a market economy.<sup>21</sup> Not only that, in Polanyi’s original writing, “the idea of a self-adjusting market implied a stark utopia. Such an institution could not exist for any length of time without annihilating the human and natural substance of society; it would have physically destroyed man and transformed his surroundings into a wilderness”<sup>22</sup> further concretized China’s confidence in a “socialist market economy.”
+          </p>
+          <h6>Polanyi and Climate Mitigation</h6>
+          <p>Diana Stuart, Ryan Gunderson, and Brian Petersen illustrate a scheme of Polanyian application on the analysis of climate intervention: fictitious commodities, the double movement, and (dis)embeddedness.<sup>23</sup> Fictitious commodities, according to Polanyi, refer to objects that are not produced by humans for sale, for example, “labor, land, and money.” Stuart, Gunderson, and Petersen broaden this false commodification to carbon markets. Once fictitious commodities are treated as genuine ones will lead to the destruction of society. The reason it did not occur is “thus the result of a double movement: the extension of the market organization in respect to genuine commodities was accompanied by its restriction in respect to the fictitious ones”<sup>24</sup> The third is the debate over embedded economy versus disembedded one. Stuart, Gunderson, and Petersen endorse the perspective that “the idea rather than the reality of the disembedded economy that drives market fundamentalism.” The embeddedness-disembeddedness debate does not pertain as much to the <i>Anji</i> carbon trade center as it does somewhere else, under the SME of China. The following analysis will return back to Polanyi’s view on nature that without protections, nature “would be reduced to its elements”<sup>25</sup> and his theorization of “fictitious commodities.”
+          </p>
+          <h5>A Certified Commodity</h5>
+          <p>On October 24, 2021, the Central Committee of the Communist Party of China and the State Council issued the "<i>Opinions on Completely, Accurately and Comprehensively Implementing the New Development Concept and Doing a Good Job in Carbon Peaking and Carbon Neutralization</i>"<sup>27</sup>, which brought carbon sink in the national carbon trading market, as part of the ecological protection. Subsequently, ten departments, including the State Forestry and Grass Administration, jointly issued the "Opinions on Accelerating the Innovation and Development of the Bamboo Industry" to encourage local governments to build bamboo forest carbon sink trading platforms and carry out carbon trading pilot projects.
+          </p>
+          <p>
+            Since 2010, <i>Anji</i> has worked with the National Key Laboratory of Bamboo Forest Carbon Sequestration of Zhejiang University and other institutions to build the world's first carbon flux observation system for Moso bamboo forests, reporting an average annual increase of carbon sink in the test forest of 0.39 tons/mu. According to the operator of the "Two Mountains Bank" in Anji County and the CEO of CityInvestment Group, Chen Wei, "the more than 1 million mu of bamboo forests in Anji are a huge carbon pool and a steady stream of treasures."
+          </p>
+          <p>
+            Bamboo is a fast-growing and regenerating plant. Bamboo that is chopped and grown and chopped again releases 35% more oxygen than forests of the same area. One bamboo can fix 6 square meters of soil, and each hectare of bamboo forest can store 1,000 tons of water. The bamboo industry, therefore, is called the golden green industry.
+          </p>
+          <h6><i>Anji</i> Where?</h6>
+          <p>
+            <i>Anji</i> County<sup>28</sup> is where An Lee set the bamboo scene of the Academy-Award-winning movie Crouching Tiger Hidden Dragon, nominee for best picture and winner for Best Art Direction-Set Decoration. The Bamboo forest in Anji has been an AAAA tourist attraction. Apart from tourism, Bamboo is also monetized as products: bamboo flooring and bamboo fiber, as well as derivatives such as the under-forest economy and bamboo forest picking. However, the physical material modality of its economy hit its roof. 50 kg Moso bamboo used to sell for 40 <i>yuan</i>, and the labor wage was about 200 <i>yuan</i> per day; now, 50 kg Moso bamboo is worth 19 <i>yuan</i>, and the labor wage has risen to 400 <i>yuan</i> per day. Moso Bamboo Mountain, which is in a better location, has an average annual income of only about 150 <i>yuan</i> per mu.<sup>29</sup> Following the dual sector model, farmers lose their incentives to manage the bamboo forest and become migrant workers and strangers in large cities. This is another typical rural story of migrant labor and displaced dreams, but the biological traits of bamboo bring in environmental considerations in the case of <i>Anji</i>.
+          </p>
+          <p>
+            The management of bamboo forests mainly refers to regular harvesting. "Bamboo forests are different from ordinary woodlands. If they are not harvested, the bamboo shoots will not come out, nor will the bamboo. In the end, the bamboo will die. When abandoned, the bamboo forest may bloom and die in pieces. Over time, <i>Anji's</i> ecosystem will also be threatened." <i>Zhu Weirong</i> said.
+          </p>
+          <h6>
+            What is the financial mechanism, then?
+          </h6>
+          <p>
+            <i>Anji</i> promotes the formation of carbon purchase groups without increasing enterprises' burdens. Local banking institutions have developed "Carbon Resource Benefit Enterprise Loans." For some enterprises that need credit funds, whose unit energy consumption and unit emissions exceed the provincial average and whose per-mu<sup>30</sup> tax revenue is lower than the provincial average, referring to the same period of the previous year or similar enterprises. Loan interest rates are given preferential interest rates, and enterprises can purchase carbon sinks with preferential interest rates without increasing the burden by a penny.
+          </p>
+          <p>
+            Under the incentive plan, <i>Anji Dacheng Paper Co. Ltd.</i> originally had a loan of 29 million <i>yuan</i> with an annualized interest rate of 5.78%. <i>Anji</i> Rural Commercial Bank transformed its loan into a "carbon sink benefit enterprise loan" with an annualized interest rate of 5.28% when they buy carbon sink. This move saves the company 145,000 <i>yuan</i> a year in interest expenses. The company purchased 2,101 tons of carbon sinks from the center and paid 116,000 <i>yuan</i>. In the end, it realized the purchase of carbon and saved 29,000 <i>yuan</i> in financial costs.
+          </p>
+          <p>
+            The <i>Anji</i> 110kV Northern City Substation has yet to start construction. Still, after the carbon emissions of the raw materials required in the project construction had been calculated, the constructor pre-purchased a total of 146,800 <i>yuan</i> at a unit price of 73.41 <i>yuan</i> per ton (CO2). ( 2,000 tons ) of bamboo forest carbon sink with the same amount of carbon emissions, becoming the first carbon-neutral construction project in <i>Anji</i>.
+          </p><p>
+            Seeing the trading process above, it is evident that no extra carbon got trapped, and no carbon emission was actually reduced. The bamboo forest has been there for hundreds of years, and the purchase provides some incentive and ushers in a modality of mechanical integration in the cultivation.
+          </p>
+          <section id = 'sec3'>
+            <h4>Section 3 COMMODITY, NATURE, LABOR</h4>
+            <h5>Carbon is carbon. It becomes GHG “only in certain relations.”</h5>
+            <p>
+              Karl Marx illuminates the ontological presence of commodities as abstract and a framework for understanding the larger concept of capitalism. Then can we analyze the commodification of nature with respect to structuring the socio-ecological relations and the geospatial specificities implied? Can we draw an analogy to Moore’s paraphrase of Marx’s theory of “capitalism remade itself through their incorporation”: “coal is coal. it becomes fossil fuel only in certain relations.’<sup>31</sup> As a disclaimer, China is a socialist country, and the implicit capitalism in writing refers to entities and institutions that operate on a capitalist model under the socialist market economy, such as finance, tech titans… What could be the potent revelations of saying that: carbon is carbon, it becomes GHG “only in certain relations?” Moore states that “ecological surplus” is accumulated by appropriations of the process of biophysical reproduction and geological extraction and that the former involves the appropriation of socio-ecological relations, creating ‘biological’ community frontiers with different backdrops and characters.<sup>32</sup> Then what does it mean to create a ‘biological’ community frontier in Anji, building on the bamboo forest’s biological process of carbon capture and photosynthesis and farmers’ labor to keep the bio-carbon purifier running? To put the community frontier in relation, what does it mean to the depeasantized villages and migrant workers?
+            </p>
+            <h5>The Invisible Labor</h5>
+            <p>
+              The concept of carbon trade is so topical and controversial that it blinds people to see the labor behind it. Admittedly, the commodification of nature has inherent labor relations embedded, but current discussions mainly focus on the appropriation of nature aspect. Since “faces” are my point of departure, it is no surprise that I get here. One important principle in macroeconomics is “no free lunch,” however, the description of PES leaves an impression that money will automatically fall into farmers’ pockets. This notion is rather falsified. At least in <i>Anji</i>, carbon capture depends on farmers’ constant labor of caring and harvesting, no less than agricultural products do: plowing, fertilizing, Deworming, cutting down blooming ones, and moving them etc. The following paragraphs unpack its labor-value aspects empirically.
+            </p>
+            <p>
+              A recap of the previous discussion of the Lewis Dual Sector model: farmers go to the cities and industrial sectors for the price scissors between industrial products and agricultural commodities; the income from agriculture no longer covers the living expense under inflation. Part of the rationale for PES is to alleviate poverty, which under the phenomenal migration of farmers in China would be to compensate farmers; hence the next paragraphs analyze its validity.
+            </p>
+            <p>
+              Per China Certified Emission Reductions (CCER) scheme, the carbon capture capacity of bamboo forest, and the average carbon price of the 30 transactional days in the market, the carbon trade in Anji ends up at 16.926 <i>yuan</i> per mu. The chart below demonstrates the unit area income of different agricultural products with green beans at 1500 <i>yuan</i> per mu. Even if we throw in the 150 <i>yuan</i> per mu of derivative bamboo products exchange value, the bamboo forest still yields far less than agricultural products. If mushrooms and green beans are not attractive or sufficient for farmers' living, on what ground is PES? The bank gets the 20 percent net revenue because of the sheer scale of the bamboo forest in Anji, but it is safe to say that the benefit for individual farmers is not appealing.
+            </p>
+            <iframe src="index.html"></iframe>
+            <p>
+              Then how about the price elasticity of the carbon sink? From the price and transaction chart, it is reasonable that the two factors are negatively correlated. While the carbon price is high, there is simply no purchase. The power of the market drives the price down consequently. The conundrum of policy-wise intervention for a mandatary high carbon price means the externalities on consumers, as the cost of production increases with the carbon cost. Some propose combining “well-designed” policies to contain the shifting risks. However, this situation shares the same dilemma with setting a taxing standard. The trade-off, aka the indifference curve between work and leisure, explains well: as the compensation decreases, so do productivity, and the state would not risk waning productivity and decreasing GDP. This reflects yet another actualization of the “phantasmagram” in the measurement of GDP and the global race of GDP illustrated by Michelle Murphy illustrates in her Economy as Atmosphere. But then what can we do about the “oracle” as in GDP?
+            </p><img class = 'imgs' style="alignment: center" src="indiff_cur.png" alt="leisure work indifference curve" width="30vw">
+
+            <h5>The wicker basket, bamboo, and K-line</h5>
+            <p>
+              Bamboo are what the wicker basket used to be. This research sees the wicker basket and bamboo as anchors across time to contextualize carbon trade in the more informed social context and the stratified stories as a forecast of the myth of carbon trading that stems from its novelty and controversy. Using Marxist parlance, "productive forces," i.e., both my grandma’s picking mushrooms with the wicker basket and Anji villagers “picking” carbon with bamboo feed the production of the "relations of production" (the social structures that regulate the relation between humans in the production of goods). The inherent discrepancy of PES or carbon trading, analyzed within Polanyian theory with which they closely identify, is their proclamation for the common good in the process of embeddedness and their practice of commodification of nature that Polanyi explicitly argues against. Then the commodification of nature also feeds the production of the relations of production, under which the depeasantization, the worker migration, and the separation of the kids in villages and their parents in the city are the social expressions.
+
+            </p>
+
+          </section>
+          <section>
+            <p>notes:</p>
+            <ul>
+            <li>Moore, Jason. Transcending the metabolic rift: A theory of crises in the capitalist world-ecology. Journal of Peasant Studies 38, no. 1: 1–46. 2011.
+              </li><li>According to the 2021 Migrant Worker Report by the Chinese National Bureau of Statistics.
+          </li><li>http://www.stats.gov.cn/tjsj/zxfb/202204/t20220429_1830126.html
+          </li><li>
+              https://books.google.com/books?id=78KFCIHtJS4C&pg=PA93#v=onepage&q&f=false
+          </li><li>I am not so sure of this post, as in the original blog, I feel the “commodification” might just be a habitual typo by the author, when he meant “commoditization.” Investopidia, https://www.investopedia.com/terms/c/commoditization.asp
+          </li><li> As a reference their sources are from Wiktionary. diffbw https://www.diffbw.com/commoditization-vs-commodification
+          </li><li> Wikipedia https://en.wikipedia.org/wiki/Commoditization#:~:text=One%20way%20to%20summarize%20the,about%20nonsaleable%20things%20becoming%20saleable.
+          </li><li>Douglas Mark Rushkoff is an American media theorist, writer, columnist, lecturer, graphic novelist, and documentarian. He is best known for his association with the early cyberpunk culture and his advocacy of open source solutions to social problems. https://rushkoff.com/commodified-vs-commoditized/
+              Brad Allenby is  is an American environmental scientist, environmental attorney and Professor of Civil and Environmental Engineering, and of Law, at Arizona State University. https://www.greenbiz.com/article/commoditization-nature
+          </li><li>Beijing, Shanghai, Guangzhou, Shenzhen are popular choices.
+          </li><li>A Chinese official document, citizenship, local,... for education, medical care..
+            </li><li> Should have a reference here
+            </li><li>The Dual Sector model, or the Lewis model, is a model in Developmental economics that explains the growth of a developing economy in terms of a labor transition between two sectors, a traditional agricultural sector and a modern industrial sector. Sir William Arthur Lewis (23 January 1915 – 15 June 1991) was a Saint Lucian economist and the James Madison Professor of Political Economy at Princeton University.[2] Lewis was known for his contributions in the field of economic development. In 1979, he was awarded the Nobel Memorial Prize in Economic Sciences.
+            </li><li>Engles. Wage Labor Capital. p9
+            </li><li>Jeffrey C. Milder, Sara J. Scherr,  and Carina Bracer. Trends and Future Potential of Payment for Ecosystem Services to activate Rural Poverty in Developing Countries
+            </li><li>1 mu = 666.667 m2
+            </li><li>https://news.sina.cn/kx/2021-12-28/detail-ikyamrmz1729471.d.html
+            </li><li>Diana Stuart, Ryan Gunderson and Brian Petersen .Climate Change and the Polanyian Counter-movement: Carbon Markets or Degrowth?
+            </li><li>Karl Polanyi, (25 October 1886 – 23 April 1964), was an Austro-Hungarian economic anthropologist and politician, best known for his book The Great Transformation, which questions the conceptual validity of self-regulating markets.
+            </li><li>The story of spring is a song depicting Xiaoping Deng’s reform in 1979, since then, China went on the implementation of the Reform and Open-up policy, entering the global market. Deng’s reform marked the socialist market economy of China. The “old man” is Deng.
+            </li><li>SME is an economic structure in which the government maintains the balance between capital and social welfare. SME deployed in the People's Republic of China is a market economy with the predominance of public ownership and state-owned enterprises.
+            </li><li>Lin Yi, Thoughts on Institutional Economics and Its Enlightenment (2001)
+            </li><li>Karl Polanyi, The Great Transformation. Beacon Press. p3
+            </li><li>Diana Stuart, Ryan Gunderson and Brian Petersen .Climate Change and the Polanyian Counter-movement: Carbon Markets or Degrowth?
+            </li><li>Second source: Climate Change and the Polanyian Counter-movement: Carbon Markets or Degrowth?
+            </li><li>The embedded-disembedded debate could also be seen at the last paragraph, Polani’s view on absolute free market economy as stark utopia.
+            </li><li>The great transformation. p76
+            </li><li>One directly related to Anji Carbon Trade is “(31). Actively develop green finance. Promote the development of green and low-carbon financial products and services in an orderly manner, set up monetary policy tools for carbon emission reduction, incorporate green credit into the macro-prudential assessment framework, and guide financial institutions such as banks to provide long-term, low-cost funds for green and low-carbon projects. Encourage developmental policy financial institutions to provide long-term stable financing support for carbon peaking and carbon neutrality in accordance with the principles of marketization and the rule of law. Support qualified companies to raise funds and refinance for green and low-carbon project construction and operation and expand the scale of green bonds. Study the establishment of a national low-carbon transition fund. Encourage social capital to set up investment funds for green and low-carbon industries. Establish and improve the green finance standard system.”
+            </li><li>Opinions on Completely, Accurately, and Comprehensively Implementing the New Development Concept and Doing a Good Job in Carbon Peaking and Carbon Neutralization
+              http://www.gov.cn/zhengce/2021-10/24/content_5644613.htm
+            </li><li>30°37′48″N 119°40′17″E, Elevation20 to 1,600 m (65 to 5,250 ft)
+            </li><li>Yang Peiyou, a villager in Dali Village, Shanchuan Township, Anji County,
+            </li><li>Moore, Transcending the metabolic rift.
+            </li><li><i>ibid</i>.
+            </li><li>This website does a though explanation https://www.economicsdiscussion.net/income/individuals-choice-between-income-and-leisure-explained-with-diagram/1196
+            </li><li>Murphy, Michelle. "01. Economy as Atmosphere" In The Economization of Life, 17-34. New York, USA: Duke University Press, 2017. https://doi.org/10.1515/9780822373216-003
+
+
+            </li>
+            </ul>
+          </section>
+
+
+        </section>
+
+
+      </section>
+
+      <div id="term_container">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+        <script>
+          // basic SVG setup
+          var margin = { top: 20, right: 150, bottom: 40, left: 100 };
+          var height = 350 - margin.top - margin.bottom;
+          var width = 650 - margin.left - margin.right;
+
+          var svg = d3.select("#term_container").append("svg")
+                  .attr("width",width + margin.left + margin.right)
+                  .attr("height",height + margin.top + margin.bottom)
+                  .append("g")
+                  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          // setup scales - the domain is specified inside of the function called when we load the data
+          var xScale = d3.time.scale().range([0, width]);
+          var yScale = d3.scale.linear().range([height, 0]);
+          // var color = d3.color('black','black','black','black','black','black');
+          var color = d3.scale.category10();
+
+          // setup the axes
+          var xAxis = d3.svg.axis().scale(xScale).orient("bottom");
+          var yAxis = d3.svg.axis().scale(yScale).orient("left");
+
+          // create function to parse dates into date objects
+          var parseDate = d3.time.format("%Y-%m").parse;
+          var formatDate = d3.time.format("%Y-%m");
+          var bisectDate = d3.bisector(function(d) { return d.date; }).left;
+
+          // set the line attributes
+          var line = d3.svg.line()
+                  .interpolate("basis")
+                  .x(function(d) { return xScale(d.date); })
+                  .y(function(d) { return yScale(d.close); });
+
+          var focus = svg.append("g").style("display","none");
+
+          // import data and create chart
+          d3.csv("files/term_world.csv", function(d) {
+                    return {
+                      date: parseDate(d.date),
+                      Carbon_emission_trading: +d.Carbon_emission_trading,
+                      Carbon_trade: +d.Carbon_trade,
+                      Payment_for_ecosystem_services: +d.Payment_for_ecosystem_services,
+                      Carbon_tax: +d.Carbon_tax,
+
+                    };
+                  },
+                  function(error,data) {
+
+                    // sort data ascending - needed to get correct bisector results
+                    data.sort(function(a,b) {
+                      return a.date - b.date;
+                    });
+
+                    // color domain
+                    color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+
+                    // create stocks array with object for each company containing all data
+                    var stocks = color.domain().map(function(name) {
+                      return {
+                        name: name,
+                        values: data.map(function(d){
+                          return {date: d.date, close: d[name]};
+                        })
+                      };
+                    });
+
+                    // add domain ranges to the x and y scales
+                    xScale.domain([
+                      d3.min(stocks, function(c) { return d3.min(c.values, function(v) { return v.date; }); }),
+                      d3.max(stocks, function(c) { return d3.max(c.values, function(v) { return v.date; }); })
+                    ]);
+                    yScale.domain([
+                      0,
+                      // d3.min(stocks, function(c) { return d3.min(c.values, function(v) { return v.close; }); }),
+                      d3.max(stocks, function(c) { return d3.max(c.values, function(v) { return v.close; }); })
+                    ]);
+
+                    // add the x axis
+                    svg.append("g")
+                            .attr("class", "x axis")
+                            .attr("transform", "translate(0," + height + ")")
+                            .call(xAxis);
+
+                    // add the y axis
+                    svg.append("g")
+                            .attr("class", "y axis")
+                            .call(yAxis)
+                            .append("text")
+                            .attr("transform","rotate(-90)")
+                            .attr("y",-60)
+                            .attr("dy",".71em")
+                            .style("text-anchor","end")
+                            .text("count");
+
+                    // add circle at intersection
+                    focus.append("circle")
+                            .attr("class","y")
+                            .attr("fill","none")
+                            .attr("stroke","black")
+                            .style("opacity",0.5)
+                            .attr("r",8);
+
+                    // add horizontal line at intersection
+                    focus.append("line")
+                            .attr("class","x")
+                            .attr("stroke","black")
+                            .attr("stroke-dasharray","3,3")
+                            .style("opacity",0.5)
+                            .attr("x1", 0)
+                            .attr("x2", width);
+
+                    // add vertical line at intersection
+                    focus.append("line")
+                            .attr("class","y")
+                            .attr("stroke","black")
+                            .attr("transition-duration","1s")
+                            .attr("stroke-dasharray","3,3")
+                            .style("opacity",0.5)
+                            .attr("y1", 0)
+                            .attr("y2", height);
+
+                    // append rectangle for capturing if mouse moves within area
+                    svg.append("rect")
+                            .attr("width",width)
+                            .attr("height",height)
+                            .style("fill","none")
+                            .style("pointer-events","all")
+                            .on("mouseover", function() { focus.style("display", null); })
+                            .on("mouseout", function() { focus.style("display", "none"); })
+                            .on("mousemove", mousemove);
+
+                    // add the line groups
+                    var stock = svg.selectAll(".stockXYZ")
+                            .data(stocks)
+                            .enter().append("g")
+                            .attr("class","stockXYZ");
+
+                    // add the stock price paths
+                    stock.append("path")
+                            .attr("class","line")
+                            .attr("id",function(d,i){ return "id" + i; })
+                            .attr("d", function(d) {
+                              return line(d.values);
+                            })
+                            .style("stroke", function(d) { return color(d.name); });
+
+
+                    // add the stock labels at the right edge of chart
+                    var maxLen = data.length;
+                    stock.append("text")
+                            .datum(function(d) {
+                              return {name: d.name, value: d.values[maxLen - 1]};
+                            })
+                            .attr("transform", function(d) {
+                              return "translate(" + xScale(d.value.date) + "," + yScale(d.value.close) + ")";
+                            })
+                            .attr("id",function(d,i){ return "text_id" + i; })
+                            .attr("x", 3)
+                            .attr("dy", ".35em")
+                            .text(function(d) { return d.name; })
+                            .on("mouseover",function(d,i) {
+                              for (j=0; j < 6; j++) {
+                                if (i !== j) {
+                                  d3.select("#id"+j).style("opacity",0.1);
+                                  d3.select("#text_id"+j).style("opacity",0.2);
+                                }
+                              };
+                            })
+                            .on("mouseout", function(d,i) {
+                              for (j=0; j < 6; j++) {
+                                d3.select("#id"+j).style("opacity",1);
+                                d3.select("#text_id"+j).style("opacity",1);
+                              };
+                            });
+
+                    // mousemove function
+                    function mousemove() {
+
+                      var x0 = xScale.invert(d3.mouse(this)[0]);
+                      var i = bisectDate(data, x0, 1); // gives index of element which has date higher than x0
+                      var d0 = data[i - 1], d1 = data[i];
+                      var d = x0 - d0.date > d1.date - x0 ? d1 : d0;
+                      var close = d3.max([+d.Carbon_emission_trading,+d.Carbon_trade,+d.Payment_for_ecosystem_services,+d.Carbon_tax]);
+
+                      focus.select("circle.y")
+                              .attr("transform", "translate(" + xScale(d.date) + "," + yScale(close) + ")");
+
+                      focus.select("line.y")
+                              .attr("y2",height - yScale(close))
+                              .attr("transform", "translate(" + xScale(d.date) + ","
+                                      + yScale(close) + ")");
+
+                      focus.select("line.x")
+                              .attr("x2",xScale(d.date))
+                              .attr("transform", "translate(0,"
+                                      + (yScale(close)) + ")");
+
+                    };
+
+                  });
+
+
+        </script>
+      </div>
+
+    </div>
+  </div>
+  <div id="container">
+    <img id = 'large_img' src = "img/1.png">
+
+  </div>
+
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js'></script>
+<script type="module" src="bamboo_3d.js"></script>
+
+
+</body>
+</html>
+

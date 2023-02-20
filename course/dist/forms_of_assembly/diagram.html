@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Informatics of Domination</title>
+<!--  <link rel="stylesheet" href="./css/word_style.css">-->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<div class="btn">
+    <a href="index.html"><h1>all things titled 零工城市</h1></a>
+    <p>Yunsong Liu | 01-05 2023</p>
+    <p>gig economy: tracking the offline consequences of algorithmic meritocracy on labor and urban configuration</p>
+    <a class="indiv_btn">literature review</a>
+    <a class="indiv_btn" href="diagram.html">constituencies</a>
+    <a class="indiv_btn" href="map.html">sites</a>
+    <a class="indiv_btn" href="force.html">hyper</a>
+    <a class="indiv_btn">intervention</a>
+</div>
+
+
+<div class="paragraphs">
+    <h2>Unfinished[ing] Informatics of Domination</h2>
+    <p>
+        <i>“Simultaneously material and ideological,
+        the dichotomies may be expressed in the following chart of transitions from the comfortable old hierarchical dominations
+        to the scary new networks I have called the informatics of domination.“[Donna Haraway]</i>
+    </p>
+    <p>In light of Donna Haraway’s “informatics of domination” tracing access points of power (APP) in the age of technology,
+        this informatics of domination focuses specifically on APP relevant to the gig economy.</p>
+    <p>The APP informatics represents, instead of a constellation of constituencies, a structured and situated assembly that
+        molds a hyper-individualized subjectivity compatible with the new configuration of economy — the gig economy.
+        The unfinished[ing] informatics diagram tries to adumbrate the material reality and its convergence with technological
+        mediation and its social embeddedness in the gig regime, one that is:</p>
+    <li>advertised as a “comforting sense of technical neutrality and progressive openness.” [Tarleton Gillespie]
+    </li>
+    <li>characterized by Valerio De Stefano as the “casualization of the workforce, informalization of the formal economy,
+        and the so called ‘demutualization of risk.’”[Valerio De Stefano]</li>
+    <p>The diagram:</p>
+    <li>counters the discourses that justify exploitative practices, privilege technologies, shift risk to workers.
+    </li>
+    <li>unveils the praxis of profiting from the reconfiguration of economy
+    </li>
+    <li>maps the intersectional movement across political economic and technological constituents
+    </li>
+    <br>
+    <p2>Notes:
+        Stuart Hall, “The Problem of Ideology: Marxism Without Guarantees,” Journal of Communication Inquiry 10, no. 2 (1986).
+        Lewis, Daniel J. 93, 97–99, 101–104 liberation management 78, 87n11
+        Yee, Nick. 2006. “The Labor of Fun.” Games and Culture 1 (1): 68–71.
+        Williams, Raymond. 1977. Marxism and Literature. Oxford: Oxford University Press.
+        Tarleton Gillespie,“The Politics of‘Platforms’,”NewMedia& Society12,no.3(2010):360.
+        Valerio De Stefano, “The Rise of the ‘Just in Time Workforce’: On-Demand Work, Crowdwork, and Labor Protection in the “Gig-Economy,” Proceedings from Crowd- Sourcing, the Gig Economy, and the Law (Philadelphia, 2015): 3, accessed July 3, 2019, http://ssrn.com/abstract=2682602.
+        Van Dam, Piran. 2017. Freelancing in the Gig Economy: The Practical, Fact-Based Guide to Launching Your Career by Understanding the New Rules of the Game. Self-published, Kindle. Van Dijck, José, David Nieborg, and Thomas Poell. 2019. “Reframing Platform Power.”
+        Internet Policy Review 8 (2): 1–18. Van Dijk, Teun A. 2015. “Critical Discourse Analysis.” In The Handbook of Discourse Analy-
+        sis, edited by Deborah Tannen, Heidi E. Hamilton, and Deborah Schriffin, 466–85.
+        John Wiley & Sons, Ltd. https://doi.org/10.1002/9781118584194.ch22. Van Doorn, Niels. 2017. “Platform Labor: On the Gendered and Racialized Exploi- tation of Low-Income Service Work in the ‘On Demand’ Economy.” Information,
+        Communication & Society 20 (6): 898–914.———. 2019. “On the Conditions of Possibility for Worker Organizing in Platform- Based Gig Economies.” LogOut! https://notesfrombelow.org/article/conditionspossibility-worker-organizing-platform Van Doorn, Niels, and Olav Velthuis. 2018. “A Good Hustle: The Moral Economy of Market Competition in Adult Webcam Modeling.” Journal of Cultural Economy 11 (3):
+        177–92. Von Hippel, Eric. 2005. Democratizing Innovation. Cambridge, MA: MIT Press.
+        Zwick, Austin. 2018. “Welcome to the Gig Economy: Neoliberal Industrial Relations and the Case of Uber.” GeoJournal 83 (4): 679–91. https://doi.org/10.1007/ s10708-017-9793-8.
+    </p2>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>The Gigger Man</h2>
+    <p>
+        The social ontology of labor exploitation,
+    </p>
+
+
+</div>
+
+<!-- partial:index.partial.html -->
+<div class="svg-container">
+ <div id="tag"></div>
+    <div id="gigger-man"></div>
+</div>
+
+
+   
+<!--I wrote this python script to create the json
+
+import bs4
+import json
+import urllib2
+import re
+
+req = urllib2.urlopen('https://twitter.com')
+html = req.read()
+            
+soup = bs4.BeautifulSoup(html)
+[s.extract() for s in soup('noscript')]
+[s.extract() for s in soup('script')]
+[s.extract() for s in soup('style')]
+[s.extract() for s in soup('link')]
+[s.extract() for s in soup(text=True)]
+
+body = soup.body
+
+if body:
+    json_string = ''
+        
+    def handle_element(node):
+        
+        global json_string
+
+        json_string += '{"name" :"' + node.name + '"'
+        child_size = len(list(node.contents))
+        children = node.contents
+        if children:
+            json_string += ',"children" : ['
+            for i in range(child_size):
+                if not isinstance(children[i], bs4.NavigableString):
+                    handle_element(children[i])
+                    if child_size > 1 and i < child_size - 1:
+                        json_string += ','
+                        
+            json_string += ']}'
+        else:
+            json_string += '}'
+        
+    
+    handle_element(body)
+    
+    j = json.loads(json_string)
+    
+    f = open('data.json', 'w');
+    f.write(json.dumps(j))
+    f.close()
+
+-->
+<!-- partial -->
+  <script src='https://d3js.org/d3.v3.min.js'></script><script  src="./js/word_script.js"></script>
+
+</body>
+</html>
