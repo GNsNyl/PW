@@ -71,12 +71,13 @@ function draw() {
     // mountainLine(PI,2, zoff, 25, 150, 0.01, 300,height ,0.9,cl2,5)
     // mountainLine(PI,3, 1.05*zoff, 25, 550, 0.008, 500,height,0.75,cl3 ,3)
     // stroke('none');
-        mountainLine (PI , 2 , 1.05 * zoff , 125 , 500 , mouseY , 0.008 , -50 , height , 0.75 , cl0 ,cl1, 3)
+        mountainLine (PI , 2 , 1.05 * zoff , 125 , 500 , mouseY , 0.008 , -50 , height , 0.75 , cl00 ,cl0, 3)
 
     // fill(cl00);
-    // if(frameCount%2==0){
-    //     circle(mouseX, mouseY, Math.sin(zoff)*3);//
-    // }
+    if(frameCount%666==0){
+        background('rgb(250,250,250)')
+
+    }
     // mountain(3, 1.05*zoff, 25, 150, 0.008, 300,height/3,0.75,cl4 ,1)
 
     // noLoop();
