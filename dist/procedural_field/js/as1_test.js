@@ -172,7 +172,7 @@ function draw() {
             fill(newColorText);
             textSize(fontsize);
             noStroke();
-            text(circle.breed+circle.radius_num, cx1, cy1+2*radius+10);
+            text(circle.breed+" "+circle.radius_num, cx1, cy1+2*radius+10);
             // console.log(text)
 
 // console.log(curvex)

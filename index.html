@@ -1,172 +1,174 @@
-<!DOCTYPE html>
-<!-- saved from url=(0033)https://www.kuomaje.com/wk_1.html -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yunsong-liu</title>
+<h1>Work in progress</h1>
+<!--<!DOCTYPE html>-->
+<!--&lt;!&ndash; saved from url=(0033)https://www.kuomaje.com/wk_1.html &ndash;&gt;-->
+<!--<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
 
-  <!-- Load CSS libraries -->
-<!--  <link href="./6483/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">-->
-  <!--    <link rel="stylesheet" href="./6483/style.css">-->
+<!--  <meta name="description" content="">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <title>yunsong-liu</title>-->
 
-  <!-- GOOGLE FONTS -->
-  <!--		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>-->
-<!--  <link href="./6483/roboto" rel="stylesheet">-->
+<!--  &lt;!&ndash; Load CSS libraries &ndash;&gt;-->
+<!--&lt;!&ndash;  <link href="./6483/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">&ndash;&gt;-->
+<!--  &lt;!&ndash;    <link rel="stylesheet" href="./6483/style.css">&ndash;&gt;-->
 
-
-  <style>
-
-/*      canvas {*/
-/*          margin: auto;*/
-/*          border-radius: 12px;*/
-/*      }*/
-/*    .slidecontainer {*/
-/*      !*top:1px;*!*/
-/*      margin-left: 165px;*/
-/*      color: white;*/
-
-/*      width: 30%; !* Width of the outside container *!*/
-/*    }*/
-
-    /* The slider itself */
-    /*.slider {*/
-    /*  -webkit-appearance: none;  !* Override default CSS styles *!*/
-    /*  appearance: none;*/
-    /*  width: 100%; !* Full-width *!*/
-    /*  height: 7px; !* Specified height *!*/
-    /*  background: #6c6c6c; !* Grey background *!*/
-    /*  outline: none; !* Remove outline *!*/
-    /*  opacity: 0.7; !* Set transparency (for mouse-over effects on hover) *!*/
-    /*  -webkit-transition: .2s; !* 0.2 seconds transition on hover *!*/
-    /*  transition: opacity .2s;*/
-    /*}*/
-
-    /* Mouse-over effects */
-    /*.slider:hover {*/
-    /*  opacity: 1; !* Fully shown on mouse-over *!*/
-    /*}*/
-
-    /*!* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) *!*/
-    /*.slider::-webkit-slider-thumb {*/
-    /*  -webkit-appearance: none; !* Override default look *!*/
-    /*  appearance: none;*/
-    /*  width: 25px; !* Set a specific slider handle width *!*/
-    /*  height: 9px; !* Slider handle height *!*/
-    /*  background: #ffffff; !* Green background *!*/
-    /*  cursor: pointer; !* Cursor on hover *!*/
-    /*}*/
-
-    /*.slider::-moz-range-thumb {*/
-    /*  width: 10px; !* Set a specific slider handle width *!*/
-    /*  height: 7px; !* Slider handle height *!*/
-    /*  background: #ffffff; !* Green background *!*/
-    /*  cursor: pointer; !* Cursor on hover *!*/
-    /*}*/
-#drawing-container{
-  z-index: -10;
-  position: fixed;
-  width: 200%;
-  height: 100%;
-}
-  </style>
-
-  <script src="js/p5.js"></script>
-
-<!--  <script src="js/p5.min.js"></script>-->
-
-<!--  <script src="js/p5.dom.min.js"></script>-->
-  <script src="js/p5.sound.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/all-style.css">
-  <meta charset="utf-8" />
-</head>
+<!--  &lt;!&ndash; GOOGLE FONTS &ndash;&gt;-->
+<!--  &lt;!&ndash;		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>&ndash;&gt;-->
+<!--&lt;!&ndash;  <link href="./6483/roboto" rel="stylesheet">&ndash;&gt;-->
 
 
-<body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="">
+<!--  <style>-->
 
-<div id="drawing-container">
-</div>
+<!--/*      canvas {*/-->
+<!--/*          margin: auto;*/-->
+<!--/*          border-radius: 12px;*/-->
+<!--/*      }*/-->
+<!--/*    .slidecontainer {*/-->
+<!--/*      !*top:1px;*!*/-->
+<!--/*      margin-left: 165px;*/-->
+<!--/*      color: white;*/-->
 
-<!--HEADER-->
-<div class="header section">
-  <div class="row">
-    <div class="col-sm-9"></div>
-<!--    <div class="col-sm-1"> <a href="https://liu-yunsong.com" target="_blank"> 课程作业｜Course Work </a></div>-->
-<!--    <div class="col-sm-1"> <a href="dist/procedural_field/index.html"> 6483 </a></div>-->
-<!--    <div class="col-sm-1"> <a href=".html"> 数据｜Data Viz</a> </div>-->
-  </div>
-</div>
+<!--/*      width: 30%; !* Width of the outside container *!*/-->
+<!--/*    }*/-->
+
+<!--    /* The slider itself */-->
+<!--    /*.slider {*/-->
+<!--    /*  -webkit-appearance: none;  !* Override default CSS styles *!*/-->
+<!--    /*  appearance: none;*/-->
+<!--    /*  width: 100%; !* Full-width *!*/-->
+<!--    /*  height: 7px; !* Specified height *!*/-->
+<!--    /*  background: #6c6c6c; !* Grey background *!*/-->
+<!--    /*  outline: none; !* Remove outline *!*/-->
+<!--    /*  opacity: 0.7; !* Set transparency (for mouse-over effects on hover) *!*/-->
+<!--    /*  -webkit-transition: .2s; !* 0.2 seconds transition on hover *!*/-->
+<!--    /*  transition: opacity .2s;*/-->
+<!--    /*}*/-->
+
+<!--    /* Mouse-over effects */-->
+<!--    /*.slider:hover {*/-->
+<!--    /*  opacity: 1; !* Fully shown on mouse-over *!*/-->
+<!--    /*}*/-->
+
+<!--    /*!* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) *!*/-->
+<!--    /*.slider::-webkit-slider-thumb {*/-->
+<!--    /*  -webkit-appearance: none; !* Override default look *!*/-->
+<!--    /*  appearance: none;*/-->
+<!--    /*  width: 25px; !* Set a specific slider handle width *!*/-->
+<!--    /*  height: 9px; !* Slider handle height *!*/-->
+<!--    /*  background: #ffffff; !* Green background *!*/-->
+<!--    /*  cursor: pointer; !* Cursor on hover *!*/-->
+<!--    /*}*/-->
+
+<!--    /*.slider::-moz-range-thumb {*/-->
+<!--    /*  width: 10px; !* Set a specific slider handle width *!*/-->
+<!--    /*  height: 7px; !* Slider handle height *!*/-->
+<!--    /*  background: #ffffff; !* Green background *!*/-->
+<!--    /*  cursor: pointer; !* Cursor on hover *!*/-->
+<!--    /*}*/-->
+<!--#drawing-container{-->
+<!--  z-index: -10;-->
+<!--  position: fixed;-->
+<!--  width: 200%;-->
+<!--  height: 100%;-->
+<!--}-->
+<!--  </style>-->
+
+<!--  <script src="js/p5.js"></script>-->
+
+<!--&lt;!&ndash;  <script src="js/p5.min.js"></script>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <script src="js/p5.dom.min.js"></script>&ndash;&gt;-->
+<!--  <script src="js/p5.sound.min.js"></script>-->
+<!--  <link rel="stylesheet" type="text/css" href="css/all-style.css">-->
+<!--  <meta charset="utf-8" />-->
+<!--</head>-->
 
 
-<!--TITLE-->
-<!--<hr class="solid">-->
-<div class="section">
-  <div class="row">
-    <div class="col-sm-8 title">刘 云松</div>
-<!--    <div class="col-sm-2 title-desc"> 展品 </div>-->
-    <div class="col-sm-1 title-desc"> <a href="course/index.html" target="_blank"> 课程作业｜Course Work </a></div>
-    <div class="col-sm-1 title-desc"> <a href="https://lyunsong123.github.io/WOOFWOOFNYC/"> 数据｜Data Viz</a> </div>
+<!--<body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="">-->
 
-    <div class="col-sm-1 title-desc"> <a href="dist/procedural_field/index.html"> 6483 </a></div>
-<!--    <div class="col-sm-1 title-desc"> 计算化 </div>-->
-<!--    <div class="col-sm-1 title-desc"> 二月 2023 </div>-->
-  </div>
-</div>
+<!--<div id="drawing-container">-->
+<!--</div>-->
 
-<!--TITLE DESCRIPTION-->
-<div class="section">
-  <div class="row">
-    <div class="col-sm-8 title-label"> Yunsong Liu </div>
-<!--    <div class="col-sm-2 title-desc-label"> Portfolio </div>-->
-<!--    <div class="col-sm-1 title-desc-label"> Computational  </div>-->
-<!--    <div class="col-sm-1 title-desc-label"> Feb 2023 </div>-->
-  </div>
-</div>
-<!--<hr class="solid">-->
-
-<!--MAIN VISUALIZATION-->
-
-<br>
+<!--&lt;!&ndash;HEADER&ndash;&gt;-->
+<!--<div class="header section">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-9"></div>-->
+<!--&lt;!&ndash;    <div class="col-sm-1"> <a href="https://liu-yunsong.com" target="_blank"> 课程作业｜Course Work </a></div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-1"> <a href="dist/procedural_field/index.html"> 6483 </a></div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-1"> <a href=".html"> 数据｜Data Viz</a> </div>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
 
 
-  <div style="height:70vh">
-    <div id="wk_1_1" style="height: 100%; width:100%;"><svg width="1393" height="662.1953125"><g transform="translate(0,0)"></g></svg></div>
-  </div>
+<!--&lt;!&ndash;TITLE&ndash;&gt;-->
+<!--&lt;!&ndash;<hr class="solid">&ndash;&gt;-->
+<!--<div class="section">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-8 title">刘 云松</div>-->
+<!--&lt;!&ndash;    <div class="col-sm-2 title-desc"> 展品 </div>&ndash;&gt;-->
+<!--    <div class="col-sm-1 title-desc"> <a href="course/index.html" target="_blank"> 课程作业｜Course Work </a></div>-->
+<!--    <div class="col-sm-1 title-desc"> <a href="https://lyunsong123.github.io/WOOFWOOFNYC/"> 数据｜Data Viz</a> </div>-->
 
-  <!--PROJECT DESCRIPTION-->
-  <div class="section">
-    <div class="row">
-      <div class="col-sm-9">
-        <div class="paragraph" >
-          <p style="color:#ffffff ">
-            云松：数字设计师｜建筑师｜城市设计师
-            <br>毕业于：哈佛大学设计研究生学院，密歇根大学城市规划与设计学院，清华大学建筑学院
-            <br>设计工具：网页编程，参数化设计，数据分析，机器学习，视觉表达，数据可视化
-            <br>尺度：数据，建筑，城市
-          </p>
-          <p style="color:#ffffff ">Yunsong is a second year GSD student with the Mdes program.
-           <br> Her professional and school works unfold around the topics of activism and social equity in global south countries,
-            embracing regulatory, environmental, and vernacular processes and matrix.<br>
-          She is into interactive and digital design\art now</p>
-        </div>
-      </div>
-<!--      <div class="col-sm-3">-->
-<!--        <div class="paragraph-desc">-->
-<!--          <p>联系</p>-->
+<!--    <div class="col-sm-1 title-desc"> <a href="dist/procedural_field/index.html"> 6483 </a></div>-->
+<!--&lt;!&ndash;    <div class="col-sm-1 title-desc"> 计算化 </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-1 title-desc"> 二月 2023 </div>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;TITLE DESCRIPTION&ndash;&gt;-->
+<!--<div class="section">-->
+<!--  <div class="row">-->
+<!--    <div class="col-sm-8 title-label"> Yunsong Liu </div>-->
+<!--&lt;!&ndash;    <div class="col-sm-2 title-desc-label"> Portfolio </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-1 title-desc-label"> Computational  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="col-sm-1 title-desc-label"> Feb 2023 </div>&ndash;&gt;-->
+<!--  </div>-->
+<!--</div>-->
+<!--&lt;!&ndash;<hr class="solid">&ndash;&gt;-->
+
+<!--&lt;!&ndash;MAIN VISUALIZATION&ndash;&gt;-->
+
+<!--<br>-->
+
+
+<!--  <div style="height:70vh">-->
+<!--    <div id="wk_1_1" style="height: 100%; width:100%;"><svg width="1393" height="662.1953125"><g transform="translate(0,0)"></g></svg></div>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash;PROJECT DESCRIPTION&ndash;&gt;-->
+<!--  <div class="section">-->
+<!--    <div class="row">-->
+<!--      <div class="col-sm-9">-->
+<!--        <div class="paragraph" >-->
+<!--          <p style="color:#ffffff ">-->
+<!--            云松：数字设计师｜建筑师｜城市设计师-->
+<!--            <br>毕业于：哈佛大学设计研究生学院，密歇根大学城市规划与设计学院，清华大学建筑学院-->
+<!--            <br>设计工具：网页编程，参数化设计，数据分析，机器学习，视觉表达，数据可视化-->
+<!--            <br>尺度：数据，建筑，城市-->
+<!--          </p>-->
+<!--          <p style="color:#ffffff ">Yunsong is a second year GSD student with the Mdes program.-->
+<!--           <br> Her professional and school works unfold around the topics of activism and social equity in global south countries,-->
+<!--            embracing regulatory, environmental, and vernacular processes and matrix.<br>-->
+<!--          She is into interactive and digital design\art now</p>-->
 <!--        </div>-->
 <!--      </div>-->
-    </div>
-  </div>
+<!--&lt;!&ndash;      <div class="col-sm-3">&ndash;&gt;-->
+<!--&lt;!&ndash;        <div class="paragraph-desc">&ndash;&gt;-->
+<!--&lt;!&ndash;          <p>联系</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--&lt;!&ndash;      </div>&ndash;&gt;-->
+<!--    </div>-->
+<!--  </div>-->
 
-  <!--SECOND VISUALIZATION-->
-  <div style="height:30vh">
-    <div id="wk_1_2" style="height: 100%; width:100%;"></div>
-  </div>
-</div>
+<!--  &lt;!&ndash;SECOND VISUALIZATION&ndash;&gt;-->
+<!--  <div style="height:30vh">-->
+<!--    <div id="wk_1_2" style="height: 100%; width:100%;"></div>-->
+<!--  </div>-->
+<!--</div>-->
 
-<script type="text/javascript" src="js/shangshui.js"></script>
+<!--<script type="text/javascript" src="js/shangshui.js"></script>-->
 
 
 
-</body>
-</html>
+<!--</body>-->
+<!--</html>-->
