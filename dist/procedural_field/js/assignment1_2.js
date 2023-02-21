@@ -35,7 +35,7 @@ let msg = 'Drag and drop file into the canvas';
 // preload table data
 function preload() {
     table = loadTable(
-        "data/name200.csv",
+        "data/artists.csv",
         'csv',
         'header');
 };
@@ -106,10 +106,13 @@ function setup() {
     ellipseMode(RADIUS);
     tableArray = table.getArray();
     for (let i = 0; i < tableArray.length; i++) {
-        let name_ani=tableArray[i][0]
-        let num=tableArray[i][1]/10
-        let arm=tableArray[i][2]
-        blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+        // print(tableArray[i][1]);
+        let artist=tableArray[i][1]
+        let gender=tableArray[i][3]
+        let num=tableArray[i][6]
+        // let arm=tableArray[i][6]
+        let yob=tableArray[i][4]
+        blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: artist, radius_num: num, yob:yob, gender:gender, active: false})
     }
 };
 // Draw on the canvas.
@@ -124,7 +127,7 @@ function draw() {
     let lineColor = linecolPic.color();
     let alphaValueText =slider_text.value;
     let newColorText = textcolPic.color();
-    fontsize = slider_font_size.value;
+    fontsize = Number(slider_font_size.value);
 
     background(backColor);
     textSize(fontsize);
@@ -140,22 +143,25 @@ function draw() {
     for (let i = 0; i < tableArray.length; i++) {
         let blob=blobs[i]
 
-        addIrregular(0.3*blob.radius_num, 0.7*blob.radius_num,1+i/tableArray.length,zoff,lineColor,fillColor,lineWeight,blob.x,blob.y)
-
+        addIrregular(1.6*blobsize*blob.radius_num, 3*blobsize*blob.radius_num,1+i/tableArray.length,zoff,lineColor,fillColor,lineWeight,blob.x,blob.y,blob.radius_num/2)
+        fill(newColorText);
+        // textSize(fontsize);
+        noStroke();
+        text(blob.breed, blob.x, blob.y+8*blobsize*blob.radius_num);
     }
     zoff+=0.007
 
     float+=0.002
 };
 
-function addIrregular(minR, maxR,noiseMax,zoff,lineColor,fillColor,lineWeight,cx,cy){
+function addIrregular(minR, maxR,noiseMax,zoff,lineColor,fillColor,lineWeight,cx,cy,inc){
 
     beginShape();
     // noFill();
     stroke(lineColor)
     strokeWeight(lineWeight)
     fill(fillColor)
-    for (let a = 0; a <= TWO_PI; a += inc) {
+    for (let a = 0; a <= TWO_PI; a += 1/inc) {
         let xoff = map(cos(a), -1, 1, 0, noiseMax);
         let yoff = map(sin(a), -1, 1, 0, noiseMax);
         let r = map(noise(xoff, yoff, zoff), 0, 1, minR, maxR);
@@ -186,14 +192,14 @@ function gotFile(file) {
         // console.log(csv);
 
         tableArray = table.getArray();
-        for (let i = 0; i < csv.length; i++) {
+        for (let i = 0; i < tableArray.length; i++) {
             // print(tableArray[i][1]);
-            let num=csv[i][1]/10
-            let arm=parseInt(csv[i][2])
-            let name_ani=csv[i][0]
-
-            // console.log(num)
-            blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+            let artist=tableArray[i][1]
+            let gender=tableArray[i][3]
+            let num=tableArray[i][6]
+            // let arm=tableArray[i][6]
+            let yob=tableArray[i][4]
+            blobs.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: artist, radius_num: num, yob:yob, gender:gender, active: false})
         }
     }
 
@@ -223,15 +229,15 @@ function mousePressed() {
         if (mouseY > 0){
             if (blobs.length > 0) {
                 for (var i = 0; i < blobs.length; i++) {
-                    var circle = blobs[i],
-                        distance = dist(mouseX, mouseY, circle.x, circle.y);
-                    if (distance < circle.radius_num) {
-                        circle.active = true;
-                        // circle.color = '#3f3f3f';
-                        // circle.color=colPic.color();
+                    var blob = blobs[i],
+                        distance = dist(mouseX, mouseY, blob.x, blob.y);
+                    if (distance < blob.radius_num) {
+                        blob.active = true;
+                        // blob.color = '#3f3f3f';
+                        // blob.color=colPic.color();
                     } else {
-                        circle.active = false;
-                        circle.color = colPic.color();
+                        blob.active = false;
+                        blob.color = colPic.color();
                     }
                 }
             }
@@ -246,10 +252,10 @@ function mouseDragged() {
         if (mouseY > 0){
             if (blobs.length > 0) {
                 for (var i = 0; i < blobs.length; i++) {
-                    var circle = blobs[i];
-                    if (circle.active) {
-                        circle.x = mouseX;
-                        circle.y = mouseY;
+                    var blob = blobs[i];
+                    if (blob.active) {
+                        blob.x = mouseX;
+                        blob.y = mouseY;
                         break;
                     }
                 }

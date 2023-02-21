@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/course/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/as1_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/as1_test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/assignment1_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/assignment1_2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/moving-arch.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/moving-arch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/shangshui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/shanshui.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +33,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/yunsongliu/Documents/PW",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yunsongliu/Documents/PW&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -58,6 +59,9 @@
       <workItem from="1676897599361" duration="152000" />
       <workItem from="1676902275823" duration="4184000" />
       <workItem from="1676914923167" duration="317000" />
+      <workItem from="1676915371159" duration="407000" />
+      <workItem from="1676916894558" duration="391000" />
+      <workItem from="1676918977768" duration="8753000" />
     </task>
     <servers />
   </component>

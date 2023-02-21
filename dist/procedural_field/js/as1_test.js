@@ -28,7 +28,7 @@ let msg = 'Drag and drop file into the canvas';
 // preload table data
 function preload() {
     table = loadTable(
-        "data/name200.csv",
+        "data/artists.csv",
         'csv',
         'header');
 };
@@ -99,10 +99,13 @@ function setup() {
     ellipseMode(RADIUS);
     tableArray = table.getArray();
     for (let i = 0; i < tableArray.length; i++) {
-        let name_ani=tableArray[i][0]
-        let num=tableArray[i][1]/10
-        let arm=tableArray[i][2]
-        circles.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+        // print(tableArray[i][1]);
+        let artist=tableArray[i][1]
+        let gender=tableArray[i][3]
+        let num=tableArray[i][6]
+        let arm=tableArray[i][6]
+        let yob=tableArray[i][4]
+        circles.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: artist, radius_num: num,arm_num:arm, yob:yob, gender:gender, active: false})
     }
 };
 // Draw on the canvas.
@@ -117,14 +120,15 @@ function draw() {
     let newColorLine = linecolPic.color();
     let alphaValueText =slider_text.value;
     let newColorText = textcolPic.color();
-    fontsize = slider_font_size.value;
+    fontsize = Number(slider_font_size.value);
+    console.log(fontsize)
 
     background(backColor);
     textSize(fontsize);
     text(msg, width / 2, height - 25);
 
-
     newColor.setAlpha(alphaValue);
+
     newColorLine.setAlpha(0.01+alphaValueLine*Math.abs(Math.sin(float*Math.PI)));
     newColorText.setAlpha(alphaValueText);
 
@@ -132,7 +136,8 @@ function draw() {
     if (circles.length > 0) {
         for (var i = 0; i < circles.length; i++) {
             var circle = circles[i];
-            let radius = circleSize*circle.radius_num;
+
+            let radius = circleSize*circle.yob/200;
             let armnum = circle.arm_num;
             strokeWeight(lineWeight);
             stroke(newColorLine);
@@ -165,9 +170,9 @@ function draw() {
             };
 
             fill(newColorText);
-            textSize(7);
+            textSize(fontsize);
             noStroke();
-            text(circle.breed, cx1, cy1+2*radius+10);
+            text(circle.breed+circle.radius_num, cx1, cy1+2*radius+10);
             // console.log(text)
 
 // console.log(curvex)
@@ -197,14 +202,14 @@ function gotFile(file) {
         // console.log(csv);
 
         tableArray = table.getArray();
-        for (let i = 0; i < csv.length; i++) {
+        for (let i = 0; i < tableArray.length; i++) {
             // print(tableArray[i][1]);
-            let num=csv[i][1]/10
-            let arm=parseInt(csv[i][2])
-            let name_ani=csv[i][0]
-
-            // console.log(num)
-            circles.push({ x: 0.5*windowWidth*(Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: name_ani, radius_num: num, arm_num:arm, active: false})
+            let artist=tableArray[i][1]
+            let gender=tableArray[i][3]
+            let num=tableArray[i][6]
+            let arm=tableArray[i][6]
+            let yob=tableArray[i][4]
+            circles.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: artist, radius_num: num, arm_num:arm, yob:yob, gender:gender, active: false})
         }
     }
 

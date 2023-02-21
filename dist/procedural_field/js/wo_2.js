@@ -37,6 +37,7 @@ function draw() {
     // triangle(35, 100, 50, 100, 100, 50);
     // draw rainbow-----------------------------------------------------------------------------------
     paintCanvas(tx6,ty6)
+
     for (let a=0;a<layer;a++){
         wc.setAlpha(255*(1-Math.tan(Math.PI*a/4/layer)));
         ty1=ty1+a;

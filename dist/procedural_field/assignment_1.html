@@ -118,8 +118,8 @@
 <hr class="solid">
 <div class="section">
   <div class="row">
-    <div class="col-sm-8 title">Atlas of Data Informatics  </div>
-    <div class="col-sm-8 title"> <p>upload your csv file to create a data viz work<br>csv structure: name\size\number of branches
+    <div class="col-sm-8 title">Atlas of Data Informatics </div>
+    <div class="col-sm-8 title"> <p>A data viz work of the Chinese artists and their work for <a href="https://www.kaggle.com/datasets/rickyjli/chinese-fine-art?select=Dataset">this dataset</a>
 <!--        <br>上传csv文件创作数据可视化，格式【名称、大小、分支】-->
     </p>
     </div>
@@ -153,7 +153,7 @@
                   <!--        <p>background transparency</p>-->
                   circle size
                   <!--            | 球尺寸-->
-                  <input type="range" min="0" max="10" value="0.3" class="slider" step="0.1" id="myRangeSize">
+                  <input type="range" min="0" max="5" value="2" class="slider" step="0.05" id="myRangeSize">
               </div>
               <!--<div class="slidecontainer">-->
               <!--  <input type='file' id='getval' />-->
@@ -193,7 +193,7 @@
               <div class="slidecontainer">
                   font size
                   <!--          ｜ 字号-->
-                  <input type="range" min="2" max="90" value="23" class="slider" id="myRangeFontSize">
+                  <input type="range" min="2" max="90" value="7" class="slider" id="myRangeFontSize">
               </div>
               <div class="slidecontainer">
                   <!--        <p>font transparency</p>-->
@@ -235,25 +235,40 @@
     <div class="row">
       <div class="col-sm-9">
         <div class="paragraph">
-          <p> This drawing app is intended for artistic visualization of data.
-              <br>- Drag your csv file into the canvas above.
+          <p> This drawing app is intended for artistic visualization of data. Inspired by the
+              symbol of the paint brush for Chinese art, the number of branches indicates the number of art works by the artist,
+              the sizes of the circle correspond to the relative years of birth (larger circle - more contemporary artist).
+              <br>- You can also plot your csv file by droping the file onto the canvas above.
               <br>- Test with different parameters on the left.
               <br>- Press s to save your work.
-              <br>- Your csv file should be structured as such
+              <br>- The data csv file is structured as such
           </p>
 
             <table>
             <tr>
-                <th><p>annotation[str]</p></th>
-                <th><p>intended size of bubble[int or float]</p></th>
-                <th><p>number of arms[int]</p></th>
+                <th><p>id</p></th>
+
+                <th><p>artist[str]</p></th>
+                <th><p>origin[str]</p></th>
+                <th><p>gender[binary]</p></th>
+                <th><p>year of birth</p></th>
+                <th><p>year of death (if applicable)</p></th>
+                <th><p>number of works</p></th>
+
 
             </tr>
 
             <tr>
-                <th><p>Max</p></th>
-                <th><p>100</p></th>
-                <th><p>25</p></th>
+                <th><p>1</p></th>
+
+                <th><p>Ai Xuan 艾軒</p></th>
+                <th><p>Zhejiang</p></th>
+                <th><p>1</p></th>
+
+                <th><p>1947</p></th>
+                <th><p></p></th>
+
+                <th><p>21</p></th>
             </tr>
 
                 </table>
@@ -275,10 +290,8 @@
 
 
 <!--<script src="js/circle_class/js"></script>-->
-<!--<script type="text/javascript" src="js/as1_test.js"></script>-->
-
-<!---->
-<script type="text/javascript" src="js/assignment1_2.js"></script>
+<script type="text/javascript" src="js/as1_test.js"></script>
+<!--<script type="text/javascript" src="js/assignment1_2.js"></script>-->
 
 
 
