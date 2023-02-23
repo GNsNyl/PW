@@ -73,9 +73,9 @@ function draw() {
     // stroke('none');
 
     // fill(cl00);
-    if(frameCount<666 || frameCount>766){
-        mountainLine (PI , 2 , 1.05 * zoff , 125 , 500 , mouseY , 0.008 , -50 , height , 0.75 , cl0 ,cl7, 3)
-    }
+    // if(frameCount<666 || frameCount>766){
+        mountainLine (PI , 2 , 1.05 * zoff , 125 , 500 ,mouseX, mouseY , 0.008 , -50 , height , 0.75 , cl0 ,cl0, 3)
+    // }
     // mountain(3, 1.05*zoff, 25, 150, 0.008, 300,height/3,0.75,cl4 ,1)
 
     // noLoop();
@@ -83,13 +83,14 @@ function draw() {
 }
 
 
-function mountainLine(angle,noiseMax, zoff, minR, maxR,mouse, inc, px,py,rd, fillC,strokeC, layers){
+function mountainLine(angle,noiseMax, zoff, minR, maxR,mouseX,mouseY, inc, px,py,rd, fillC,strokeC, layers){
     // strokeC.setAlpha(1)
     // noFill();
-    fill(fillC),
+    // fill(fillC),
     //     100,
     //     100,
     //     1);
+    strokeWeight(mouseY/height)
     stroke(strokeC)
     // for(let i = layers; i > 0; i--) {
     //     // strokeC.setAlpha(15)
@@ -107,11 +108,12 @@ function mountainLine(angle,noiseMax, zoff, minR, maxR,mouse, inc, px,py,rd, fil
         let yoff = map(sin(a), -1, 1, 0, noiseMax);
         let r = map(noise(xoff, yoff, zoff), 0, 1, minR, maxR);
         let x = 2*r * Math.cos(a);
-        let y = 3*r * Math.sin(a)*Math.sin(Math.log(2+mouse/height));
+        let y = 3*r * Math.sin(a)*Math.sin(Math.log(2+mouseY/height));
 
         // line(px,py,2*x+px,-y+py)
         vertex(2*x+px, py+3-y);
     }
+    // vertex(mouseX,mouseY)
         endShape(CLOSE);
     // }
 };

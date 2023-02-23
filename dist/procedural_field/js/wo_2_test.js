@@ -1,5 +1,5 @@
 let tx1,tx2,tx3,ty1,ty2,ty3;
-let tx4,ty4,tx5,ty5,angleIn;
+let tx4,ty4,tx5,ty5;
 let tx6,ty6;
 let wc;//white color for triangle
 let width=900,height=900;
@@ -12,17 +12,8 @@ const a0=15;
 function setup() {
     const cns=createCanvas(width, height);
     cns.parent("drawing-container");
-    // d = pixelDensity()
     pixelDensity(1);
-    // wc = color(255,255,255);
-    // layer=10
-    // tx1=width/2;
-    // ty1=height/3;
-    // tx2=2*width/3;
-    // tx5=0;
-    // tx6=3*width/5;
-    // ty6=3*height/5
-    // angleIn=0.2;
+
 
 }
 
@@ -41,7 +32,7 @@ function draw() {
     // draw rainbow-----------------------------------------------------------------------------------
     // paintCanvas(tx6)
     // console.log(ty6)
-    canvasHueGradientA(tx6-315,ty6-30,0+100*rotation, 360+100*rotation);
+    canvasHueGradientA(tx6-315,ty6-30,100*rotation, 360+100*rotation);
 
     for (let a=0;a<layer;a++){
         wc.setAlpha(255*(1-Math.tan(Math.PI*a/4/layer)));
@@ -53,7 +44,7 @@ function draw() {
         ty4=(ty2+ty1)/2;
         ty5=tx4*Math.tan(Math.PI*15/90)+ty1;
         drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc)
-    };
+    }
     rotation+=0.01;
 
     // noLoop();
@@ -72,7 +63,7 @@ function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
 
     line(tx4,ty4,tx6-8,ty6-23)
 
-};
+}
 
 // --------------------------------------------------------
 
@@ -89,7 +80,7 @@ function canvasHueGradientA(tx6,ty6,hue0, hue1)
                     const rgb = HSBToRGB([hue, 100, 100, 100]);
                     const index = 4 * (x + y * width);
                     // console.log(x,y)
-                    pixels[index + 0] = rgb[0];
+                    pixels[index] = rgb[0];
                     pixels[index + 1] = rgb[1];
                     pixels[index + 2] = rgb[2];
                     pixels[index + 3] = rgb[3];
