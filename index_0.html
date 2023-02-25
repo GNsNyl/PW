@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <!-- saved from url=(0033)https://www.kuomaje.com/wk_1.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>yunsong-liu</title>
+  <title>liu.yunsong</title>
 
   <!-- Load CSS libraries -->
 <!--  <link href="./6483/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">-->
@@ -64,20 +63,31 @@
     /*  background: #ffffff; !* Green background *!*/
     /*  cursor: pointer; !* Cursor on hover *!*/
     /*}*/
-#drawing-container{
-  z-index: -10;
+canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.container{
   position: fixed;
   width: 200%;
   height: 100%;
 }
+#drawing-container{
+  z-index: -10;
+  /*position: fixed;*/
+  /*width: 200%;*/
+  /*height: 100%;*/
+}
   </style>
 
-  <script src="js/p5.js"></script>
-
-<!--  <script src="js/p5.min.js"></script>-->
-
+  <script type="text/javascript"  src="js/p5.js"></script>
+<!--  <script type="text/javascript"  src="js/three.min.js"></script>-->
+<!--  <script type="text/javascript"  src="js/OrbitControls.js"></script>-->
+  <!--  <script src="js/p5.min.js"></script>-->
 <!--  <script src="js/p5.dom.min.js"></script>-->
   <script src="js/p5.sound.min.js"></script>
+
   <link rel="stylesheet" type="text/css" href="css/all-style.css">
   <meta charset="utf-8" />
 </head>
@@ -85,9 +95,14 @@
 
 <body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="">
 
-<div id="drawing-container">
+<div id="drawing-container" class="container">
 </div>
 
+<!--<div id="3d-container" class="container">-->
+<!--  <canvas id="canvas">-->
+
+<!--  </canvas>-->
+<!--</div>-->
 <!--HEADER-->
 <div class="header section">
   <div class="row">
@@ -166,6 +181,7 @@
 </div>
 
 <script type="text/javascript" src="js/shangshui.js"></script>
+<!--<script type="text/javascript" src="js/3d.js"></script>-->
 
 
 
