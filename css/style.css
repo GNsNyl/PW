@@ -43,6 +43,7 @@ canvas {
 
 #drawing-container{
     position: fixed;
+    z-index: 100;
 }
 
 .bar{
