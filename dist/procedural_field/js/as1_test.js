@@ -1,6 +1,6 @@
 // read data
 
-let table,tablefile,tableArray;
+let table,tableArray;
 let backcolPic,colPic,linecolPic,textcolPic;
 let font;
 let bg;
@@ -13,17 +13,8 @@ let float=0.01;
 // new------------------------------
 let inputFile;
 let csv;
-let msg = 'Drag and drop file into the canvas';
+let msg = 'Drag and drop .csv file into the canvas';
 
-// sliders--------------------
-// let canvasWidthSlider, canvasHeightSlider;
-//
-// let circleSizeSlider, circleOpacitySlider;
-// let curveWeightSlider, curveOpacitySlider;
-// let fontSizeSlider,fontOpacitySlider;
-// const sliderList=[canvasWidthSlider, canvasHeightSlider,circleSizeSlider, circleOpacitySlider,
-//     curveWeightSlider, curveOpacitySlider,fontSizeSlider,fontOpacitySlider]
-// // --------------------
 
 // preload table data
 function preload() {
@@ -45,34 +36,16 @@ let cns;
 
 function setup() {
     clear();
-    // canvasWidthSlider=createSlider(10, 1200, 650);
-    // canvasHeightSlider=createSlider(10, 1200, 650);
-    // canvasWidthSlider.position(0,300)
-    // canvasHeightSlider.position(0,200)
-    // canvasWidthSlider.parent("drawing-container");
-    // canvasHeightSlider.parent("drawing-container");
-    // circleSizeSlider=createSlider(10, 1200, 650);
-    // circleOpacitySlider=createSlider(10, 1200, 650);
-    //
-    // curveWeightSlider=createSlider(10, 1200, 650);
-    // curveOpacitySlider=createSlider(10, 1200, 650);
-    //
-    // fontSizeSlider=createSlider(10, 1200, 650);
-    // fontOpacitySlider=createSlider(10, 1200, 650);
 
     cns=createCanvas(0.6*windowWidth, 0.7*windowHeight);
     cns.parent("drawing-container");
     cns.drop(gotFile);
-// set slider position------------------------------------
-//     for (let z=0;z<sliderList.length;z++){
-//         sliderList[z].position(0,canvasHeightSlider.value()+15+z*15)
-//     }
-    // textFont(font);
-    // textSize(fontsize);
+
     textAlign(CENTER, CENTER);
 
     strokeWeight(0);
 
+// color pickers
     backcolPic = createColorPicker("black");
     backcolPic.parent("#circle")
     backcolPic.size(25,25)
@@ -95,6 +68,7 @@ function setup() {
     // linecolPic.position(100, 590);
     // textcolPic.position(100, 660);
 
+// getting initial balloon locations
 
     ellipseMode(RADIUS);
     tableArray = table.getArray();
@@ -184,6 +158,7 @@ function draw() {
     float+=0.002
 };
 
+
 function gotFile(file) {
     console.log(file);
     inputFile = file;
@@ -193,13 +168,9 @@ function gotFile(file) {
     csv = parseCSV(inputFile);
     console.log(csv);
     if (csv) {
+        // update cicles and positions if there is a csv file uploaded
         circles=[]
-        console.log("running")
-        // table = loadTable(
-        //     inputFile.name,
-        //     'csv',
-        //     'header');
-        // console.log(csv);
+        // console.log("running")
 
         tableArray = table.getArray();
         for (let i = 0; i < tableArray.length; i++) {
@@ -212,7 +183,6 @@ function gotFile(file) {
             circles.push({ x: 0.5*windowWidth*(0.1+Math.random()), y: 0.5*windowHeight*(Math.random()), color:'#000', breed: artist, radius_num: num, arm_num:arm, yob:yob, gender:gender, active: false})
         }
     }
-
 
     msg = ``;
 
@@ -234,22 +204,21 @@ function parseCSV(file) {
 // Run when the mouse/touch is down.
 function mousePressed() {
     if(mouseX>0){
-
-    if (mouseY > 0){
-        if (circles.length > 0) {
-            for (var i = 0; i < circles.length; i++) {
-                var circle = circles[i],
-                    distance = dist(mouseX, mouseY, circle.x, circle.y);
-                if (distance < circle.radius_num) {
-                    circle.active = true;
-                    // circle.color = '#3f3f3f';
-                    // circle.color=colPic.color();
-                } else {
-                    circle.active = false;
-                    circle.color = colPic.color();
+        if (mouseY > 0){
+            if (circles.length > 0) {
+                for (var i = 0; i < circles.length; i++) {
+                    var circle = circles[i],
+                        distance = dist(mouseX, mouseY, circle.x, circle.y);
+                    if (distance < circle.radius_num) {
+                        circle.active = true;
+                        // circle.color = '#3f3f3f';
+                        // circle.color=colPic.color();
+                    } else {
+                        circle.active = false;
+                        circle.color = colPic.color();
+                    }
                 }
             }
-        }
         // Prevent default functionality.
         return false;}}
 };
@@ -269,16 +238,13 @@ function mouseDragged() {
                 }
             }
         }
-        // Prevent default functionality.
         return false;
     }}
 
 };
 
 function keyPressed(){
-    //if the key is a s
     if(key == 's'){
-        //save out to a file
         save('data-viz.png');
     }
 };
