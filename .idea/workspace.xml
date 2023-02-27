@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/arch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/arch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/digital.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/digital.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/assignment_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/information.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/information.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_2.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_2_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_2_test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/moving-arch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/moving-arch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/wo_1.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/wo_1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/wo_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/wo_2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +91,9 @@
       <workItem from="1677370975599" duration="1317000" />
       <workItem from="1677418393786" duration="118000" />
       <workItem from="1677423014167" duration="1121000" />
-      <workItem from="1677434804512" duration="30000" />
+      <workItem from="1677434804512" duration="49000" />
+      <workItem from="1677435810081" duration="248000" />
+      <workItem from="1677455991884" duration="323000" />
     </task>
     <servers />
   </component>

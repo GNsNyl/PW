@@ -45,7 +45,7 @@ function draw() {
         ty5=tx4*Math.tan(Math.PI*15/90)+ty1;
         drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc)
     }
-    rotation+=0.01;
+    rotation+=0.03;
 
     // noLoop();
 }

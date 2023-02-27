@@ -94,7 +94,7 @@ function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
     stroke(wc);
     strokeWeight(3)
     triangle(tx1,ty1,tx2,ty2,tx3,ty3);
-    rotate(0.002*Math.sin(rotation*PI ));
+    rotate(0.006*Math.sin(rotation*PI ));
 
     line(tx4,ty4,tx5,ty5)
     strokeWeight(1)
