@@ -22,6 +22,7 @@ function preload() {
 function setup() {
     const cnsWO3=createCanvas(width, height, WEBGL);
     cnsWO3.parent("drawing-container-wo-4");
+    // createCanvas(width, height, WEBGL);
     pixelDensity(1);
 
 
@@ -61,12 +62,12 @@ function draw() {
     strokeWeight(0)
     // var r=max(tx6, height-ty6);
 
-    translate(tx6,ty6)
-    arc(0, 0, width/2, width/2, -Math.PI/5, -Math.PI/12 );
+    // translate(tx6+250,ty6)
+    arc(0, 0, 0.5*width,  0.5*width, -Math.PI/5, -Math.PI/12 );
 // rect(0,0,width,height)
     // console.log(`${width}x${height} FPS: ${Math.round(frameRate(), 0)}`);
 
-    // ----------------------wo2-------------------------
+    // -------------------from---wo2-------------------------
     // noFill();
     stroke(wc);
     strokeWeight(3)

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_2_test.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_2_test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/wo_2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/wo_2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/digital.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/digital.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/shaders/fshader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/shaders/fshader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/procedural_field/wo_4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/wo_4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/word.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/word.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +111,8 @@
       <workItem from="1678329308643" duration="7363000" />
       <workItem from="1678379177447" duration="114000" />
       <workItem from="1678397325626" duration="759000" />
-      <workItem from="1678406892044" duration="13381000" />
+      <workItem from="1678406892044" duration="15332000" />
+      <workItem from="1678458775474" duration="1955000" />
     </task>
     <servers />
   </component>
@@ -124,5 +129,23 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/dist/procedural_field/js/wo_4.js</url>
+          <line>65</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/dist/procedural_field/js/wo_4.js</url>
+          <line>82</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

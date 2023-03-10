@@ -38,7 +38,7 @@ void main() {
 //
 //        }
 //    }
-    float ad=atan((gl_FragCoord.y+.0)/(gl_FragCoord.x-.0));
+    float ad=atan((gl_FragCoord.y-450.0)/(gl_FragCoord.x-580.0));
     float ag=ad*PI;
     vec3 hsv = hsv2rgb_smooth(vec3(ag+u_time, 1, 1));
 
