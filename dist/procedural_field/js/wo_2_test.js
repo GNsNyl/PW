@@ -1,9 +1,10 @@
 let tx1,tx2,tx3,ty1,ty2,ty3;
 let tx4,ty4,tx5,ty5;
 let tx6,ty6;
-let wc;//white color for triangle
+let wc;
+//white color for triangle
 let width=900,height=900;
-let layer;
+let layer=10;
 let rotation=0;
 const a0=15;
 // let d;
@@ -13,26 +14,25 @@ function setup() {
     const cns=createCanvas(width, height);
     cns.parent("drawing-container");
     pixelDensity(1);
+    wc= color(255,255,255)
 
 
 }
 
 function draw() {
     background('rgb(0,0,0)')
-    wc = color(255,255,255);
-    layer=10
     tx1=width/2;
     ty1=height/3;
     tx2=2*width/3;
+    ty2=Math.floor((tx2-tx1)*Math.sqrt(3)+ty1);
     tx5=-100;
-    tx6=width*(5/9)
-    ty6=(ty2-ty1)/3+ty1;
+    tx6=width*(7/9)
+    ty6=(ty2-ty1)/4+ty1;
     // paintCanvas(pixelHueGradient);
     // triangle(35, 100, 50, 100, 100, 50);
     // draw rainbow-----------------------------------------------------------------------------------
     // paintCanvas(tx6)
     // console.log(ty6)
-    canvasHueGradientA(tx6-315,ty6-30,100*rotation, 360+100*rotation);
 
     for (let a=0;a<layer;a++){
         wc.setAlpha(255*(1-Math.tan(Math.PI*a/4/layer)));
@@ -42,15 +42,19 @@ function draw() {
         ty3=ty2;
         tx4=(tx1+tx3)/2;
         ty4=(ty2+ty1)/2;
-        ty5=tx4*Math.tan(Math.PI*15/90)+ty1;
-        drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc)
+        // tx6=1.8*tx1-tx4
+        // ty6=
+
+        ty5=tx4*Math.tan(Math.PI/6)+ty1;
+        drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,tx6-211,ty6,wc)
     }
     rotation+=0.03;
+    canvasHueGradientA(tx6+9,ty6,100*rotation, 360+100*rotation);
 
     // noLoop();
 }
 
-function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
+function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,tx6,ty6,wc){
 
     noFill();
     stroke(wc);
@@ -61,7 +65,7 @@ function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
     line(tx4,ty4,tx5,ty5)
     strokeWeight(1)
 
-    line(tx4,ty4,tx6-8,ty6-23)
+    line(tx4,ty4,tx6,ty6)
 
 }
 
@@ -70,7 +74,7 @@ function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
 function canvasHueGradientA(tx6,ty6,hue0, hue1)
 {
     loadPixels();
-    for (let x = tx6; x < width; x++) {
+    for (let x = tx6; x < width+200; x++) {
         // Normalized coordinate in X axis
         for (let y = ty6; y < height; y++) {
             let aD=calcAngleDegrees(x-tx6,y-ty6)-a0;//angle difference
