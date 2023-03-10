@@ -5,6 +5,20 @@
   cursor: none;
 
 }
+#loading-div {
+  width: 5vh;
+  height: 5vh;
+  background: none;
+  display: block;
+  vertical-align: middle;
+  /*color: #555;*/
+  overflow: hidden;
+  text-align: center;
+}
+#loading-div::before {
+  display: inline-block;
+  vertical-align: middle;
+}
 
 :lang(en) {
   font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
@@ -202,7 +216,7 @@ a.snapchat img {
   opacity: 0;
   width: 15vh;
   height: 15vh;
-  right: 15vh;
+  left: 15vh;
   top: -16vh;
   transition: opacity .5s, top .5s;
 }

@@ -2,7 +2,12 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
 // ----------------------------------
 // A part of my effort to learn parallax.
 // Photo Cred: Andre Benz @ https://unsplash.com/@trapnation
-
+document.onreadystatechange = function () {
+    if (document.readyState == "complete") {
+        document.getElementById("loading-div").style.display="none";
+        // $('body').css('overflow','scroll');
+    }
+}
 class App extends React.Component {constructor(...args) {super(...args);_defineProperty(this, "handleMouseMove",
     e => {
       const el = document.getElementById("wrapper");
