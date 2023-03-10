@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style2.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/arch.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/arch.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/digital.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/digital.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/flower.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/flower.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/food.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/food.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/gig.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/light.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/light.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/nude.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/nude.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/particle.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/particle.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/img_digit/voice.gif" beforeDir="false" afterPath="$PROJECT_DIR$/dist/img_digit/voice.gif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +113,7 @@
       <workItem from="1678329308643" duration="7363000" />
       <workItem from="1678379177447" duration="114000" />
       <workItem from="1678397325626" duration="759000" />
-      <workItem from="1678406892044" duration="10643000" />
+      <workItem from="1678406892044" duration="11521000" />
     </task>
     <servers />
   </component>
