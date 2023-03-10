@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-    background('rgb(0,1,0)')
+    background('rgb(0,0,0)')
     wc = color(255,255,255);
     layer=10
     tx1=width/2;
