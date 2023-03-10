@@ -5,12 +5,17 @@
   cursor: none;
 
 }
+body{
+  overflow: hidden;
+}
 #loading-div {
   width: 100vh;
   height: 100vh;
+  /*justify-content: center;*/
   background-color: #000000;
   display: block;
-  vertical-align: middle;
+  /*horiz-align: center;*/
+  /*vertical-align: middle;*/
   /*color: #000000;*/
   overflow: hidden;
   text-align: center;
