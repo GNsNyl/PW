@@ -6,12 +6,12 @@
 
 }
 #loading-div {
-  width: 5vh;
-  height: 5vh;
-  background: none;
+  width: 100vh;
+  height: 100vh;
+  background-color: #000000;
   display: block;
   vertical-align: middle;
-  /*color: #555;*/
+  /*color: #000000;*/
   overflow: hidden;
   text-align: center;
 }
