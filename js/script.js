@@ -5,7 +5,7 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         document.getElementById("loading-div").style.display="none";
-        document.body.style.overflow='scroll';
+        document.body.style.overflow ='scroll';
     }
 }
 class App extends React.Component {constructor(...args) {super(...args);_defineProperty(this, "handleMouseMove",
