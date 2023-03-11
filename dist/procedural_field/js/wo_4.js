@@ -48,6 +48,7 @@ function draw() {
 
 
 
+    push();
     // -----------------------shader------------------------
     // Set the active shader
     shader(myShader);
@@ -58,6 +59,12 @@ function draw() {
     myShader.setUniform('tx6', 3*width/5+tx6);
     myShader.setUniform('ty6', ty2);
     myShader.setUniform('u_time', rotation); // time in secs
+    // rect(0, 0, 100, 100);
+    // triangle(0,0,10,0,0,20);
+    triangle(0,0,50,0,0,10);
+    pop();
+    line(0,0,100,100);
+
     // Draw a full screen rectangle to apply the shader to
     strokeWeight(0)
     // var r=max(tx6, height-ty6);
@@ -95,6 +102,7 @@ function draw() {
 // ----------------------wo2-------------------------
 //
 function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
+    push();
     // noFill();
     // stroke(wc);
     // strokeWeight(3)
@@ -105,5 +113,5 @@ function drawTriangle(a,tx1,ty1,tx2,ty2,tx3,ty3,tx4,ty4,tx5,ty5,wc){
     strokeWeight(1)
 
     line(tx4,ty4,tx6-8,ty6-23)
-
+    pop();
 }
