@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/shaders/fshader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/shaders/fshader.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/js/wo_4.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/js/wo_4.js" afterDir="false" />
-    </list>
+    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,7 +113,7 @@
       <workItem from="1678549494634" duration="6058000" />
       <workItem from="1678557615480" duration="884000" />
       <workItem from="1678590532937" duration="190000" />
-      <workItem from="1678637978934" duration="2542000" />
+      <workItem from="1678637978934" duration="2785000" />
     </task>
     <servers />
   </component>
