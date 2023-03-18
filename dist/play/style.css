@@ -1,0 +1,15 @@
+*{
+    background-color: #000000;
+    overflow: scroll;
+
+}
+
+#cvs-01{
+    position: absolute;
+    background-color: #000000;
+
+    /*background-color: ;*/
+}
+img{
+    display: none;
+}
