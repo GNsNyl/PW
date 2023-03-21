@@ -2,6 +2,8 @@ function _defineProperty(obj, key, value) {if (key in obj) {Object.definePropert
 // ----------------------------------
 // A part of my effort to learn parallax.
 // Photo Cred: Andre Benz @ https://unsplash.com/@trapnation
+document.body.style.overflow ='hidden';
+
 document.onreadystatechange = function () {
     if (document.readyState == "complete") {
         document.getElementById("loading-div").style.display="none";

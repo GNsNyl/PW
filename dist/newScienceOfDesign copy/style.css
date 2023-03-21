@@ -1,8 +1,9 @@
 *{
     background-color: #000000;
-    /*overflow: scroll;*/
+    overflow: scroll;
     color: #c2c2c2;
     position: static;
+    cursor: none;
 }
 h1{
     font-size: medium;

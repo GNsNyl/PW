@@ -5,9 +5,9 @@
   cursor: none;
 
 }
-body{
-  overflow-y: hidden;
-}
+/*body{*/
+/*  overflow-y: hidden;*/
+/*}*/
 #loading-div {
   width: 100vh;
   height: 100vh;
