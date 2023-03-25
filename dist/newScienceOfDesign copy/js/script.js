@@ -12,8 +12,6 @@ function drawAll(){
             this.originX=Math.floor(x);
             this.originY=Math.floor(y);
             this.color=color;
-
-
             this.dx =0;
             this.dy = 0;
             this.distance=0;

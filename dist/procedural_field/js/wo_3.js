@@ -76,6 +76,7 @@ function draw() {
             pixels[index + 1] = gray;
             pixels[index + 2] = gray;
             pixels[index + 3] = 255;
+
         }
     }
     updatePixels();
@@ -83,5 +84,5 @@ function draw() {
     // Render text after canvas was saved
     fill(255, 0, 0);
     // text(z, 10, height - 10);
-// noLoop()
+noLoop()
 }

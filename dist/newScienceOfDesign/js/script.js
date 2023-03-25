@@ -66,7 +66,7 @@ function drawAll(){
             this.imgX=(this.width-this.image.width*0.3)*0.5;
             this.imgY=(this.height-this.image.height*0.3)*0.5;
 
-            console.log(this.imgX)
+            // console.log(this.imgX)
             this.centerX=this.width*0.5;
             this.centerY=this.height*0.5;
             this.gap = 5;
