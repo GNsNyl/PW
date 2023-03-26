@@ -5,7 +5,7 @@
   <title>TECH科技</title>
   <link rel="stylesheet" href="../css/style2.css">
   <style>
-
+    *{overflow: scroll;}
   </style>
 
 </head>
@@ -30,14 +30,9 @@
   <a class="indiv_btn" href="visual.html">VISU</a>
   <a class="indiv_btn" href="visual.html">全图</a>
 
-<!--  <hr class="solid">-->
-  <!--project-->
-  <br>  <br>
-
 </div>
-<div id="image-container" style="position: relative">
 
-</div>
+<div id="image-container" style="position: relative; overflow-y: scroll;"></div>
 
 
   <div>
@@ -47,25 +42,26 @@
   </div>
 
 
-  <div id="root">
-  <!-- partial -->
+  <div id="root"></div>
+
+    <!-- partial -->
   <script src='../js/react.production.min.js'></script>
   <script src='../js/react-dom.production.min.js'></script>
   <script src='../js/anime.min.js'></script>
   <script  src="../js/script.js"></script>
     <script>
-      const imgL=['light.gif', 'pf.gif', 'food.gif', '.DS_Store', 'flower.gif', 'op.gif', 'particle.gif', 'nude.gif', 'voice.gif', 'dog.gif', 'city.gif', 'bike.gif', 'carrot.gif', 'pm.gif', 'music.gif', 'pi.gif']
+      const imgL=['light.gif', 'pf.gif', 'food.gif', 'flower.gif', 'op.gif', 'particle.gif', 'nude.gif', 'voice.gif', 'dog.gif', 'city.gif', 'bike.gif', 'carrot.gif', 'pm.gif', 'music.gif', 'pi.gif']
       imgContainer= document.getElementById('image-container')
       for(let i=0;i<imgL.length;i++){
       var img=document.createElement('img');
         img.src='img_digit/'+imgL[i];
+        img.style.width="20vw"
         imgContainer.appendChild(img)
       }
 
 
     </script>
   </div>
-</div>
 
 </body>
 </html>
