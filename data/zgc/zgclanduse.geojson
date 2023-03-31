@@ -1,0 +1,6 @@
+{
+"type": "FeatureCollection",
+"features": [
+{ "type": "Feature", "properties": { "osm_id": "391856799", "code": 7202, "fclass": "park", "name": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 116.3306517, 39.9832293 ], [ 116.3317099, 39.9832699 ], [ 116.3317594, 39.9827547 ], [ 116.3311825, 39.9826652 ], [ 116.3306517, 39.9832293 ] ] ] } }
+]
+}
