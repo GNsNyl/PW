@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/wordcloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wordcloud.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/zgc.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/zgc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +162,7 @@
       <workItem from="1679950313618" duration="41000" />
       <workItem from="1680054834550" duration="798000" />
       <workItem from="1680102745050" duration="741000" />
-      <workItem from="1680277481904" duration="1585000" />
+      <workItem from="1680277481904" duration="1762000" />
     </task>
     <servers />
   </component>
