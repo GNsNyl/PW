@@ -3,15 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign copy/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign copy/js/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign copy/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/play/img/img-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/play/js/particle-script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/play/particle.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/play/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/word.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/word.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon_io/site.webmanifest" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/wordcloud.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/wordcloud.js" afterDir="false" />
     </list>
@@ -23,9 +14,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -173,6 +164,8 @@
       <workItem from="1680102745050" duration="741000" />
       <workItem from="1680277481904" duration="3386000" />
       <workItem from="1680288082115" duration="19000" />
+      <workItem from="1680296711652" duration="38000" />
+      <workItem from="1680308323372" duration="3664000" />
     </task>
     <servers />
   </component>
