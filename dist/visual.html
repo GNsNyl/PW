@@ -5,44 +5,43 @@
   <title>TECH科技</title>
   <link rel="stylesheet" href="../css/style2.css">
   <style>
-    *{overflow: scroll;}
+    *{overflow: scroll;
+    cursor: auto}
   </style>
 
 </head>
 <body>
-<div id="loading-div">
-  <img style="margin-left:0;margin-right:0;margin-top: 45vh" width="3000" height="10" src="loading.gif"/>
-</div>
-<div class="btn">
-  <a href="../index.html">
-    <svg>
-      <circle r="10" stroke-width="1" stroke="#ffffff" fill="none" cx="10.5px" cy="10.5px" ></circle>
-    </svg>
-  </a>
+<!--<div id="loading-div">-->
+<!--  <img style="margin-left:0;margin-right:0;margin-top: 45vh" width="3000" height="10" src="loading.gif"/>-->
+<!--</div>-->
+<!--<div class="btn" style="position: relative; overflow-y: scroll;">-->
+<!--  <a href="../index.html">-->
+<!--    <svg>-->
+<!--      <circle r="10" stroke-width="1" stroke="#ffffff" fill="none" cx="10.5px" cy="10.5px" ></circle>-->
+<!--    </svg>-->
+<!--  </a>-->
 
-  <a class="indiv_btn_indi" href="digital.html">TECH</a>
-  <a class="indiv_btn_indi" href="digital.html">科技</a>
-  <a class="indiv_btn_indi" href="arch.html">ARCH</a>
-  <a class="indiv_btn_indi" href="arch.html">建筑</a>
-  <a class="indiv_btn_indi" href="info.html">Y.LIU</a>
-  <a class="indiv_btn_indi" href="word.html">WORD</a>
-  <a class="indiv_btn_indi" href="word.html">写作</a>
-  <a class="indiv_btn" href="visual.html">VISU</a>
-  <a class="indiv_btn" href="visual.html">全图</a>
+<!--  <a class="indiv_btn_indi" href="digital.html">TECH</a>-->
+<!--  <a class="indiv_btn_indi" href="digital.html">科技</a>-->
+<!--  <a class="indiv_btn_indi" href="arch.html">ARCH</a>-->
+<!--  <a class="indiv_btn_indi" href="arch.html">建筑</a>-->
+<!--  <a class="indiv_btn_indi" href="info.html">Y.LIU</a>-->
+<!--  <a class="indiv_btn_indi" href="word.html">WORD</a>-->
+<!--  <a class="indiv_btn_indi" href="word.html">写作</a>-->
+<!--  <a class="indiv_btn" href="visual.html">VISU</a>-->
+<!--  <a class="indiv_btn" href="visual.html">全图</a>-->
 
-</div>
+<!--</div>-->
 
-<div id="image-container" style="position: relative; overflow-y: scroll;"></div>
+<div id="image-container" style="position: relative; margin-top:10vh;height:100vh;overflow-y: scroll;"></div>
 
-
-  <div>
-  <div class="curzr" hidden>
-    <div class="circle"></div>
-    <div class="dot"></div>
-  </div>
+<!--  <div class="curzr" hidden>-->
+<!--    <div class="circle"></div>-->
+<!--    <div class="dot"></div>-->
+<!--  </div>-->
 
 
-  <div id="root"></div>
+<!--  <div id="root"></div>-->
 
     <!-- partial -->
   <script src='../js/react.production.min.js'></script>
@@ -55,7 +54,9 @@
       for(let i=0;i<imgL.length;i++){
       var img=document.createElement('img');
         img.src='img_digit/'+imgL[i];
-        img.style.width="15vw"
+        img.style.width="15vw";
+        img.style.padding="1vw"
+
         imgContainer.appendChild(img)
       }
 
