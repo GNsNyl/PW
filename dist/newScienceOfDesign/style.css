@@ -1,7 +1,9 @@
 *{
-    background-color: #000000;
+    background-color: #ffffff;
     /*overflow: scroll;*/
-    color: #c2c2c2;
+    color: #000000;
+    /*color: #c2c2c2;*/
+
     position: static;
 }
 h1{
@@ -25,7 +27,7 @@ h3{
 }
 #cvs-01{
     /*position: absolute;*/
-    background-color: #000000;
+    background-color: #ffffff;
     /*width: 60%;*/
     margin: auto;
     z-index: -10;

@@ -31,7 +31,8 @@ a:hover { color: #ffffff; text-decoration: underline; cursor:pointer;}
 img{object-fit: scale-down;}
 
 /*INDEX______________________________________________________________________________________________________________*/
-.hover figure img { -webkit-filter: grayscale(100%) blur(3px); filter: grayscale(100%) blur(3px); -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out;}
+.hover figure img { -webkit-filter: grayscale(100%) blur(3px); filter: grayscale(100%) blur(3px);
+    -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out;}
 .hover figure:hover img { -webkit-filter: grayscale(0) blur(0); filter: grayscale(0) blur(0);}
 
 /*INPUT______________________________________________________________________________________________________________*/
@@ -45,6 +46,9 @@ button { background-color: transparent; border: none; color: white; padding-top:
 button:hover{ text-decoration: underline; cursor:pointer;}
 
 
+input{
+    color: #ffffff;
+}
 a.snapchat {
     position: relative;
     /*background: lightgrey;*/
@@ -63,4 +67,7 @@ a.snapchat img {
 a.snapchat:hover img {
     opacity: 1;
     top: 20px;
+}
+.punch-viewer-navbar{
+    background: none;
 }

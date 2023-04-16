@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>yunsong-liu-wo-4</title>
+
+  <!-- Load CSS libraries -->
+  <link href="./6483/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <!--    <link rel="stylesheet" href="./6483/style.css">-->
+
+  <!-- GOOGLE FONTS -->
+  <!--		<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,400italic,300italic' rel='stylesheet' type='text/css'>-->
+  <!--  <link href="./6483/roboto" rel="stylesheet">-->
+
+
+  <style>
+
+    canvas {
+      margin: auto;
+      border-radius: 12px;
+    }
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none; /* Override default look */
+      appearance: none;
+      width: 25px; /* Set a specific slider handle width */
+      height: 9px; /* Slider handle height */
+      background: #ffffff; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+
+    .slider::-moz-range-thumb {
+      width: 10px; /* Set a specific slider handle width */
+      height: 7px; /* Slider handle height */
+      background: #ffffff; /* Green background */
+      cursor: pointer; /* Cursor on hover */
+    }
+    #textCanvas {
+      display:none;
+    }
+
+    .wrap {
+      padding:30px;
+    }
+
+    /*p {*/
+    /*  background-color:#ddd;*/
+    /*  padding:20px;*/
+    /*  border:1px solid #ccc;*/
+    /*}*/
+  </style>
+
+  <script src="js/p5.js"></script>
+
+  <!--  <script src="js/p5.min.js"></script>-->
+
+  <!--  <script src="js/p5.dom.min.js"></script>-->
+  <!--  <script src="js/p5.sound.min.js"></script>-->
+  <link rel="stylesheet" type="text/css" href="css/all-style.css">
+  <meta charset="utf-8" />
+</head>
+
+
+<body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="">
+
+<!--HEADER-->
+<div class="header section">
+  <div class="row">
+    <div class="col-sm-9"></div>
+    <div class="col-sm-1"> <a href="https://liu-yunsong.com" target="_blank"> Other </a></div>
+    <div class="col-sm-1"> <a href="index.html"> SCI 6483 </a></div>
+    <div class="col-sm-1"> <a href="information.html"> Information </a> </div>
+  </div>
+</div>
+
+
+<!--TITLE-->
+<hr class="solid">
+<div class="section">
+  <div class="row">
+    <div class="col-sm-8 title"> Steganography </div>
+    <div class="col-sm-2 title-desc"> Steganography</div>
+    <div class="col-sm-1 title-desc"> Workout_6 </div>
+    <div class="col-sm-1 title-desc"> April 2023 </div>
+  </div>
+</div>
+
+<!--TITLE DESCRIPTION-->
+<div class="section">
+  <div class="row">
+    <div class="col-sm-8 title-label"> Title </div>
+    <div class="col-sm-2 title-desc-label"> Category </div>
+    <div class="col-sm-1 title-desc-label"> Assignment </div>
+    <div class="col-sm-1 title-desc-label"> Date </div>
+  </div>
+</div>
+<hr class="solid">
+
+<!--MAIN VISUALIZATION-->
+
+<br>
+<!--<div class="section">-->
+<!--  <div class="row">-->
+<!--    <div id="drawing-container-wo-6" style="width: 75vw; height: 75vw">-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <br>-->
+<div class="col-sm-8 title section">
+
+<h1>Encode an image with a message</h1>
+<label>Enter a message to hide within the image:</label><br/>
+<input type="password" id="message" placeholder="Enter your secret message"></br>
+<label>Upload an image image:</label><br/>
+<input type="file" id="imageLoader" name="imageLoader"/>
+<canvas id="imageCanvas"></canvas>
+<canvas id="textCanvas"></canvas>
+<hr>
+<h2>Decode an image</h2>
+<label>Upload an image:</label><br/>
+<input type="file" id="imageLoader2" name="imageLoader2"/>
+<canvas id="imageCanvas2"></canvas>
+</div>
+
+
+</div>
+  <!--PROJECT DESCRIPTION-->
+  <div class="section">
+    <div class="row">
+      <div class="col-sm-9">
+        <div class="paragraph">
+          <p>
+
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="paragraph-desc">
+          <p>
+            Storm Thorgerson</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--SECOND VISUALIZATION-->
+  <div style="height:30vh">
+    <div id="wk_3" style="height: 100%; width:100%;"></div>
+  </div>
+<!--<script type="text/javascript" src="js/color-functions.js"></script>-->
+<script type="text/javascript" src="js/wo_6.js"></script>
+
+
+
+</body>
+</html>
