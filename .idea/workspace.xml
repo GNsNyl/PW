@@ -3,7 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/fabrication.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/procedural_field/fabrication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/eye-tracking-web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/d3/d3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/data/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/eye-tracking.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/eye-tracking.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftm1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftm2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightm1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightm2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightw.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/tb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,6 +195,7 @@
       <workItem from="1681578050418" duration="5508000" />
       <workItem from="1681662170218" duration="1604000" />
       <workItem from="1681678023038" duration="26000" />
+      <workItem from="1681762168688" duration="261000" />
     </task>
     <servers />
   </component>
