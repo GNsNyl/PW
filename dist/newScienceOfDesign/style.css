@@ -1,7 +1,5 @@
 *{
-    background-color: #ffffff;
     /*overflow: scroll;*/
-    color: #000000;
     /*color: #c2c2c2;*/
 
     position: static;
@@ -14,6 +12,8 @@ h1{
 h2{
     font-size: large;
     font-weight: bold;
+    background-color: #000000;color: #ffffff;
+
     font-family: 'Roboto';
 
 
@@ -41,16 +41,38 @@ h3{
 
 .section{
     /*width: 70vw;*/
-    overflow:hidden;
+    overflow-x:hidden;
 }
 
+
+*{
+    overflow-x:hidden ;
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+img{
+    background: none;
+}
+.text{
+    width: 45vw;
+    text-align: center;
+    margin-left: 50vw;
+    padding: 15px;
+    position: absolute;
+}
 p{
     margin-top: 5%;
     font-family: 'Roboto Light';
     line-height: 2em;
 
+    background-color: #000000;color: #ffffff;
 }
-
+.img{
+    z-index: -100;
+}
 /*!*LINK______________________________________________________________________________________________________________*!*/
 /*a { color: #ffffff; text-decoration: none;}*/
 /*a:link { text-decoration: none;}*/

@@ -3,24 +3,30 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/eye-tracking-web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/d3/d3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/data/image.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/eye-tracking.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/eye-tracking.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftm1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftm2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/leftw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightm1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightm2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/rightw.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/img/tb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/eye-tracking-web/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/cello.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/hang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/hi-hat.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/saxophone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/shakuhachi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/suona.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/uillean_pipes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/viola.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/violin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/process.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScienceOfDesign/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/cello.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/cello2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/erhu.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hang.m4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hi-hat.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hi-hats2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/saxophone.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/shakuhachi.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/shakuhachi2.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin2.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin3.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScienceOfDesign/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -196,6 +202,20 @@
       <workItem from="1681662170218" duration="1604000" />
       <workItem from="1681678023038" duration="26000" />
       <workItem from="1681762168688" duration="261000" />
+      <workItem from="1682050039373" duration="2997000" />
+      <workItem from="1682081020558" duration="12015000" />
+      <workItem from="1682113274830" duration="634000" />
+      <workItem from="1682182323894" duration="1150000" />
+      <workItem from="1682214482632" duration="5160000" />
+      <workItem from="1682248248940" duration="1443000" />
+      <workItem from="1682258931446" duration="2566000" />
+      <workItem from="1682265989819" duration="2104000" />
+      <workItem from="1682287078076" duration="3337000" />
+      <workItem from="1682293968914" duration="225000" />
+      <workItem from="1682347243062" duration="64000" />
+      <workItem from="1682444488320" duration="344000" />
+      <workItem from="1682450964325" duration="642000" />
+      <workItem from="1682455588921" duration="814000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tactile Music</title>
+  <meta name="author" content="you">
+<!--Please leave this meta tag untouched-->
+<meta name="web_author" content="Alberto Hartzet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="contenedor">
+  <form>
+    <input type="radio" id="Slide1" name="slider" titulo="Home" autofocus="autofocus" checked="checked"/>
+    <input type="radio" id="Slide2" name="slider" titulo="Context"/>
+    <input type="radio" id="Slide3" name="slider" titulo="Vision"/>
+    <input type="radio" id="Slide4" name="slider" titulo="Experiment"/>
+    <input type="radio" id="Slide5" name="slider" titulo="Data"/>
+    <input type="radio" id="Slide6" name="slider" titulo="Thanks"/>
+    <input type="radio" id="Slide7" name="slider" titulo="Contact"/>
+    <div class="labels">
+      <label class="Slide" for="Slide1" id="Slide1">
+        <div class="content">
+          <h1><strong>Inclusive Design</strong><br><br>Using Eye Tracking and Hectic Appraisal for Music Tone Correspondence</h1>
+            <div class="block">
+            <span>Yunsong Liu 2023<br>
+            instructor: Juan Pablo Ugarte<br>
+            ta: Katarina Richter-Lunn</span></div>
+        </div>
+        <div class="icon"><span><img src="img/keyboard.png" width="100px"/></span><span>Use keyboard</span></div>
+      </label>
+      <label class="Slide" for="Slide2" id="Slide2">
+        <div class="content" >
+            <div onclick="researchPage(0); return false" style="background: none; width: 100vw; height: 100vh; top:0;position: absolute; z-index: -10"></div>
+          <h1>Context</h1>
+            <div id="research" style="width: 70vw; left:15vw;margin-top:150px; padding:25px;display: none; position: absolute;  transition-delay: 1s; background-color: rgba(255,255,255,0.2)"></div>
+<!--          <img src="img/oldPhoto.png" style="height: 100%; position: absolute">-->
+          <div class="block">
+            <span onclick="researchPage(1); return false"><img src="img/icon/cubes.png" height="30px"><br/><strong>Vision Substitution</strong><br/>Tactile Image Projection</span>
+            <span onclick="researchPage(2); return false"><img src="img/icon/dial-pad.png" height="30px"><br/><strong>Vibrotactile Music</strong><br/>Music Score to Vibrotactile Signals</span>
+            <span onclick="researchPage(3); return false"><img src="img/icon/vest.png" height="30px"><br/><strong>Verbal Substitution</strong><br/>Verbal to Vibrotactile Signals</span>
+            <span onclick="researchPage(4); return false"><img src="img/icon/vest2.png" height="30px"><br/><strong>Sensory augmentation</strong><br/>Multimedia Experience</span></div>
+<!--          <div class="block"><span> <i class="fa fa-hashtag"></i><br/><strong>No JS</strong><br/>CSS Rules!</span><span> <i class="fa fa-keyboard-o"></i><br/><strong>Keyboard navigation</strong><br/>Yep, no kidding</span><span><i class="fa fa-bars"></i><br/><strong>Lateral menu</strong></span><span><i class="fa fa-codepen"></i><br/><strong>Autogenerate pages</strong><br/>Using Jade & SASS</span></div>-->
+        </div>
+      </label>
+      <label class="Slide" for="Slide3" id="Slide3">
+<!--        <img src="img/arm.png" style="height: 100vh; left:60vw;position: absolute">-->
+        <div id="vision-page" style="height: 100vh; left:60vw;position: absolute"></div>
+
+        <div class="content">
+          <h1>Vision</h1>
+          <div class="block">
+            <ol>
+              <li>Haptic music device</li>
+              <li>Extended existential experience</li>
+              <li></li>
+            </ol>
+          </div>
+        </div>
+      </label>
+      <label class="Slide" for="Slide4" id="Slide4">
+          <img src="img/device.png" width="300px" style="position: absolute; margin-left: 50vw; margin-top: -30vh">
+
+          <div class="content">
+              <div onclick="expPage(0); return false" style="background: none; width: 100vw; height: 100vh; top:0;position: absolute; z-index: -10"></div>
+
+              <h1>Experiment</h1>
+              <div id="exp" style="width: 50vw; left:25vw;margin-top:120px; padding:25px;display: none; position: absolute;  transition-delay: 1s; background-color: rgba(255,255,255,0.6)"></div>
+
+              <div class="block">
+              <span onclick="expPage(1); return false"><img src="img/icon/cubes.png" height="30px"><br/>Baseline image eye-tracking</span>
+              <span onclick="expPage(2); return false"><img src="img/icon/hand.png" height="30px"><br/>Haptic visual association</span>
+              <span onclick="expPage(3); return false"><img src="img/icon/sound.png" height="30px"><br/>Audio visual association</span>
+<!--              <span><a href="https://codepen.io/hrtzt/pen/vGqEJO" target="_blank">Google photos album view with only CSS</a></span>-->
+          </div>
+        </div>
+      </label>
+      <label class="Slide" for="Slide5" id="Slide5">
+        <div class="content">
+          <h1>Data</h1>
+          <div class="block"><span><a href="https://dribbble.com/albertohartzet" target="_blank"><i class="fa fa-dribbble"> </i>Data analysis</a></span><span><a href="https://twitter.com/hrtzt" target="_blank"><i class="fa fa-twitter"></i>Tweet me</a></span></div>
+        </div>
+      </label>
+      <label for="Slide6" id="Slide6">
+        <div class="content">
+          <h1>Thanks</h1>
+          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
+        </div>
+      </label>
+      <label for="Slide7" id="Slide7">
+        <div class="content">
+          <h1>Contact</h1>
+          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
+        </div>
+      </label>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+  <script src="/js/d3.min.js" charset="utf-8"></script>
+<!--  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
