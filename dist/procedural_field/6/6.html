@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<!-- stuff -->
+
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <script async type="text/javascript" src="https://files.mcneel.com/rhino3dm/js/latest/rhino3dm.js"></script>
+    <script async type="text/javascript" src="https://files.mcneel.com/rhino3dm/js/latest/compute.rhino3d.js"></script>
+</head>
+
+<body>
+<div id="header" style="left:0;width: 50vw" >
+    <img src="img/logo.png" id='logo' onclick="getFunPage(0)" style="margin-left:7vw;margin-top:4vw;width: 10vw">
+    <h1 id="name" onclick="getFunPage(0)" style="margin-top: -5vw; margin-left: 13vw">tactile<br>drawing</h1>
+
+    <h4 style="margin-top: -1vw; margin-left: 7vw">assistive tool for visual impairment</h4>
+</div>
+<div id="header-bar" style="margin-top: -6vw; margin-left:60vw;width: 33vw; display: flex">
+    <h4 class="bar" onclick="getFunPage(1)">NARRATIVES</h4>
+    <h4 class="bar" onclick="getFunPage(2)">TOOL</h4>
+    <h4 class="bar" onclick="getFunPage(3)">CONTACT</h4>
+</div>
+<!--<script src="https://cdn.jsdelivr.net/npm/rhino3dm@0.13.0/rhino3dm.min.js"></script>-->
+<!--https://developer.rhino3d.com/guides/compute/compute-javascript-getting-started/-->
+<!--<div id='dropButton' class="dropdown">-->
+<!--    <button onclick="myFunction()" class="dropbtn">Dropdown</button>-->
+<!--    <div id="myDropdown" class="dropdown-content">-->
+<!--&lt;!&ndash;        <p>test</p>&ndash;&gt;-->
+<!--    </div>-->
+<!--</div>-->
+<div id="ui" style="margin-left:7vw;margin-top: 5vw">
+    <h1>opening videos</h1>
+</div>
+
+
+<!--<form>-->
+<!--    <div>-->
+<!--        &lt;!&ndash;        <div id="img-preview"></div>&ndash;&gt;-->
+<!--        <input type="file" id="choose-file" name="choose-file" accept="image/*" />-->
+<!--        <label for="choose-file">Choose File</label>-->
+<!--        &lt;!&ndash;        <canvas id="myCanvas">&ndash;&gt;-->
+<!--        &lt;!&ndash;        </canvas>&ndash;&gt;-->
+
+<!--    </div>-->
+<!--</form>-->
+
+</body>
+<script>
+    var ui=document.getElementById('ui')
+    const pageUiList=['<h1>opening videos</h1>',
+        '<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQF54ZCQGlA52DgLvAq7FEywh7PCXAKMPZNC4-5JNabKGjggrTPrC24Lc_dbSKiQjnbpf95-qvP1dDY/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+        '<input id="inputKey" type="text" placeholder="Enter text" >\n' +
+    '    <button onclick="getTitle()" >submit</button>\n' +
+    '    <button onclick="getImgData()">getImgData</button>\n' +
+    '    <button onclick="getAPIImage()">getAPIImage</button>\n' +
+    '    <div id="gallery"></div>\n' +
+    '    <canvas id="myCanvas" style="width:100vw;height: 100vh">\n' +
+    '    </canvas>\n' +
+    '    <img id="test-image" style="display: none;">',
+        '<h1>placeholder2</h1>',
+
+    ]
+    function getFunPage(i){
+        ui.innerHTML=pageUiList[i]
+
+    }
+
+</script>
+<!--<script>-->
+<!--    // let dropD,dropDiv;-->
+<!--    window.addEventListener("load", (event) => {-->
+<!--    const apiList=['Object',-->
+<!--    'Person',-->
+<!--    'Exhibition',-->
+<!--    'Publication',-->
+<!--    'Gallery',-->
+<!--    'Spectrum',-->
+<!--    'Classification',-->
+<!--    'Century',-->
+<!--    'Color',-->
+<!--    'Culture',-->
+<!--    'Group',-->
+<!--    'Medium',-->
+<!--    'Support',-->
+<!--    'Period',-->
+<!--    'Place',-->
+<!--    'Technique',-->
+<!--    'Worktype',-->
+<!--    'Activity',-->
+<!--    'Site',-->
+<!--    'Video',-->
+<!--    'Image',-->
+<!--    'Audio',-->
+<!--    'Annotation']-->
+<!--    // console.log(apiList.length)-->
+
+<!--    var dropD=document.getElementById('myDropdown')-->
+<!--    // console.log(dropD)-->
+<!--   // var dropDiv=document.createElement('div')-->
+
+<!--    // console.log(dropD)-->
+<!--        // dropD.appendChild(document.createElement('p'))-->
+<!--    for(let i=0;i<apiList.length;i++){-->
+<!--        var dropb=document.createElement('p')-->
+<!--        dropb.innerText=apiList[i]-->
+<!--        dropb.onclick="getAPItype("+apiList[i]+")";-->
+<!--        document.getElementById('myDropdown').appendChild(dropb)-->
+<!--    }})-->
+<!--</script>-->
+<script src="./js/6_readImg.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/api.js"></script>
+<script src="./js/6.js"></script>
+</html>

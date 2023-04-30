@@ -3,30 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/cello.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/hang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/hi-hat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/saxophone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/shakuhachi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/suona.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/uillean_pipes.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/viola.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/instrument/violin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/img/process.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScienceOfDesign/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/cello.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/cello2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/erhu.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hang.m4a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hi-hat.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/hi-hats2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/saxophone.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/shakuhachi.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/shakuhachi2.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/sound/violin3.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScienceOfDesign/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScienceOfDesign/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,6 +192,7 @@
       <workItem from="1682444488320" duration="344000" />
       <workItem from="1682450964325" duration="642000" />
       <workItem from="1682455588921" duration="814000" />
+      <workItem from="1682782804838" duration="647000" />
     </task>
     <servers />
   </component>
