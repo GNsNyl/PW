@@ -14,13 +14,13 @@
 <!-- partial:index.partial.html -->
 <div class="contenedor">
   <form>
-    <input type="radio" id="Slide1" name="slider" titulo="Home" autofocus="autofocus" checked="checked"/>
-    <input type="radio" id="Slide2" name="slider" titulo="Context"/>
-    <input type="radio" id="Slide3" name="slider" titulo="Vision"/>
-    <input type="radio" id="Slide4" name="slider" titulo="Experiment"/>
-    <input type="radio" id="Slide5" name="slider" titulo="Data"/>
-    <input type="radio" id="Slide6" name="slider" titulo="Thanks"/>
-    <input type="radio" id="Slide7" name="slider" titulo="Contact"/>
+    <input type="radio" name="slider" titulo="Home" autofocus="autofocus" checked="checked"/>
+    <input type="radio" name="slider" titulo="Context"/>
+    <input type="radio" name="slider" titulo="Vision"/>
+    <input type="radio" name="slider" titulo="Experiment"/>
+    <input type="radio" name="slider" titulo="Data"/>
+    <input type="radio" name="slider" titulo="Assessment"/>
+    <input type="radio" name="slider" titulo="Associations"/>
     <div class="labels">
       <label class="Slide" for="Slide1" id="Slide1">
         <div class="content">
@@ -54,9 +54,8 @@
           <h1>Vision</h1>
           <div class="block">
             <ol>
-              <li>Haptic music device</li>
+              <li>Haptic music device for auditory impairment</li>
               <li>Extended existential experience</li>
-              <li></li>
             </ol>
           </div>
         </div>
@@ -81,28 +80,48 @@
       <label class="Slide" for="Slide5" id="Slide5">
         <div class="content">
           <h1>Data</h1>
-          <div class="block"><span><a href="https://dribbble.com/albertohartzet" target="_blank"><i class="fa fa-dribbble"> </i>Data analysis</a></span><span><a href="https://twitter.com/hrtzt" target="_blank"><i class="fa fa-twitter"></i>Tweet me</a></span></div>
+
+            <div class="block"><span><a href="https://docs.google.com/presentation/d/1T4T2moGps3mOnR-K7PM-Qj5XtBwh-hN-WkAE02RT3lY/edit?usp=sharing" target="_blank"><i class="fa fa-dribbble"> </i>Data analysis</a></span>
+                <div id="process" style="width: 100vw;height: 30vh"></div>
+
+               </div>
         </div>
       </label>
       <label for="Slide6" id="Slide6">
         <div class="content">
-          <h1>Thanks</h1>
-          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
-        </div>
+          <h1>Assessment</h1>
+          <div class="block">
+              <li>Visual Attractiveness: The selected materials used in the experiment should be visually equally attractive. This will ensure that there is no bias in the results obtained. The materials should be designed in a way that they are equally appealing to the participants. ( P2 )
+              </li>
+              <li>Diversity of experimented material: I provided 4 out of 6 metal materials, one fabric, and one wood, which posed challenges in terms of differentiating metal material and bias toward metal.
+              </li>
+              <li>It is hard to draw correlations between material and sound, even if there is one, as everyone may have a different link.</li>
+              <li>Screen Size: The experiment should be conducted using a small screen rather than a projected screen. This is because the projected screen may result in differences in visual quality, which may affect the results. A small screen, on the other hand, will ensure that the visual quality is consistent across all participants. ( p4 )
+              </li>
+
+              <li>Pre-experiment Information: The participants should be informed of the experiment's purpose. This will help to minimize the risk of overly random responses.</li>
+              <li>Participant Number: The experiment should have more participants. This will help to increase the reliability and generalizability of the results obtained. The sample size should be sufficient to ensure that the results obtained are representative of the larger population. ( I acquired 9; but due to technical issues and I only have 6, eliminating the outliers, I am left with 4 usable data)
+              </li>
+          </div>          </div>
+
       </label>
       <label for="Slide7" id="Slide7">
         <div class="content">
-          <h1>Contact</h1>
-          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
+          <h1>Associations</h1>
+            <div class="chart"></div>
         </div>
       </label>
     </div>
   </form>
 </div>
 <!-- partial -->
-  <script src="/js/d3.min.js" charset="utf-8"></script>
+  <script src="/js/libraries/d3.v4.min.js" charset="utf-8"></script>
 <!--  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
   <script  src="./script.js"></script>
+<script src="associations.js"></script>
+
+<script src="script-tree.js"></script>
+
 
 </body>
 </html>

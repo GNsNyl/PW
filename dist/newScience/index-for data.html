@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tactile Music</title>
+  <meta name="author" content="you">
+  <!--Please leave this meta tag untouched-->
+  <meta name="web_author" content="Alberto Hartzet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'><link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="contenedor">
+  <form>
+    <input type="radio" name="slider" titulo="Data"/>
+    <input type="radio" name="slider" titulo="Thanks"/>
+    <input type="radio" name="slider" titulo="Contact"/>
+    <div class="labels">
+      <label class="Slide" for="Slide5" id="Slide5">
+        <div class="content">
+          <div id="img-container">
+          </div>
+<!--          <h1>Data</h1>-->
+          <div id="data-container" style="pointer-events:auto; z-index: 1000;left:14%;margin-top:-50vh;height:100vh;position: absolute"></div>
+<!--          <div class="block"><span><a href="https://dribbble.com/albertohartzet" target="_blank"><i class="fa fa-dribbble"> </i>Data analysis</a></span><span><a href="https://twitter.com/hrtzt" target="_blank"><i class="fa fa-twitter"></i>Tweet me</a></span></div>-->
+        </div>
+      </label>
+      <label for="Slide6" id="Slide6">
+        <div id="process" style="width: 100vw;height: 100vh"></div>
+
+        <div class="content">
+
+          <h1>Thanks</h1>
+          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
+        </div>
+      </label>
+      <label for="Slide7" id="Slide7">
+        <div class="content">
+          <h1>Contact</h1>
+          <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto numquam, totam iusto officia earum perferendis</div>
+        </div>
+      </label>
+    </div>
+  </form>
+</div>
+<!-- partial -->
+<script src="/js/libraries/d3.v4.min.js" charset="utf-8"></script>
+
+<!--<script src="/js/d3.min.js" charset="utf-8"></script>-->
+<!--  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
+<!--<script  src="./script.js"></script>-->
+<script  src="./data.js"></script>
+<script src="script-tree.js"></script>
+
+
+</body>
+</html>

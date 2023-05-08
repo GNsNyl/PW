@@ -137,7 +137,7 @@ body {
 }
 
 .Slide:nth-child(even) .content .block {
-  color: #717171;
+  color: #ffffff;
 }
 
 .icon {
@@ -180,4 +180,58 @@ a {
 }
 a:hover {
   color: rebeccapurple;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+}
+
+.node text {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: rgb(238, 238, 238);
+  stroke-width: 1px;
+}
+
+li{
+  width:100%;
+  text-align: justify;
+  padding: 10px;
+}
+
+
+
+/*association style:*/
+
+line.line {
+  fill: none;
+  stroke-width: 1px;
+  stroke: #ffffff;
+  opacity: 0.5;
+}
+
+circle.letterbox {
+  cursor: pointer;
+}
+
+text.letter {
+  fill: #ffffff;
+  text-transform: uppercase;
+  text-anchor: middle;
+  font-size: 9px;
+  pointer-events: none;
+}
+text.letter2 {
+  fill: #ffffff;
+
+  text-transform: uppercase;
+  text-anchor: middle;
+  font-size: 9px;
+  pointer-events: none;
 }

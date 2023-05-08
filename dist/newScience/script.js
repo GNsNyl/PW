@@ -12,10 +12,10 @@ const researchList=[
 ];
 const expList=[
     '',
-    "<p>Tack subjects eye movements without any further perturbation, to set the baseline for comparison</p><br><img style='width: 90%' src='img/icon/material.png'>",
+    "<p>Tack subjects eye movements without any further perturbation, to set the baseline for comparison</p><br><img style='width: 90%' src='img/icon/material.png'> <p>In each session, participants are asked to look at 5 pages of slide of different arrangements of the six images</p>",
     '<p>Subjects are asked to touch the material sample before looking at the screen, to check if there is any correlation between haptic and visual attention</p><br><img style=\'width: 90%\' src=\'img/icon/material.png\'>',
     '<p>Subjects are asked to listen to the sound sample while looking at the screen, to check if there is any correlation between auditory and visual attention</p>'+
-        '<br><img onclick="playM(0)" style="padding: 10px" src="img/icon/cello.png" height="50px"><img onclick="playM(1)" style="padding: 10px"  src="img/icon/piano.png" height="50px"><img onclick="playM(2)" style="padding: 10px"  src="img/icon/organ.png" height="50px"><img onclick="playM(3)" style="padding: 10px"  src="img/icon/shakuhachi.png" height="50px"><img onclick="playM(4)" style="padding: 10px" src="img/icon/synthpad.png" height="50px">'
+        '<br><img onclick="playM(0)" style="padding: 10px" src="img/icon/cello.png" height="50px"><img onclick="playM(1)" style="padding: 10px"  src="img/icon/piano.png" height="50px"><img onclick="playM(2)" style="padding: 10px"  src="img/icon/organ.png" height="50px"><img onclick="playM(3)" style="padding: 10px"  src="img/icon/shakuhachi.png" height="50px"><img onclick="playM(4)" style="padding: 10px" src="img/icon/synthpad.png" height="50px"><br><img style=\'width: 90%\' src=\'img/icon/material.png\'>'
 ];
 function researchPage(n){
     var research=document.getElementById("research")
@@ -52,7 +52,7 @@ var width = window.innerWidth,
     height = window.innerHeight;
 let arm,armPage,ring,album, emptyCircle;
 var audio = document.createElement("audio");
-audio.setAttribute('src','sound/saxophone.wav')
+audio.setAttribute('src','sound/piano.mp3')
 
 var playMusic = function (d){
     audio.play()
@@ -60,35 +60,35 @@ var playMusic = function (d){
     d3.select(this)
         .transition()
         .duration(1500)
-        .attr('transform', 'rotate(30 ' +width*0.2+' '+height*0.67+')');
-    ring.attr("y",height*0.22+25*Math.random())
+        .attr('transform', 'rotate(-30 ' +width*0.22+' '+height*0.67+')');
+    ring.attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
         .transition()
         .duration(150)
-        .attr("y",height*0.22+25*Math.random())
+        .attr("y",height*0.27+15*Math.random())
 }
 
 var pauseMusic= function(d) {
@@ -98,6 +98,7 @@ var pauseMusic= function(d) {
         .transition()
         .duration(1500)
         .attr('transform', 'rotate(0 ' +width*0.2+' '+height*0.67+')');
+    ring.attr("y",height*0.27)
 }
 armPage = d3.select('#vision-page')
     .append('svg')
@@ -110,9 +111,11 @@ arm=armPage.append("image")
     .style("position",'absolute');
 ring=armPage.append("image")
     .attr("xlink:href",  "img/greenBar.png")
-    .attr("x", width*0.13)
-    .attr("y",height*0.22 )
-    .attr("width", "150")
+    .attr("x", width*0.11)
+    .attr("y",height*0.25 )
+    .attr("width", "200")
+    // .attr("height", "20")
+
     .style("position",'absolute');
 
 album=armPage.append("image")
