@@ -1,23 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="">
+    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScience/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScience/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScience/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScience/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/newScience/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/newScience/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/.idea/6.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/data-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/img/bag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/js/6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/js/6_readImg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/js/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/procedural_field/6/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +20,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lyunsong &lt;110934662+gnsnyl@users.noreply.github.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -219,7 +210,17 @@
       <workItem from="1683432072182" duration="2540000" />
       <workItem from="1683465870288" duration="10450000" />
       <workItem from="1683515435592" duration="2332000" />
+      <workItem from="1726573542869" duration="101000" />
+      <workItem from="1726592798970" duration="576000" />
     </task>
+    <task id="LOCAL-00001" summary="Add files via upload">
+      <created>1726573581839</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1726573581839</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +236,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add files via upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add files via upload" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
