@@ -1974,6 +1974,7 @@ ul {
 
 .page-title {
     padding: 110px 0 40px 0;
+    text-align: center;
 }
 
 .page-title__title {
@@ -2007,7 +2008,7 @@ ul {
     width: 40px;
     height: 3px;
     background-color: #333;
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .page-title__social {
