@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload">
-      <change afterPath="$PROJECT_DIR$/dist/network analysis.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +240,8 @@
       <workItem from="1732344759957" duration="246000" />
       <workItem from="1735882674506" duration="576000" />
       <workItem from="1735888411270" duration="677000" />
-      <workItem from="1735889111948" duration="6196000" />
+      <workItem from="1735889111948" duration="6341000" />
+      <workItem from="1736132244882" duration="1796000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1726573581839</created>
