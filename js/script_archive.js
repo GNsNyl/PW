@@ -81,30 +81,30 @@ function draw() {
 
 
 
-    for (let i = 0; i < nodeNum; i++) {
-        let dt=dist(mouseX,mouseY,beginDown[i].x,beginDown[i].y)
-        if(beginDown[i].y<1.2 * height / 2){
-            beginDown[i].y=beginDown[i].y+1
-        }
-        if(beginDown[i].y>1.2 * height / 2){
-            beginDown[i].y=beginDown[i].y-1
-        }
-        if(dt<100){
-            beginDown[i].x = beginUp[i].x+20*Math.sin(-dt/600*Math.PI);
-
-                if(beginDown[i].y<=1.39 * height / 2){
-                beginDown[i].y = mouseY-80*Math.cos(-dt/200*Math.PI);
-            }
-            // beginDown[i].y = mouseY-80*Math.cos(-dt/200*Math.PI);
-        }
-        // let l= i%5;
-        // if(l==0){
-        stroke(0, 0, 0)
-        // fill(0,255,0);
-        strokeWeight(0.5);
-        // ellipse(beginUp[i].x, beginUp[i].y, 2, 2);
-        line(beginUp[i].x,beginUp[i].y,beginDown[i].x,beginDown[i].y)
-    }
+    // for (let i = 0; i < nodeNum; i++) {
+    //     let dt=dist(mouseX,mouseY,beginDown[i].x,beginDown[i].y)
+    //     if(beginDown[i].y<1.2 * height / 2){
+    //         beginDown[i].y=beginDown[i].y+1
+    //     }
+    //     if(beginDown[i].y>1.2 * height / 2){
+    //         beginDown[i].y=beginDown[i].y-1
+    //     }
+    //     if(dt<100){
+    //         beginDown[i].x = beginUp[i].x+20*Math.sin(-dt/600*Math.PI);
+    //
+    //             if(beginDown[i].y<=1.39 * height / 2){
+    //             beginDown[i].y = mouseY-80*Math.cos(-dt/200*Math.PI);
+    //         }
+    //         // beginDown[i].y = mouseY-80*Math.cos(-dt/200*Math.PI);
+    //     }
+    //     // let l= i%5;
+    //     // if(l==0){
+    //     stroke(0, 0, 0)
+    //     // fill(0,255,0);
+    //     strokeWeight(0.5);
+    //     // ellipse(beginUp[i].x, beginUp[i].y, 2, 2);
+    //     line(beginUp[i].x,beginUp[i].y,beginDown[i].x,beginDown[i].y)
+    // }
 
 
 
