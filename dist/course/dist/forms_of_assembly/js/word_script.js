@@ -338,7 +338,7 @@ var diameter = 1000;
 		var radiusScale = d3.scale
 		.linear()
 		.domain([0, yMax])
-		.range([4, 1]);
+		.range([6, 2]);
 
 		node.on('mouseover', function(e) {
 			var tag = this.textContent;
