@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload">
-      <change afterPath="$PROJECT_DIR$/dist/mapGlobe/data/lithium_mineral.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/mapGlobe/data/world_countries_geojson.geojson" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/diagram.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/diagram.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/force.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/force.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/js/word_script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/course/dist/forms_of_assembly/js/word_script.js" afterDir="false" />
-    </list>
+    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +249,7 @@
       <workItem from="1744173342990" duration="647000" />
       <workItem from="1744179038197" duration="280000" />
       <workItem from="1744187369006" duration="17000" />
-      <workItem from="1760155155680" duration="8003000" />
+      <workItem from="1760155155680" duration="8256000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1726573581839</created>
@@ -275,7 +266,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740670443477</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add files via upload">
+      <option name="closed" value="true" />
+      <created>1760163485302</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1760163485302</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add files via upload">
+      <option name="closed" value="true" />
+      <created>1760163533595</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1760163533595</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
