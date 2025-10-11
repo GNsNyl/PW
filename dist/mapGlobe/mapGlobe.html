@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D</title>
+  <script src="lib/threeGeoJSON.js"></script>
+
+  <!-- Three.js library, movement controls, and jquery for the geojson-->
+  <script src="lib/three.min.js"></script>
+  <script src="lib/TrackballControls.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<!--  <link href="./css/index.css" rel="stylesheet">-->
+<!--  <script type="text/javascript" src="./js/jquery.min.js"></script>-->
+<!--  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>-->
+<!--  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"  crossorigin="anonymous"></script>-->
+<!--&lt;!&ndash;  <script type="text/javascript" src="https://threejsfundamentals.org/threejs/resources/threejs/r122/examples/jsm/controls/OrbitControls.js" crossorigin="anonymous"></script>&ndash;&gt;-->
+<!--&lt;!&ndash;  <script src="js/THREE.MeshLine.js"></script>&ndash;&gt;-->
+<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.meshline/1.4.0/THREE.MeshLine.js" integrity="sha512-CNumL3RLkfw0m0RcHHv67JdGVqchvvNOPZnX9WP2gNzkyk82/jKCgK1kVGJV8U3Cr+mEFOFAxY6L63mUGj3TIA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+  <style type="text/css">
+    #three-frame {
+      z-index: 998;
+      opacity:1;
+      background: #ffffff !important;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+
+
+</head>
+<body>
+<div id="three-frame"></div>
+</body>
+<script type="text/JavaScript">
+  //New scene and camera
+  var scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x000000, 0.05);
+
+  var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.5, 1000);
+
+  //New Renderer
+  var renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
+
+  var planet = new THREE.Object3D();
+
+  //Create a sphere to make visualization easier.
+  var geometry = new THREE.SphereGeometry(10, 32, 32);
+  var material = new THREE.MeshBasicMaterial({
+    color: 0x000000,
+    wireframe: false,
+    transparent: true
+  });
+  var sphere = new THREE.Mesh(geometry, material);
+  planet.add(sphere);
+
+  // Draw the GeoJSON
+  $.getJSON("data/world_countries_geojson.geojson", function(data) {
+    drawThreeGeo(data, 10, 'sphere', {
+      color: 0x80FF80
+    }, planet);
+  });
+
+
+  var ic = new THREE.MeshBasicMaterial({ map: THREE.ImageUtils.loadTexture('data/mk.jpg') })
+
+  $.getJSON("data/lithium_mineral.geojson", function(data) {
+    drawThreeGeo(data, 10, 'sphere', {
+      // color: 0xffffff,
+      color: ic,
+      size: 0.1,
+
+    }, planet);
+  });
+
+  scene.add(planet);
+
+  //Set the camera position
+  camera.position.z = 20;
+
+  //Enable controls
+  var controls = new THREE.TrackballControls(camera);
+
+  //Render the image
+  function render() {
+    controls.update();
+    requestAnimationFrame(render);
+    renderer.render(scene, camera);
+  }
+  function onWindowResize() {
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize( window.innerWidth, window.innerHeight );
+
+  }
+  window.addEventListener( 'resize', onWindowResize );
+
+  render();
+</script>
+</html>

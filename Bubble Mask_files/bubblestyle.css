@@ -1,0 +1,48 @@
+/* reset our CSS */
+body,
+html {
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5rem;
+	font-family: sans-serif;
+	color: #000;
+	cursor: pointer;
+	font-size: 2rem;
+}
+.menu-item a {
+	color: black;          /* 設定一般顏色 */
+	text-decoration: none; /* 如果不想要底線可以加這行，視需求 */
+}
+
+.menu-item a:visited {
+	color: black;          /* 覆蓋訪問過的顏色 */
+}
+.menu-item:hover {
+	text-decoration: underline;
+}
+
+canvas {
+	/*top: 50px;*/
+	position: fixed;
+	display: block;
+	z-index: -1;
+}
+
+#sketch {
+	width: 100vw;
+	min-height: 800px;
+	overscroll-behavior: none;
+}
