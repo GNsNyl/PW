@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload" />
+    <list default="true" id="93fe60e2-d7ac-44e7-9a3d-ba976a70167e" name="Changes" comment="Add files via upload">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -250,6 +253,8 @@
       <workItem from="1744179038197" duration="280000" />
       <workItem from="1744187369006" duration="17000" />
       <workItem from="1760155155680" duration="8256000" />
+      <workItem from="1760163891838" duration="94000" />
+      <workItem from="1760164390363" duration="46000" />
     </task>
     <task id="LOCAL-00001" summary="Add files via upload">
       <created>1726573581839</created>
@@ -282,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760163533595</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add files via upload">
+      <option name="closed" value="true" />
+      <created>1760163962733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1760163962733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
